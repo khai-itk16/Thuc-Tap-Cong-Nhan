@@ -74,6 +74,32 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </head>
 <body>
     <!---->
+    <div class="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <i class="far fa-check-circle"></i>
+                    <div class="services-name">
+                        <h4>ĐẢM BẢO CHẤT LƯỢNG SẢN PHẨM</h4>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <i class="fas fa-undo"></i>
+                    <div class="services-name">
+                        <h4>ĐỔI MỚI TRONG 15 NGÀY</h4>
+                    </div>
+
+                </div>
+                <div class="col-md-4">
+                    <i class="fas fa-shipping-fast"></i>
+                    <div class="services-name">
+                        <h4>GIAO HÀNG NHANH CHÓNG</h4>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="footer">
         <div class="footer-middle">
             <div class="container">
