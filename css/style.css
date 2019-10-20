@@ -677,9 +677,9 @@ a.toggleMenu{
 }
 ul.callbacks_tabs.callbacks1_tabs {
 	position: absolute;
-	bottom: -11%;
+	bottom: 5%;
 	z-index: 999;
-	left: 9%;
+	right: 10%;
 }
 .banner-mat{
 	background: url(../images/back.jpg)no-repeat center;
