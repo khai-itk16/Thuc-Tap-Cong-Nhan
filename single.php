@@ -83,98 +83,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </head>
 
 <body>
-    <!--header-->
-    <!--header-->
-    <div class="header">
-        <div class="header-top">
-            <div class="container">
-                <div class="header-top-in">
-                    <div class="logo">
-                        <a href="index.html"><img src="images/logo.png" alt=" "></a>
-                    </div>
-                    <div class="header-in">
-                        <ul class="icon1 sub-icon1">
-                            <li><a href="wishlist.html">Đăng ký</a> </li>
-                            <li><a href="account.html">Đăng nhập</a></li>
-                            <li>
-                                <div class="cart">
-                                    <a href="#" class="cart-in"> </a>
-                                    <span> 0</span>
-                                </div>
-                                <ul class="sub-icon1 list">
-                                    <h3>Recently added items(2)</h3>
-                                    <div class="shopping_cart">
-                                        <div class="cart_box">
-                                            <div class="message">
-                                                <div class="alert-close"> </div>
-                                                <div class="list_img"><img src="images/14.jpg" class="img-responsive" alt=""></div>
-                                                <div class="list_desc">
-                                                    <h4><a href="#">velit esse molestie</a></h4>1 x<span class="actual">
-											 $12.00</span></div>
-                                                <div class="clearfix"></div>
-                                            </div>
-                                        </div>
-                                        <div class="cart_box1">
-                                            <div class="message1">
-                                                <div class="alert-close1"> </div>
-                                                <div class="list_img"><img src="images/15.jpg" class="img-responsive" alt=""></div>
-                                                <div class="list_desc">
-                                                    <h4><a href="#">velit esse molestie</a></h4>1 x<span class="actual">
-											 $12.00</span></div>
-                                                <div class="clearfix"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="total">
-                                        <div class="total_left">CartSubtotal : </div>
-                                        <div class="total_right">$250.00</div>
-                                        <div class="clearfix"> </div>
-                                    </div>
-                                    <div class="login_buttons">
-                                        <div class="check_button"><a href="checkout.html">Check out</a></div>
-                                        <div class="clearfix"></div>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="clearfix"> </div>
-                </div>
-            </div>
-        </div>
-        <div class="header-bottom">
-            <div class="container">
-                <div class="h_menu4">
-                    <a class="toggleMenu" href="#">Menu</a>
-                    <ul class="nav">
-                        <li class="active"><a href="index.html"><i> </i>Trang chủ</a></li>
-                        <li><a href="#">Danh mục</a>
-                            <ul class="drop">
-                                <li><a href="products.html">ARDUINO</a></li>
-                                <li><a href="products.html">IC</a></li>
-                                <li><a href="products.html">VI ĐIỀU KHIỂN</a></li>
-                                <li><a href="products.html">LED</a></li>
-                                <li><a href="products.html">CẢM BIẾN</a></li>
-                                <li><a href="products.html">MÀN HÌNH</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="products.html">Về chúng tôi</a></li>
-                        <li><a href="products.html">Liên hệ</a></li>
-                        <div class="search" style="margin-top: 20px; float: right;">
-                            <form>
-                                <input type="text" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}">
-                                <input type="submit" value="">
-                            </form>
-                        </div>
-                    </ul>
-
-                    <script type="text/javascript" src="js/nav.js"></script>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!---->
+    <?php include 'header.php'?>
     <div class="container">
         <div class="single">
             <div class="row">
@@ -216,12 +125,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <div class="available">
                                     Số lượng:
                                     <select>
-								<option>1</option>
-								<option>2</option>
-								<option>3</option>
-								<option>4</option>
-								<option>5</option>
-							</select>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
                                 </div>
                                 <p>Arduino Uno R3 DIP là dòng Arduino thế hệ thứ 3 cũng giống như các phiên bản trước đây giúp người dùng dễ dàng tiếp cận với lập trình để tạo ra phần cứng có những tính năng mong muốn một cách nhanh chóng với chi phí hợp
                                     lý. Hiện nay nó đã được biết đến một cách quen thuộc tại Việt Nam và sức mạnh của chúng ngày càng được chứng tỏ theo thời gian với vô vàn các ứng dụng mở (open source) độc đáo được chia sẻ rộng rãi.</p>
@@ -318,45 +227,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </div>
     </div>
     <!---->
-    <div class="footer">
-        <div class="footer-middle">
-            <div class="container">
-                <div class="footer-middle-in" style="width:33.33% !important;">
-                    <h6>GIỚI THIỆU</h6>
-                    <p>Suspendisse sed accumsan risus. Curabitur rhoncus, elit vel tincidunt elementum, nunc urna tristique nisi, in interdum libero magna tristique ante. adipiscing varius. Vestibulum dolor lorem.</p>
-                </div>
-                <div class="footer-middle-in" style="width:33.33% !important;">
-                    <h6>LIÊN HỆ</h6>
-                    <ul>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Delivery Information</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms & Conditions</a></li>
-                    </ul>
-                </div>
-                <div class="footer-middle-in" style="width:33.33% !important;">
-                    <h6>THEO DÕI CHÚNG TÔI TRÊN</h6>
-                    <ul>
-                        <li><a href="contact.html">Contact Us</a></li>
-                        <li><a href="#">Returns</a></li>
-                        <li><a href="#">Site Map</a></li>
-                    </ul>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-        </div>
-        <p class="footer-class">Copyright © <a href="" target="_blank">W3layouts</a> </p>
-        <script type="text/javascript">
-            $(document).ready(function() {
-                $().UItoTop({
-                    easingType: 'easeOutQuart'
-                });
-
-            });
-        </script>
-        <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
-
-    </div>
+    <?php include 'footer.php'?>
 </body>
 
 </html>
