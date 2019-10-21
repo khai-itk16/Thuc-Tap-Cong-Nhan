@@ -11,6 +11,7 @@
     <!-- Custom Theme files -->
     <!--theme-style-->
     <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" href="css/style1.css">
     <!--//theme-style-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -61,45 +62,44 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </script>
 </head>
 <body>
-    <!---->
-    <div class="footer">
-        <div class="footer-middle">
-            <div class="container">
-                <div class="footer-middle-in" style="width:33.33% !important;">
-                    <h6>GIỚI THIỆU</h6>
-                    <p>Suspendisse sed accumsan risus. Curabitur rhoncus, elit vel tincidunt elementum, nunc urna tristique nisi, in interdum libero magna tristique ante. adipiscing varius. Vestibulum dolor lorem.</p>
-                </div>
-                <div class="footer-middle-in"  style="width:33.33% !important;">
-                    <h6>LIÊN HỆ</h6>
-                    <ul>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Delivery Information</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms & Conditions</a></li>
-                    </ul>
-                </div>
-                <div class="footer-middle-in"  style="width:33.33% !important;">
-                    <h6>THEO DÕI CHÚNG TÔI TRÊN</h6>
-                    <ul>
-                        <li><a href="contact.html">Contact Us</a></li>
-                        <li><a href="#">Returns</a></li>
-                        <li><a href="#">Site Map</a></li>
-                    </ul>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-        </div>
-        <p class="footer-class">Copyright ©  <a href="" target="_blank">W3layouts</a> </p>
-        <script type="text/javascript">
-            $(document).ready(function() {
-                $().UItoTop({
-                    easingType: 'easeOutQuart'
-                });
-
-            });
-        </script>
-        <a href="#" id="toTop"> <span id="toTopHover" style="opacity: 1;"> </span></a>
-
-    </div>
+    <?php include 'header.php';?>
+    <div class="container">
+		<div class="account">
+			<h2 class="account-in">ĐĂNG KÝ TÀI KHOẢN</h2>
+				<form>
+				<div class="col-md-12">
+					<span class="col-md-2">Tài khoản*</span>
+					<input class="col-md-10" type="text">
+				</div> 
+                <div class="col-md-12">
+					<span class="col-md-2">Họ và tên*</span>
+					<input class="col-md-10" type="text">
+				</div>
+                <div class="col-md-12">
+					<span class="col-md-2">Địa chỉ*</span>
+					<input class="col-md-10" type="text">
+				</div> 
+                <div class="col-md-12"> 	
+					<span class="mail col-md-2" >Số điện thoại*</span>
+					<input type="text" class="col-md-10"> 
+				</div>	
+				<div class="col-md-12"> 	
+					<span class="mail col-md-2" >Email*</span>
+					<input type="text" class="col-md-10"> 
+				</div>
+				<div class="col-md-12"> 
+					<span class="word col-md-2">Mật khẩu*</span>
+					<input type="password" class="col-md-10">
+				</div>	
+                <div class="col-md-12"> 
+					<span class="word col-md-2">Nhập lại mật khẩu*</span>
+					<input type="password" class="col-md-10">
+				</div>				
+					<input type="submit" value="Đăng ký"> 
+				</form>
+		</div>
+	</div>
+		<!---->
+    <?php include 'footer.php';?>
 </body>
 </html>

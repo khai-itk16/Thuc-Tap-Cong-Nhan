@@ -1,0 +1,140 @@
+h3.future:after{ 
+	content: "";
+	background: url(../images/line.png)0px 0px;
+	width: 100% !important;
+	height: 10px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+ul.callbacks_tabs.callbacks1_tabs {
+    bottom: 5% !important;
+    right: 10% !important;
+    left: unset !important;
+}
+
+#toTop {
+    display: block !important;
+    visibility: hidden;
+    z-index: 10000 !important;
+}
+
+.fixed {
+    top: 0;
+    z-index: 1000;
+    position: fixed;
+    transition: 0.4s;
+    animation-duration: 1s;
+}
+
+h2.account-in:after {
+    width: 100% !important;
+}
+
+.account input[type="submit"] {
+    margin-left: 12em !important;
+}
+
+.content-header {
+    color: #ee4d2d;
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: 400;
+    width: 100%;
+    float: left;
+    text-align: center;
+}
+
+.cart-item-content {
+    width: 100%;
+    height: 110px;
+    line-height: 90px;
+    position: relative;
+    float: left;
+    text-align: center;
+}
+
+.cart-item-content:after {
+    content: '';
+    display: block;
+    border-bottom: 1px solid brown;
+    width: 100%;
+    bottom: 10px;
+    position: absolute;
+}
+
+.img-content img {
+    width: 80px;
+    height: 80px;
+}
+
+.count-content .minus,
+.count-content .plus{
+    height: 25px;
+    width: 30px;
+    line-height: 15px;
+}
+
+
+.delete-item i {
+    font-size: 25px;
+    color: red;
+}
+
+.quatity-status {
+    width: 30px;
+    height: 25px;
+    text-align: center;
+    border: none;
+}
+
+.cart-order {
+    display: flex;
+    justify-content: space-around;
+    height: fit-content;
+    margin-bottom: 10px;
+    margin-left: 35%;
+    font-weight: bold;
+}
+
+.cart-order button {
+   width: fit-content;
+   height: fit-content;
+   padding: 0;
+   margin: 0;
+   border: none;
+}
+
+.cart-order input[type="submit"] {
+    width: 100px;
+    height: 50px;
+    background: red;
+    color: white;
+    text-align: center;
+    border: 1px solid;
+}
+
+.cart-order a,
+.cart-order a:hover,
+.cart-order a:active {
+    display: block;
+    width: 180px;
+    height: 50px;
+    background: red;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+}
+
+.total-status,
+.price-status {
+    width: 60%;
+    border: none;
+    text-align: right;
+}
+
+.total-status:focus,
+.price-status:focus {
+    outline: none;
+}

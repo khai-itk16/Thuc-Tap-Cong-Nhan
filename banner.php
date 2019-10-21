@@ -11,6 +11,7 @@
     <!-- Custom Theme files -->
     <!--theme-style-->
     <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" href="css/style1.css">
     <!--//theme-style-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -40,15 +41,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             });
         });
     </script>
-    <!--slider-script-->
-    <script src="js/responsiveslides.min.js"></script>
+   <!--slider-script-->
+   <script src="js/responsiveslides.min.js"></script>
     <script>
         $(function() {
             $("#slider1").responsiveSlides({
                 auto: true,
                 speed: 500,
                 namespace: "callbacks",
-                pager: true, 
+                pager: true,
             });
         });
     </script>
@@ -90,15 +91,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         </li>
                     </ul>
                 </div>
-
-                <div class="banner-bottom">
-                    <div class="banner-matter">
-                        <p>Childish Gambino - Camp Now Available for just $9.99</p>
-                        <a href="single.html" class="hvr-shutter-in-vertical ">Purchase</a>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-            </div>
             <!-- //slider-->
         </div>
     </div>
