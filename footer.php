@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery.min.js"></script>
@@ -62,6 +63,32 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </head>
 <body>
     <!---->
+    <div class="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <i class="far fa-check-circle"></i>
+                    <div class="services-name">
+                        <h4>ĐẢM BẢO CHẤT LƯỢNG SẢN PHẨM</h4>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <i class="fas fa-undo"></i>
+                    <div class="services-name">
+                        <h4>ĐỔI MỚI TRONG 15 NGÀY</h4>
+                    </div>
+
+                </div>
+                <div class="col-md-4">
+                    <i class="fas fa-shipping-fast"></i>
+                    <div class="services-name">
+                        <h4>GIAO HÀNG NHANH CHÓNG</h4>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="footer">
         <div class="footer-middle">
             <div class="container">
