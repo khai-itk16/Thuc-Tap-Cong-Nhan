@@ -1231,7 +1231,6 @@ h2.products-in:after {
     background: linear-gradient(to bottom, rgba(252, 94, 53, 1) 55%, rgba(252, 94, 53, 1) 55%, rgba(233, 71, 34, 1) 100%);
     color: #fff;
 }
-<<<<<<< HEAD
 
 /* contactus */
 .contactus iframe{
@@ -1251,13 +1250,16 @@ h2.products-in:after {
     width: 100%;
     padding: 15px;
     border: 2px solid #fb5e33;
+    border-radius: 5px;
 }
 .info form input{
+    border-radius: 5px;
     width: 100%;
     padding: 15px;
     border: 2px solid #fb5e33;
 }
 .contactus .btn-submit{
+    border-radius: 5px;
     background: white;
     position: relative;
     overflow: hidden;
@@ -1333,8 +1335,6 @@ h2.products-in:after {
     background: #eee;
     padding: 15px 0px
 }
-=======
->>>>>>> 76c042a24d2c04a5f6fdc601899e3c40a6e922b5
 /*--single--*/
 
 .img-product img {

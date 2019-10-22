@@ -98,7 +98,6 @@
                     <h4><i class="fas fa-map-marker-alt"></i>Địa chỉ: K05/47 Lê Trọng Tấn, Thành phố Đà Nẵng</h4>
                     <h4><i class="fas fa-phone-volume"></i>Số điện thoại: 0335941792</h4>
                     <h4><i class="fas fa-envelope"></i>Email: giakhanh9890@gmail.com</h4>
-<<<<<<< HEAD
                     <h4><i class="fab fa-facebook-square"></i>facebook.com/page/dientuk2dmc</h4>
                     <form class="form-lienhe" action="">
                         <div class="row">
@@ -120,23 +119,6 @@
                         
                         </div>
                     </form>
-=======
-                    <div class="row">
-                        <form class="form-lienhe" action="">
-                            <div class="col-md-12">
-                                <textarea placeholder="Nội dung thắc mắc" name="" id="" cols="100%" rows="4" width="100%"></textarea>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-9">
-                            <input type="gmail" width="100%" placeholder="Nhập email của bạn">
-                        </div>
-                        <div class="col-md-3">
-                            <input class="btn-submit" type="submit" value="Xác nhận">
-                        </div>
-                    </div>
->>>>>>> 76c042a24d2c04a5f6fdc601899e3c40a6e922b5
                 </div>
 
             </div>
