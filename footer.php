@@ -41,18 +41,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             });
         });
     </script>
-    <!--slider-script-->
-    <script src="js/responsiveslides.min.js"></script>
-    <script>
-        $(function() {
-            $("#slider1").responsiveSlides({
-                auto: true,
-                speed: 500,
-                namespace: "callbacks",
-                pager: true,
-            });
-        });
-    </script>
     <!--//slider-script-->
     <script>
         $(document).ready(function(c) {
@@ -137,7 +125,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
             });
         </script>
-        <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+        <a href="#" id="toTop"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 
     </div>
 </body>

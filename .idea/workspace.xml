@@ -43,6 +43,24 @@
       </list>
     </option>
   </component>
+  <component name="RunManager" selected="PHPUnit.Thuc-Tap-Cong-Nhan">
+    <configuration name="Thuc-Tap-Cong-Nhan" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner directory="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="banner.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/banner.php">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/index.php">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHPUnit.Thuc-Tap-Cong-Nhan" />
+        <item itemvalue="PHP Script.index.php" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -55,7 +73,8 @@
       <updated>1571409487982</updated>
       <workItem from="1571409495491" duration="1029000" />
       <workItem from="1571447357037" duration="132000" />
-      <workItem from="1571538600886" duration="251000" />
+      <workItem from="1571538600886" duration="1972000" />
+      <workItem from="1571669670181" duration="2115000" />
     </task>
     <task id="LOCAL-00001" summary="add folder css, images, js">
       <created>1571409727075</created>
@@ -71,7 +90,28 @@
       <option name="project" value="LOCAL" />
       <updated>1571538815675</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add footer header">
+      <created>1571539053661</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1571539053661</updated>
+    </task>
+    <task id="LOCAL-00004" summary="khai add file: login, register, gio-hang, don-hang">
+      <created>1571670346526</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1571670346526</updated>
+    </task>
+    <task id="LOCAL-00005" summary="khai add file: login, register, gio-hang">
+      <created>1571671487879</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1571671487879</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -80,6 +120,23 @@
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="range">
+                    <value>
+                      <list>
+                        <option value="HEAD..origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State>
@@ -89,10 +146,17 @@
         </entry>
       </map>
     </option>
+    <option name="OPEN_TABS">
+      <set>
+        <option value="1" />
+      </set>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add folder css, images, js" />
     <MESSAGE value="add footer header" />
-    <option name="LAST_COMMIT_MESSAGE" value="add footer header" />
+    <MESSAGE value="khai add file: login, register, gio-hang, don-hang" />
+    <MESSAGE value="khai add file: login, register, gio-hang" />
+    <option name="LAST_COMMIT_MESSAGE" value="khai add file: login, register, gio-hang" />
   </component>
 </project>

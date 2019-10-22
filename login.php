@@ -41,18 +41,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             });
         });
     </script>
-   <!--slider-script-->
-   <script src="js/responsiveslides.min.js"></script>
-    <script>
-        $(function() {
-            $("#slider1").responsiveSlides({
-                auto: true,
-                speed: 500,
-                namespace: "callbacks",
-                pager: true,
-            });
-        });
-    </script>
     <!--//slider-script-->
     <script>
         $(document).ready(function(c) {
@@ -74,52 +62,28 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </script>
 </head>
 <body>
-    <div class="banner-mat">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="banner">
-
-<<<<<<< HEAD
-                    <!-- Slideshow 4 -->
-                    <div class="slider">
-                        <ul class="rslides" id="slider1">
-                            <li><img src="images/banner.jpg" alt="">
-                            </li>
-                            <li><img src="images/banner1.jpg" alt="">
-                            </li>
-                            <li><img src="images/banner.jpg" alt="">
-                            </li>
-                            <li><img src="images/banner2.jpg" alt="">
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="banner-bottom">
-                        <div class="banner-matter">
-                            <p>Childish Gambino - Camp Now Available for just $9.99</p>
-                            <a href="single.html" class="hvr-shutter-in-vertical ">Purchase</a>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                </div>
-            </div>
-=======
-                <!-- Slideshow 4 -->
-                <div class="slider">
-                    <ul class="rslides" id="slider1">
-                        <li><img src="images/banner.jpg" alt="">
-                        </li>
-                        <li><img src="images/banner1.jpg" alt="">
-                        </li>
-                        <li><img src="images/banner.jpg" alt="">
-                        </li>
-                        <li><img src="images/banner2.jpg" alt="">
-                        </li>
-                    </ul>
-                </div>
->>>>>>> 76c042a24d2c04a5f6fdc601899e3c40a6e922b5
-            <!-- //slider-->
-        </div>
-    </div>
+    <?php include 'header.php';?>
+    <div class="container">
+		<div class="account">
+			<h2 class="account-in">ĐĂNG NHẬP TÀI KHOẢN</h2>
+				<form>
+				<div class="col-md-12">
+					<span class="col-md-2">Tài khoản*</span>
+					<input class="col-md-10" type="text">
+				</div> 	
+				<div class="col-md-12"> 	
+					<span class="mail col-md-2" >Email*</span>
+					<input type="text" class="col-md-10"> 
+				</div>
+				<div class="col-md-12"> 
+					<span class="word col-md-2">Mật khẩu*</span>
+					<input type="password" class="col-md-10">
+				</div>				
+					<input type="submit" value="Login"> 
+				</form>
+		</div>
+	</div>
+		<!---->
+    <?php include 'footer.php';?>
 </body>
 </html>

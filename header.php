@@ -13,6 +13,7 @@
     <!-- Custom Theme files -->
     <!--theme-style-->
     <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" href="./css/style1.css">
     <!--//theme-style-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -42,19 +43,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             });
         });
     </script>
-    <!--slider-script-->
-    <script src="js/responsiveslides.min.js"></script>
-    <script>
-        $(function() {
-            $("#slider1").responsiveSlides({
-                auto: true,
-                speed: 500,
-                namespace: "callbacks",
-                pager: true,
-            });
-        });
-    </script>
-    <!--//slider-script-->
     <script>
         $(document).ready(function(c) {
             $('.alert-close').on('click', function(c) {
@@ -73,6 +61,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             });
         });
     </script>
+    <script src="./js/custom.js"></script>
 </head>
 
 <body>
@@ -86,8 +75,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </div>
                     <div class="header-in">
                         <ul class="icon1 sub-icon1">
-                            <li><a href="wishlist.html">Đăng ký</a> </li>
-                            <li><a href="account.html">Đăng nhập</a></li>
+                            <li><a href="register.php">Đăng ký</a> </li>
+                            <li><a href="login.php">Đăng nhập</a></li>
                             <li>
                                 <div class="cart">
                                     <a href="#" class="cart-in"> </a>
@@ -155,7 +144,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <li><a href="contactus.php">Liên hệ</a></li>
                         <div class="search" style="margin-top: 20px; float: right;">
                             <form>
-                                <input type="text" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}">
+                                <input type="text" placeholder="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}">
                                 <input type="submit" value="">
                             </form>
                         </div>
@@ -168,5 +157,4 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </div>
 
 </body>
-
 </html>

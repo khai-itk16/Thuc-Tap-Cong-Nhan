@@ -84,57 +84,56 @@
         <div class="container">
             <div class="row ">
                 <div class="col-md-12 title">
-                    <h2><i class="fas fa-search"></i>            KẾT QUẢ TÌM KIẾM CHO: IC</h2>
+                    <h2><i class="fas fa-search"></i> KẾT QUẢ TÌM KIẾM CHO: IC</h2>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-3">
-                        <div class="col-md1">
-                            <img src="images/pic8.jpg" alt="" />
-                            <div class="top-content">
-                                <h5>ARDUINO NANO</h5>
-                                <div class="white clearfix">
-                                    <a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
-                                    <div class="price">200,000 VND</div>
-                                </div>
+                    <div class="col-md1">
+                        <img src="images/pic8.jpg" alt="" />
+                        <div class="top-content">
+                            <h5>ARDUINO NANO</h5>
+                            <div class="white clearfix">
+                                <a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
+                                <div class="price">200,000 VND</div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
-                        <div class="col-md1">
-                            <img src="images/pic8.jpg" alt="" />
-                            <div class="top-content">
-                                <h5>ARDUINO NANO</h5>
-                                <div class="white clearfix">
-                                    <a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
-                                    <div class="price">200,000 VND</div>
-                                </div>
-                            </div>                            
-                        </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="col-md1">
+                        <img src="images/pic8.jpg" alt="" />
+                        <div class="top-content">
+                            <h5>ARDUINO NANO</h5>
+                            <div class="white clearfix">
+                                <a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
+                                <div class="price">200,000 VND</div>
+                            </div>
+                        </div>                            
                     </div>
-                    <div class="col-md-3">
-                        <div class="col-md1">
-                            <img src="images/pic8.jpg" alt="" />
-                            <div class="top-content">
-                                <h5>ARDUINO NANO</h5>
-                                <div class="white clearfix">
-                                    <a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
-                                    <div class="price">200,000 VND</div>
-                                </div>
-                            </div>                            
-                        </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="col-md1">
+                        <img src="images/pic8.jpg" alt="" />
+                        <div class="top-content">
+                            <h5>ARDUINO NANO</h5>
+                            <div class="white clearfix">
+                                <a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
+                                <div class="price">200,000 VND</div>
+                            </div>
+                        </div>                            
                     </div>
-                    <div class="col-md-3">
-                        <div class="col-md1">
-                            <img src="images/pic8.jpg" alt="" />
-                            <div class="top-content">
-                                <h5>ARDUINO NANO</h5>
-                                <div class="white clearfix">
-                                    <a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
-                                    <div class="price">200,000 VND</div>
-                                </div>
-                            </div>                            
-                        </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="col-md1">
+                        <img src="images/pic8.jpg" alt="" />
+                        <div class="top-content">
+                            <h5>ARDUINO NANO</h5>
+                            <div class="white clearfix">
+                                <a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
+                                <div class="price">200,000 VND</div>
+                            </div>
+                        </div>                            
                     </div>
                 </div>
             </div>
