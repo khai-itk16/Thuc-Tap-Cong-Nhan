@@ -904,7 +904,7 @@ ul.callbacks_tabs.callbacks1_tabs {
 }
 
 .banner {
-    padding: 3em 1em;
+    padding: 3em 0px;
 }
 
 .purchase {
@@ -2248,7 +2248,6 @@ ul.start li a i.next {
     .logo {
         width: 90%;
     }
-<<<<<<< HEAD
     .header-top-in {
         padding: 1em 1em;
     }
@@ -2261,97 +2260,41 @@ ul.start li a i.next {
     .hvr-shutter-in-vertical {
         font-size: 0.8em;
     }
-=======
-
-    .header-top-in {
-        padding: 1em 1em;
-    }
-
-    a.toggleMenu {
-        font-size: 1.1em;
-    }
-
-    .header-bottom {
-        height: 57px;
-    }
-
-    .hvr-shutter-in-vertical {
-        font-size: 0.8em;
-    }
-
->>>>>>> 76c042a24d2c04a5f6fdc601899e3c40a6e922b5
     .banner-bottom {
         padding: 0.4em 1em;
         border-bottom: 4px solid #8dcac8;
     }
-<<<<<<< HEAD
     ul.callbacks_tabs.callbacks1_tabs {
         bottom: -28%;
     }
     .header-top-in {
         padding: 1em 0.5em;
     }
-=======
-
-    ul.callbacks_tabs.callbacks1_tabs {
-        bottom: -28%;
-    }
-
-    .header-top-in {
-        padding: 1em 0.5em;
-    }
-
->>>>>>> 76c042a24d2c04a5f6fdc601899e3c40a6e922b5
     .h_menu4,
     h3.future {
         padding: 0 0.5em;
     }
-<<<<<<< HEAD
     .banner {
         padding: 1.5em 0.5em;
     }
     .banner-mat {
         min-height: 184px;
     }
-=======
-
-    .banner {
-        padding: 1.5em 0.5em;
-    }
-
-    .banner-mat {
-        min-height: 184px;
-    }
-
->>>>>>> 76c042a24d2c04a5f6fdc601899e3c40a6e922b5
     h3.future:after,
     h2.contact-in:after,
     h2.account-in:after {
         width: 64%;
     }
-<<<<<<< HEAD
     h2.products-in:after {
         width: 60%;
     }
     .md-col {
         padding: 0 0.5em 1em;
     }
-=======
-
-    h2.products-in:after {
-        width: 60%;
-    }
-
-    .md-col {
-        padding: 0 0.5em 1em;
-    }
-
->>>>>>> 76c042a24d2c04a5f6fdc601899e3c40a6e922b5
     .top-content h5 {
         font-size: 0.8em;
         padding: 0.5em 0 1em;
     }
-<<<<<<< HEAD
     p.dollar {
         display: none;
     }
@@ -2367,34 +2310,10 @@ ul.start li a i.next {
     .footer-in {
         padding: 0 0.5em 1em;
     }
-=======
-
-    p.dollar {
-        display: none;
-    }
-
-    .content-top-in {
-        padding: 1em 0;
-    }
-
-    ul.start {
-        padding: 0em 0 1em 0em;
-    }
-
-    ul.start li:nth-child(6) {
-        display: none;
-    }
-
-    .footer-in {
-        padding: 0 0.5em 1em;
-    }
-
->>>>>>> 76c042a24d2c04a5f6fdc601899e3c40a6e922b5
     .footer-in p {
         height: 50px;
         overflow: hidden;
     }
-<<<<<<< HEAD
     .footer-top {
         height: 316px;
     }
@@ -2404,63 +2323,31 @@ ul.start li a i.next {
     .footer-class {
         font-size: 0.9em;
     }
-=======
-
-    .footer-top {
-        height: 316px;
-    }
-
-    .footer-middle {
-        padding: 2em 0 0;
-    }
-
-    .footer-class {
-        font-size: 0.9em;
-    }
-
->>>>>>> 76c042a24d2c04a5f6fdc601899e3c40a6e922b5
     .products,
     .contact,
     .single {
         padding: 1.5em 0;
     }
-<<<<<<< HEAD
     h2.products-in {
         padding: 0 1em 1em;
     }
-=======
-
-    h2.products-in {
-        padding: 0 1em 1em;
-    }
-
->>>>>>> 76c042a24d2c04a5f6fdc601899e3c40a6e922b5
     .compare {
         width: 100px;
         height: 88px;
         padding: 1.5em 0 0;
         left: 17px;
     }
-<<<<<<< HEAD
-=======
-
->>>>>>> 76c042a24d2c04a5f6fdc601899e3c40a6e922b5
     .compare span {
         font-size: 0.63em;
         padding: 0.4em 0;
         width: 79%;
     }
-<<<<<<< HEAD
-=======
-
->>>>>>> 76c042a24d2c04a5f6fdc601899e3c40a6e922b5
     .in-compare {
         width: 161px;
         height: 140px;
         padding: 2.7em 0 0;
         left: 41px;
     }
-<<<<<<< HEAD
     .men {
         margin: 0 13% 0;
     }
@@ -2470,48 +2357,20 @@ ul.start li a i.next {
     .map iframe {
         min-height: 121px;
     }
-=======
-
-    .men {
-        margin: 0 13% 0;
-    }
-
-    .in-compare span {
-        font-size: 0.8em;
-    }
-
-    .map iframe {
-        min-height: 121px;
-    }
-
->>>>>>> 76c042a24d2c04a5f6fdc601899e3c40a6e922b5
     ul.social li span,
     ul.social li a {
         font-size: 0.79em;
     }
-<<<<<<< HEAD
     .contact-top p {
         font-size: 0.9em;
     }
     .contact-top {
         padding: 0 0.5em;
     }
-=======
-
-    .contact-top p {
-        font-size: 0.9em;
-    }
-
-    .contact-top {
-        padding: 0 0.5em;
-    }
-
->>>>>>> 76c042a24d2c04a5f6fdc601899e3c40a6e922b5
     .single-top {
         width: 100%;
         padding: 0 0.5em;
     }
-<<<<<<< HEAD
     .single-top-in {
         padding: 1em 0.5em 0;
     }
@@ -2527,34 +2386,10 @@ ul.start li a i.next {
     span.add-to {
         font-size: 1.4em;
     }
-=======
-
-    .single-top-in {
-        padding: 1em 0.5em 0;
-    }
-
-    .single-para h4 {
-        font-size: 1.2em;
-    }
-
-    .para-grid {
-        padding: 1em 0;
-    }
-
-    .single-para h5 {
-        font-size: 1.2em;
-    }
-
-    span.add-to {
-        font-size: 1.4em;
-    }
-
->>>>>>> 76c042a24d2c04a5f6fdc601899e3c40a6e922b5
     .single-para p {
         height: 70px;
         overflow: hidden;
     }
-<<<<<<< HEAD
     .top-single {
         padding: 0.5em;
     }
@@ -2573,56 +2408,17 @@ ul.start li a i.next {
     .account {
         padding: 1.5em 0.5em;
     }
-=======
-
-    .top-single {
-        padding: 0.5em;
-    }
-
-    .single-bottom h4 {
-        font-size: 1.1em;
-    }
-
-    .grid-product {
-        width: 50%;
-    }
-
-    a.elit {
-        font-size: 1em;
-    }
-
-    span.price-in {
-        font-size: 1em;
-    }
-
-    .account {
-        padding: 1.5em 0.5em;
-    }
-
->>>>>>> 76c042a24d2c04a5f6fdc601899e3c40a6e922b5
     .account span {
         font-size: 1em;
         padding-right: 0em;
         margin-bottom: 0.5em;
     }
-<<<<<<< HEAD
     .account div {
         padding: 0.5em 0;
     }
     .account input[type="submit"] {
         margin: 0.5em 0 0;
     }
-=======
-
-    .account div {
-        padding: 0.5em 0;
-    }
-
-    .account input[type="submit"] {
-        margin: 0.5em 0 0;
-    }
-
->>>>>>> 76c042a24d2c04a5f6fdc601899e3c40a6e922b5
     .account input[type="text"],
     .account textarea,
     .account input[type="password"],
@@ -2630,15 +2426,10 @@ ul.start li a i.next {
     .contact-top div textarea {
         padding: 0.5em;
     }
-<<<<<<< HEAD
-=======
-
->>>>>>> 76c042a24d2c04a5f6fdc601899e3c40a6e922b5
     .wish-list {
         width: 95%;
         margin: 4em 0.5em;
     }
-<<<<<<< HEAD
     .wish-list h6 {
         font-size: 1em;
     }
@@ -2651,44 +2442,13 @@ ul.start li a i.next {
     p.cart {
         font-size: 1em;
     }
-=======
-
-    .wish-list h6 {
-        font-size: 1em;
-    }
-
-    h4.title {
-        font-size: 1.3em;
-    }
-
-    .check-out {
-        padding: 4em 0.5em;
-    }
-
-    p.cart {
-        font-size: 1em;
-    }
-
->>>>>>> 76c042a24d2c04a5f6fdc601899e3c40a6e922b5
     h2.contact-in,
     h2.products-in {
         padding: 0 0.5em 1em;
     }
-<<<<<<< HEAD
     .contact-top div textarea {
         resize: none;
     }
     .contact-top input[type="submit"] {
         width: 30%;
     }
-=======
-
-    .contact-top div textarea {
-        resize: none;
-    }
-
-    .contact-top input[type="submit"] {
-        width: 30%;
-    }
-}
->>>>>>> 76c042a24d2c04a5f6fdc601899e3c40a6e922b5

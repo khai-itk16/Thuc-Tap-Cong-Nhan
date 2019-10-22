@@ -12,6 +12,7 @@
     <script src="js/jquery.min.js"></script>
     <!-- Custom Theme files -->
     <!--theme-style-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" type="text/css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
     <link rel="stylesheet" href="./css/style1.css">
     <!--//theme-style-->

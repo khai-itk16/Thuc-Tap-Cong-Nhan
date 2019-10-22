@@ -1,9 +1,9 @@
 $(document).ready(function () {
     $(document).scroll(function() {
         if ($(document).scrollTop() > 94){
-          $(".header-bottom").addClass("fixed animated fadeIn");
+          $(".header-bottom").addClass("fixed animated fadeInDown");
         } else {
-          $(".header-bottom").removeClass("fixed animated fadeIn");
+          $(".header-bottom").removeClass("fixed animated fadeInDown");
         } 
 
         if ($(document).scrollTop() < 8){

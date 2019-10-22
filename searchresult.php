@@ -90,7 +90,7 @@
             <div class="row">
                 <div class="col-md-3">
                     <div class="col-md1">
-                        <img src="images/pic8.jpg" alt="" />
+                        <a href="single.php"><img src="images/pic8.jpg" alt="" /></a>
                         <div class="top-content">
                             <h5>ARDUINO NANO</h5>
                             <div class="white clearfix">
@@ -102,7 +102,7 @@
                 </div>
                 <div class="col-md-3">
                     <div class="col-md1">
-                        <img src="images/pic8.jpg" alt="" />
+                        <a href="single.php"><img src="images/pic8.jpg" alt="" /></a>
                         <div class="top-content">
                             <h5>ARDUINO NANO</h5>
                             <div class="white clearfix">
@@ -114,7 +114,7 @@
                 </div>
                 <div class="col-md-3">
                     <div class="col-md1">
-                        <img src="images/pic8.jpg" alt="" />
+                        <a href="single.php"><img src="images/pic8.jpg" alt="" /></a>
                         <div class="top-content">
                             <h5>ARDUINO NANO</h5>
                             <div class="white clearfix">
@@ -126,7 +126,7 @@
                 </div>
                 <div class="col-md-3">
                     <div class="col-md1">
-                        <img src="images/pic8.jpg" alt="" />
+                        <a href="single.php"><img src="images/pic8.jpg" alt="" /></a>
                         <div class="top-content">
                             <h5>ARDUINO NANO</h5>
                             <div class="white clearfix">

@@ -79,7 +79,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="row">
                 <div class="banner">
 
-<<<<<<< HEAD
                     <!-- Slideshow 4 -->
                     <div class="slider">
                         <ul class="rslides" id="slider1">
@@ -103,21 +102,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </div>
                 </div>
             </div>
-=======
-                <!-- Slideshow 4 -->
-                <div class="slider">
-                    <ul class="rslides" id="slider1">
-                        <li><img src="images/banner.jpg" alt="">
-                        </li>
-                        <li><img src="images/banner1.jpg" alt="">
-                        </li>
-                        <li><img src="images/banner.jpg" alt="">
-                        </li>
-                        <li><img src="images/banner2.jpg" alt="">
-                        </li>
-                    </ul>
-                </div>
->>>>>>> 76c042a24d2c04a5f6fdc601899e3c40a6e922b5
             <!-- //slider-->
         </div>
     </div>

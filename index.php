@@ -68,118 +68,102 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="container">
 			<div class="content">
 				<div class="content-top">
-					<h3 class="future">SẢN PHẨM MỚI</h3>
+					<h3 class="future">SẢN PHẨM MUA NHIỀU</h3>
 					<div class="content-top-in">
 						<div class="col-md-3 md-col" style="padding: 10px;">
 							<div class="col-md">
-								<a href="single.html"><img  src="images/LCD.jpg" alt="" /></a>	
+								<a href="single.php"><img src="images/pic8.jpg" alt="" /></a>
 								<div class="top-content">
-									<h5><a href="single.html">LCD 1602 XANH LÁ</a></h5>
-									<div class="white">
-										<a href="single.html" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2 ">ADD TO CART</a>
-										<p class="dollar"><span class="in-dollar">VND</span><span>29.000</span></p>
-										<div class="clearfix"></div>
+									<h5>ARDUINO NANO</h5>
+									<div class="white clearfix">
+										<a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
+										<div class="price">200,000 VND</div>
 									</div>
-
-								</div>							
+								</div>
 							</div>
                         </div>
                         
 						<div class="col-md-3 md-col" style="padding: 10px;">
 							<div class="col-md">
-								<a href="single.html"><img  src="images/LCD.jpg" alt="" /></a>	
+								<a href="single.php"><img src="images/pic8.jpg" alt="" /></a>
 								<div class="top-content">
-									<h5><a href="single.html">LCD 1602 XANH LÁ</a></h5>
-									<div class="white">
-										<a href="single.html" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2 ">ADD TO CART</a>
-										<p class="dollar"><span class="in-dollar">VND</span><span>29.000</span></p>
-										<div class="clearfix"></div>
+									<h5>ARDUINO NANO</h5>
+									<div class="white clearfix">
+										<a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
+										<div class="price">200,000 VND</div>
 									</div>
-
-								</div>							
+								</div>						
 							</div>
 						</div>
 						<div class="col-md-3 md-col" style="padding: 10px;">
 							<div class="col-md">
-								<a href="single.html"><img  src="images/LCD.jpg" alt="" /></a>	
+								<a href="single.php"><img src="images/pic8.jpg" alt="" /></a>
 								<div class="top-content">
-									<h5><a href="single.html">LCD 1602 XANH LÁ</a></h5>
-									<div class="white">
-										<a href="single.html" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2 ">ADD TO CART</a>
-										<p class="dollar"><span class="in-dollar">VND</span><span>29.000</span></p>
-										<div class="clearfix"></div>
+									<h5>ARDUINO NANO</h5>
+									<div class="white clearfix">
+										<a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
+										<div class="price">200,000 VND</div>
 									</div>
-
-								</div>							
+								</div>						
 							</div>
 						</div>
                         <div class="col-md-3 md-col" style="padding: 10px;">
 							<div class="col-md">
-								<a href="single.html"><img  src="images/LCD.jpg" alt="" /></a>	
+								<a href="single.php"><img src="images/pic8.jpg" alt="" /></a>
 								<div class="top-content">
-									<h5><a href="single.html">LCD 1602 XANH LÁ</a></h5>
-									<div class="white">
-										<a href="single.html" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2 ">ADD TO CART</a>
-										<p class="dollar"><span class="in-dollar">VND</span><span>29.000</span></p>
-										<div class="clearfix"></div>
+									<h5>ARDUINO NANO</h5>
+									<div class="white clearfix">
+										<a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
+										<div class="price">200,000 VND</div>
 									</div>
-
 								</div>							
 							</div>
                         </div>
                         <div class="col-md-3 md-col" style="padding: 10px;">
 							<div class="col-md">
-								<a href="single.html"><img  src="images/LCD.jpg" alt="" /></a>	
+								<a href="single.php"><img src="images/pic8.jpg" alt="" /></a>
 								<div class="top-content">
-									<h5><a href="single.html">LCD 1602 XANH LÁ</a></h5>
-									<div class="white">
-										<a href="single.html" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2 ">ADD TO CART</a>
-										<p class="dollar"><span class="in-dollar">VND</span><span>29.000</span></p>
-										<div class="clearfix"></div>
+									<h5>ARDUINO NANO</h5>
+									<div class="white clearfix">
+										<a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
+										<div class="price">200,000 VND</div>
 									</div>
-
 								</div>							
 							</div>
                         </div>
                         <div class="col-md-3 md-col" style="padding: 10px;">
 							<div class="col-md">
-								<a href="single.html"><img  src="images/LCD.jpg" alt="" /></a>	
+								<a href="single.php"><img src="images/pic8.jpg" alt="" /></a>
 								<div class="top-content">
-									<h5><a href="single.html">LCD 1602 XANH LÁ</a></h5>
-									<div class="white">
-										<a href="single.html" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2 ">ADD TO CART</a>
-										<p class="dollar"><span class="in-dollar">VND</span><span>29.000</span></p>
-										<div class="clearfix"></div>
+									<h5>ARDUINO NANO</h5>
+									<div class="white clearfix">
+										<a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
+										<div class="price">200,000 VND</div>
 									</div>
-
 								</div>							
 							</div>
                         </div>
                         <div class="col-md-3 md-col" style="padding: 10px;">
 							<div class="col-md">
-								<a href="single.html"><img  src="images/LCD.jpg" alt="" /></a>	
+								<a href="single.php"><img src="images/pic8.jpg" alt="" /></a>
 								<div class="top-content">
-									<h5><a href="single.html">LCD 1602 XANH LÁ</a></h5>
-									<div class="white">
-										<a href="single.html" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2 ">ADD TO CART</a>
-										<p class="dollar"><span class="in-dollar">VND</span><span>29.000</span></p>
-										<div class="clearfix"></div>
+									<h5>ARDUINO NANO</h5>
+									<div class="white clearfix">
+										<a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
+										<div class="price">200,000 VND</div>
 									</div>
-
 								</div>							
 							</div>
                         </div>
                         <div class="col-md-3 md-col" style="padding: 10px;">
 							<div class="col-md">
-								<a href="single.html"><img  src="images/LCD.jpg" alt="" /></a>	
+								<a href="single.php"><img src="images/pic8.jpg" alt="" /></a>
 								<div class="top-content">
-									<h5><a href="single.html">LCD 1602 XANH LÁ</a></h5>
-									<div class="white">
-										<a href="single.html" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2 ">ADD TO CART</a>
-										<p class="dollar"><span class="in-dollar">VND</span><span>29.000</span></p>
-										<div class="clearfix"></div>
+									<h5>ARDUINO NANO</h5>
+									<div class="white clearfix">
+										<a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
+										<div class="price">200,000 VND</div>
 									</div>
-
 								</div>							
 							</div>
                         </div>
@@ -194,55 +178,50 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="content-top-in">
 						<div class="col-md-3 md-col">
 							<div class="col-md">
-								<a href="single.html"><img  src="images/LCD.jpg" alt="" /></a>	
+								<a href="single.php"><img src="images/pic8.jpg" alt="" /></a>
 								<div class="top-content">
-									<h5><a href="single.html">LCD 1602 XANH LÁ</a></h5>
-									<div class="white">
-										<a href="single.html" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2 ">ADD TO CART</a>
-										<p class="dollar"><span class="in-dollar">VND</span><span>29.000</span></p>
-										<div class="clearfix"></div>
+									<h5>ARDUINO NANO</h5>
+									<div class="white clearfix">
+										<a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
+										<div class="price">200,000 VND</div>
 									</div>
-
-								</div>							
+								</div>						
 							</div>
 						</div>
 						<div class="col-md-3 md-col">
 							<div class="col-md">
-								<a href="single.html"><img  src="images/pi1.jpg" alt="" />	</a>
+								<a href="single.php"><img src="images/pic8.jpg" alt="" /></a>
 								<div class="top-content">
-									<h5><a href="single.html">Bite Me</a></h5>
-									<div class="white">
-										<a href="single.html" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
-										<p class="dollar"><span class="in-dollar">$</span><span>3</span><span>0</span></p>
-										<div class="clearfix"></div>
-									</div>
-								</div>							
-							</div>
-						</div>
-						<div class="col-md-3 md-col">
-							<div class="col-md">
-								<a href="single.html"><img  src="images/pi2.jpg" alt="" /></a>	
-								<div class="top-content">
-									<h5><a href="single.html">Little Fella</a></h5>
-									<div class="white">
-										<a href="single.html" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
-										<p class="dollar"><span class="in-dollar">$</span><span>5</span><span>0</span></p>
-										<div class="clearfix"></div>
+									<h5>ARDUINO NANO</h5>
+									<div class="white clearfix">
+										<a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
+										<div class="price">200,000 VND</div>
 									</div>
 								</div>							
 							</div>
 						</div>
 						<div class="col-md-3 md-col">
 							<div class="col-md">
-								<a href="single.html"><img  src="images/pi3.jpg" alt="" /></a>	
+								<a href="single.php"><img src="images/pic8.jpg" alt="" /></a>
 								<div class="top-content">
-									<h5><a href="single.html">Astral Cruise</a></h5>
-									<div class="white">
-										<a href="single.html" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
-										<p class="dollar"><span class="in-dollar">$</span><span>4</span><span>5</span></p>
-										<div class="clearfix"></div>
+									<h5>ARDUINO NANO</h5>
+									<div class="white clearfix">
+										<a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
+										<div class="price">200,000 VND</div>
 									</div>
 								</div>							
+							</div>
+						</div>
+						<div class="col-md-3 md-col">
+							<div class="col-md">
+								<a href="single.php"><img src="images/pic8.jpg" alt="" /></a>
+								<div class="top-content">
+									<h5>ARDUINO NANO</h5>
+									<div class="white clearfix">
+										<a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
+										<div class="price">200,000 VND</div>
+									</div>
+								</div>						
 							</div>
 						</div>
 					<div class="clearfix"></div>
@@ -255,53 +234,48 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="content-top-in">
 						<div class="col-md-3 md-col">
 							<div class="col-md">
-								<a href="single.html"><img  src="images/LCD.jpg" alt="" /></a>	
+								<a href="single.php"><img src="images/pic8.jpg" alt="" /></a>
 								<div class="top-content">
-									<h5><a href="single.html">LCD 1602 XANH LÁ</a></h5>
-									<div class="white">
-										<a href="single.html" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2 ">ADD TO CART</a>
-										<p class="dollar"><span class="in-dollar">VND</span><span>29.000</span></p>
-										<div class="clearfix"></div>
-									</div>
-
-								</div>							
-							</div>
-						</div>
-						<div class="col-md-3 md-col">
-							<div class="col-md">
-								<a href="single.html"><img  src="images/pi1.jpg" alt="" />	</a>
-								<div class="top-content">
-									<h5><a href="single.html">Bite Me</a></h5>
-									<div class="white">
-										<a href="single.html" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
-										<p class="dollar"><span class="in-dollar">$</span><span>3</span><span>0</span></p>
-										<div class="clearfix"></div>
+									<h5>ARDUINO NANO</h5>
+									<div class="white clearfix">
+										<a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
+										<div class="price">200,000 VND</div>
 									</div>
 								</div>							
 							</div>
 						</div>
 						<div class="col-md-3 md-col">
 							<div class="col-md">
-								<a href="single.html"><img  src="images/pi2.jpg" alt="" /></a>	
+								<a href="single.php"><img src="images/pic8.jpg" alt="" /></a>
 								<div class="top-content">
-									<h5><a href="single.html">Little Fella</a></h5>
-									<div class="white">
-										<a href="single.html" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
-										<p class="dollar"><span class="in-dollar">$</span><span>5</span><span>0</span></p>
-										<div class="clearfix"></div>
+									<h5>ARDUINO NANO</h5>
+									<div class="white clearfix">
+										<a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
+										<div class="price">200,000 VND</div>
 									</div>
 								</div>							
 							</div>
 						</div>
 						<div class="col-md-3 md-col">
 							<div class="col-md">
-								<a href="single.html"><img  src="images/pi3.jpg" alt="" /></a>	
+								<a href="single.php"><img src="images/pic8.jpg" alt="" /></a>
 								<div class="top-content">
-									<h5><a href="single.html">Astral Cruise</a></h5>
-									<div class="white">
-										<a href="single.html" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
-										<p class="dollar"><span class="in-dollar">$</span><span>4</span><span>5</span></p>
-										<div class="clearfix"></div>
+									<h5>ARDUINO NANO</h5>
+									<div class="white clearfix">
+										<a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
+										<div class="price">200,000 VND</div>
+									</div>
+								</div>							
+							</div>
+						</div>
+						<div class="col-md-3 md-col">
+							<div class="col-md">
+								<a href="single.php"><img src="images/pic8.jpg" alt="" /></a>
+								<div class="top-content">
+									<h5>ARDUINO NANO</h5>
+									<div class="white clearfix">
+										<a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
+										<div class="price">200,000 VND</div>
 									</div>
 								</div>							
 							</div>
@@ -316,53 +290,48 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="content-top-in">
 						<div class="col-md-3 md-col">
 							<div class="col-md">
-								<a href="single.html"><img  src="images/LCD.jpg" alt="" /></a>	
+								<a href="single.php"><img src="images/pic8.jpg" alt="" /></a>
 								<div class="top-content">
-									<h5><a href="single.html">LCD 1602 XANH LÁ</a></h5>
-									<div class="white">
-										<a href="single.html" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2 ">ADD TO CART</a>
-										<p class="dollar"><span class="in-dollar">VND</span><span>29.000</span></p>
-										<div class="clearfix"></div>
-									</div>
-
-								</div>							
-							</div>
-						</div>
-						<div class="col-md-3 md-col">
-							<div class="col-md">
-								<a href="single.html"><img  src="images/pi1.jpg" alt="" />	</a>
-								<div class="top-content">
-									<h5><a href="single.html">Bite Me</a></h5>
-									<div class="white">
-										<a href="single.html" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
-										<p class="dollar"><span class="in-dollar">$</span><span>3</span><span>0</span></p>
-										<div class="clearfix"></div>
+									<h5>ARDUINO NANO</h5>
+									<div class="white clearfix">
+										<a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
+										<div class="price">200,000 VND</div>
 									</div>
 								</div>							
 							</div>
 						</div>
 						<div class="col-md-3 md-col">
 							<div class="col-md">
-								<a href="single.html"><img  src="images/pi2.jpg" alt="" /></a>	
+								<a href="single.php"><img src="images/pic8.jpg" alt="" /></a>
 								<div class="top-content">
-									<h5><a href="single.html">Little Fella</a></h5>
-									<div class="white">
-										<a href="single.html" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
-										<p class="dollar"><span class="in-dollar">$</span><span>5</span><span>0</span></p>
-										<div class="clearfix"></div>
+									<h5>ARDUINO NANO</h5>
+									<div class="white clearfix">
+										<a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
+										<div class="price">200,000 VND</div>
 									</div>
 								</div>							
 							</div>
 						</div>
 						<div class="col-md-3 md-col">
 							<div class="col-md">
-								<a href="single.html"><img  src="images/pi3.jpg" alt="" /></a>	
+								<a href="single.php"><img src="images/pic8.jpg" alt="" /></a>
 								<div class="top-content">
-									<h5><a href="single.html">Astral Cruise</a></h5>
-									<div class="white">
-										<a href="single.html" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
-										<p class="dollar"><span class="in-dollar">$</span><span>4</span><span>5</span></p>
-										<div class="clearfix"></div>
+									<h5>ARDUINO NANO</h5>
+									<div class="white clearfix">
+										<a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
+										<div class="price">200,000 VND</div>
+									</div>
+								</div>							
+							</div>
+						</div>
+						<div class="col-md-3 md-col">
+							<div class="col-md">
+								<a href="single.php"><img src="images/pic8.jpg" alt="" /></a>
+								<div class="top-content">
+									<h5>ARDUINO NANO</h5>
+									<div class="white clearfix">
+										<a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
+										<div class="price">200,000 VND</div>
 									</div>
 								</div>							
 							</div>
