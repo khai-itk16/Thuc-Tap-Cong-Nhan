@@ -35,6 +35,15 @@ h2.account-in:after {
     margin-left: 12em !important;
 }
 
+.content-order {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.content {
+    margin-top: 25px;
+}
+
 .content-header {
     color: #ee4d2d;
     text-transform: capitalize;
@@ -43,6 +52,8 @@ h2.account-in:after {
     width: 100%;
     float: left;
     text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
 .cart-item-content {
@@ -75,10 +86,10 @@ h2.account-in:after {
     line-height: 15px;
 }
 
-
 .delete-item i {
     font-size: 25px;
     color: red;
+    cursor: pointer;
 }
 
 .quatity-status {
@@ -112,6 +123,7 @@ h2.account-in:after {
     color: white;
     text-align: center;
     border: 1px solid;
+    outline: none;
 }
 
 .cart-order a,
@@ -137,4 +149,10 @@ h2.account-in:after {
 .total-status:focus,
 .price-status:focus {
     outline: none;
+}
+
+.total-price {
+    outline: none;
+    border: 0;
+    text-align: right;
 }

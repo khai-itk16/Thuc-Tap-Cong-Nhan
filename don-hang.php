@@ -64,40 +64,100 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <body>
     <?php include 'header.php';?>
     <div class="container">
-		<div class="account">
-			<h2 class="account-in">ĐƠN HÀNG</h2>
-				<form>
-				<div class="col-md-12">
-					<span class="col-md-2">Tài khoản*</span>
-					<input class="col-md-10" type="text">
-				</div> 
-                <div class="col-md-12">
-					<span class="col-md-2">Họ và tên*</span>
-					<input class="col-md-10" type="text">
-				</div>
-                <div class="col-md-12">
-					<span class="col-md-2">Địa chỉ*</span>
-					<input class="col-md-10" type="text">
-				</div> 
-                <div class="col-md-12"> 	
-					<span class="mail col-md-2" >Số điện thoại*</span>
-					<input type="text" class="col-md-10"> 
-				</div>	
-				<div class="col-md-12"> 	
-					<span class="mail col-md-2" >Email*</span>
-					<input type="text" class="col-md-10"> 
-				</div>
-				<div class="col-md-12"> 
-					<span class="word col-md-2">Mật khẩu*</span>
-					<input type="password" class="col-md-10">
-				</div>	
-                <div class="col-md-12"> 
-					<span class="word col-md-2">Nhập lại mật khẩu*</span>
-					<input type="password" class="col-md-10">
-				</div>				
-					<input type="submit" value="Đăng ký"> 
-				</form>
-		</div>
+        <div class="row">
+            <div class="account">
+                <h3 class="future">ĐƠN HÀNG</h2>
+                <form action="">
+                    <div class="content-order">
+                        <div class="content-header">
+                            <div class="col-md-2" style="padding: 0 !important;">Hình ảnh</div>
+                            <div class="col-md-3" style="padding: 0 !important;">Sản phẩm</div>
+                            <div class="col-md-2" style="padding: 0 !important;">Đơn giá</div>
+                            <div class="col-md-2" style="padding: 0 !important;">Số lượng</div>
+                            <div class="col-md-3" style="padding: 0 !important;">Thành tiền</div>
+                        </div>
+
+                        <div class="cart-item-content" style="padding-top: 0 !important; line-height: 80px;">
+                            <div class="img-content col-md-2">
+                                <a href=""><img src="./images/cuon_cam.jpg" alt=""></a>
+                            </div>
+                            <div class="name-content col-md-3">
+                                Cuộn cảm 0.1uH
+                            </div>
+                            <div class="price-content col-md-2">
+                                <input class="price-status" name="price" readonly value="1000">đ 
+                            </div>
+                            <div class="count-content col-md-2">
+                                <button class="minus">-</button>
+                                <input class="quatity-status" name="quatity" value="1">
+                                <button class="plus">+</button>
+                            </div>
+                            <div class="total-content col-md-2">
+                                <input class="total-status" name="total-status" readonly value="1000">đ 
+                            </div>
+                            <div class="delete-item col-md-1">
+                                <i class="far fa-trash-alt"></i>
+                            </div>
+                        </div>
+
+                        <div class="cart-item-content" style="padding-top: 0 !important; line-height: 80px;">
+                            <div class="img-content col-md-2">
+                                <a href=""><img src="./images/cuon_cam.jpg" alt=""></a>
+                            </div>
+                            <div class="name-content col-md-3">
+                                Cuộn cảm 0.1uH
+                            </div>
+                            <div class="price-content col-md-2">
+                                <input class="price-status" name="price" readonly value="1000">đ 
+                            </div>
+                            <div class="count-content col-md-2">
+                                <button class="minus">-</button>
+                                <input class="quatity-status" name="quatity" value="1">
+                                <button class="plus">+</button>
+                            </div>
+                            <div class="total-content col-md-2">
+                                <input class="total-status" name="total-status" readonly value="1000">đ 
+                            </div>
+                            <div class="delete-item col-md-1">
+                                <i class="far fa-trash-alt"></i>
+                            </div>
+                        </div>
+
+                        <div class="cart-item-content" style="color: red;">
+                            TỔNG CỘNG:
+                            <input class="total-price" name="total-price" readonly value="0">đ 
+                        </div>
+                    </div>
+
+                    
+                    <h3 class="future">ĐỊA ĐIỂM NHẬN HÀNG</h2>
+                    <div class="col-md-12">
+                        <span class="col-md-2">Họ và tên*</span>
+                        <input class="col-md-10" type="text" require="require">
+                    </div>
+                    <div class="col-md-12">
+                        <span class="col-md-2" >Địa chỉ nhận hàng*</span>
+                        <input class="col-md-10" type="text">
+                    </div> 
+                    <div class="col-md-12"> 	
+                        <span class="mail col-md-2" >Số điện thoại*</span>
+                        <input type="text" class="col-md-10"> 
+                    </div>	
+                    <div class="col-md-12"> 	
+                        <span class="mail col-md-2" >Email*</span>
+                        <input type="text" class="col-md-10"> 
+                    </div>
+                    <div class="col-md-12"> 	
+                        <span class="mail col-md-2" >Ghi chú</span>
+                        <input type="text" class="col-md-10"> 
+                    </div>					
+
+                    <h3 class="future">HÌNH THỨC THANH TOÁN</h2>
+                    <input type="submit" value="ĐẶT HÀNG"> 
+
+                </form>
+            </div>
+        </div>
 	</div>
 		<!---->
     <?php include 'footer.php';?>

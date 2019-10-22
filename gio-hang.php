@@ -89,7 +89,7 @@
                             <input class="total-status" name="price" readonly value="1000">đ 
                         </div>
                         <div class="delete-item col-md-1">
-                            <i class="fa fa-trash-o" aria-hidden="true"></i>
+                            <i class="far fa-trash-alt"></i>
                         </div>
                     </div>
                     
@@ -112,7 +112,7 @@
                             <input class="total-status" name="price" readonly value="1000">đ 
                         </div>
                         <div class="delete-item col-md-1">
-                            <i class="fa fa-trash-o" aria-hidden="true"></i>
+                            <i class="far fa-trash-alt"></i>
                         </div>
                     </div>
 
@@ -135,9 +135,15 @@
                             <input class="total-status" name="price" readonly value="1000">đ 
                         </div>
                         <div class="delete-item col-md-1">
-                            <i class="fa fa-trash-o" aria-hidden="true"></i>
+                            <i class="far fa-trash-alt"></i>
                         </div>
                     </div>
+
+                    <div class="cart-item-content" style="color: red;">
+                        TỔNG CỘNG:
+                        <input class="total-price" name="total-price" readonly value="0">đ 
+                    </div>
+
                     <div class="cart-order col-md-4">
                         <button><a href="">MUA THÊM SẢN PHẨM</a></button>
                         <input type="submit" value="ĐẶT HÀNG">
