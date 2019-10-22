@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"/>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery.min.js"></script>
@@ -82,7 +82,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="container">
                 <div class="header-top-in">
                     <div class="logo">
-                        <a href="index.html"><img src="images/logo.png" alt=" "></a>
+                        <a href="index.php"><img src="images/logo.png" alt=" "></a>
                     </div>
                     <div class="header-in">
                         <ul class="icon1 sub-icon1">
@@ -140,7 +140,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="h_menu4">
                     <a class="toggleMenu" href="#">Menu</a>
                     <ul class="nav">
-                        <li class="active"><a href="index.html"><i> </i>Trang chủ</a></li>
+                        <li class="active"><a href="index.php"><i> </i>Trang chủ</a></li>
                         <li><a href="#">Danh mục</a>
                             <ul class="drop">
                                 <li><a href="products.html">ARDUINO</a></li>
@@ -151,8 +151,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <li><a href="products.html">MÀN HÌNH</a></li>
                             </ul>
                         </li>
-                        <li><a href="products.html">Về chúng tôi</a></li>
-                        <li><a href="products.html">Liên hệ</a></li>
+                        <li><a href="aboutus.php">Về chúng tôi</a></li>
+                        <li><a href="contactus.php">Liên hệ</a></li>
                         <div class="search" style="margin-top: 20px; float: right;">
                             <form>
                                 <input type="text" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}">
