@@ -42,7 +42,7 @@
                         </a>
                     </li>  
                     <li class="nav-item">
-                        <a class="nav-link" href="quantriphanhoi.php" >
+                        <a class="nav-link" href="quantritaikhoanuser.php" >
                         Quản trị tài khoản người dùng
                         </a>
                     </li>  
