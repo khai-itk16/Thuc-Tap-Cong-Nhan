@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d34c0e44-339e-461f-a347-246027f10b40" name="Default Changelist" comment="" />
+    <list default="true" id="d34c0e44-339e-461f-a347-246027f10b40" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +78,8 @@
       <workItem from="1571447357037" duration="132000" />
       <workItem from="1571538600886" duration="1972000" />
       <workItem from="1571669670181" duration="2115000" />
+      <workItem from="1571714328856" duration="700000" />
+      <workItem from="1571932035782" duration="1202000" />
     </task>
     <task id="LOCAL-00001" summary="add folder css, images, js">
       <created>1571409727075</created>
@@ -111,7 +116,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571671487879</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="khai update: gio hang, don hang">
+      <created>1571714386748</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1571714386748</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,6 +169,7 @@
     <MESSAGE value="add footer header" />
     <MESSAGE value="khai add file: login, register, gio-hang, don-hang" />
     <MESSAGE value="khai add file: login, register, gio-hang" />
-    <option name="LAST_COMMIT_MESSAGE" value="khai add file: login, register, gio-hang" />
+    <MESSAGE value="khai update: gio hang, don hang" />
+    <option name="LAST_COMMIT_MESSAGE" value="khai update: gio hang, don hang" />
   </component>
 </project>
