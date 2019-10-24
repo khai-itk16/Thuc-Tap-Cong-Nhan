@@ -68,7 +68,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="container">
 			<div class="content">
 				<div class="content-top">
-					<h3 class="future">SẢN PHẨM MUA NHIỀU</h3>
+					<h3 class="future"><a href="">SẢN PHẨM MUA NHIỀU</a></h3>
 					<div class="content-top-in">
 						<div class="col-md-3 md-col" style="padding: 10px;">
 							<div class="col-md">
@@ -174,7 +174,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 				<!---->
 				<div class="content-middle">
-                <h3 class="future">SẢN PHẨM MỚI</h3>
+                <h3 class="future"><a href="">SẢN PHẨM MỚI</a></h3>
 					<div class="content-top-in">
 						<div class="col-md-3 md-col">
 							<div class="col-md">
@@ -230,7 +230,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <!---->
                 <!---->
 				<div class="content-middle">
-                <h3 class="future">LINH KIÊN CƠ BẢN</h3>
+                <h3 class="future"><a href="">LINH KIÊN CƠ BẢN</a></h3>
 					<div class="content-top-in">
 						<div class="col-md-3 md-col">
 							<div class="col-md">
@@ -286,7 +286,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <!---->
                 <!---->
 				<div class="content-middle">
-                <h3 class="future">ARDUINO</h3>
+                <h3 class="future"><a href="">ARDUINO</a></h3>
 					<div class="content-top-in">
 						<div class="col-md-3 md-col">
 							<div class="col-md">
