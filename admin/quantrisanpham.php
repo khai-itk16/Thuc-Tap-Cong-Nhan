@@ -15,7 +15,11 @@
 <?php 
         include 'header.php';
         $iddanhmuc = $_REQUEST['iddanhmuc'];
-        $tendanhmuc = $_REQUEST['tendanhmuc'];
+        if(isset($_REQUEST['tendanhmuc'])){
+            $tendanhmuc = $_REQUEST['tendanhmuc'];
+        }
+        
+        
     ?>
     <div class="content">
         <div class="container">
@@ -43,7 +47,7 @@
                         </tr>
                         <?php 
                             include 'connect.php';
-                            $sql = "select * from sanpham";
+                            $sql = "select * from sanpham where madanhmuc =".$iddanhmuc;
                             $result = mysqli_query($link,$sql);
                             if(mysqli_num_rows($result) == 0){
                                 echo "Không tìm thấy thông tin<br>";
