@@ -82,6 +82,12 @@ $(document).ready(function () {
     }
 
     totalCost();
+
+    $(".nav > li").click(function (e) { 
+     // e.preventDefault();
+      $(".nav > li").removeClass("active");
+      $(this).addClass("active");
+    });
     
 });
 

@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+
+<?php
+    require_once ("connect.php");
+?>
+
+>>>>>>> e4cb2486b42e98fb6b4496546934cf0ad8149033
 <!DOCTYPE html>
 <html lang="en">
 
@@ -79,11 +87,16 @@
 
 <body>
     <!--header-->
+<<<<<<< HEAD
     <?php include 'header.php'; ?>
+=======
+    <?php require_once('header.php'); ?>
+>>>>>>> e4cb2486b42e98fb6b4496546934cf0ad8149033
     <div class="search-result">
         <div class="container">
             <div class="row ">
                 <div class="col-md-12">
+<<<<<<< HEAD
                 <h3 class="title">DANH MỤC ARDUINO</h2>
                 </div>
             </div>
@@ -136,6 +149,58 @@
                         </div>                            
                     </div>
                 </div>
+=======
+                <?php
+                    if (isset($_REQUEST['spmoi'])) {
+                        echo '<h3 class="title">SẢN PHẨM MỚI</h2>';
+                    } else if (isset($_REQUEST['spmuanhieu'])) {
+                        echo '<h3 class="title">SẢN PHẨM MUA NHIỀU</h2>';
+                    } else if (isset($_REQUEST['linhkiencoban'])) {
+                        echo '<h3 class="title">LINH KIỆN CƠ BẢN</h2>';
+                    } else if (isset($_REQUEST['madanhmuc'])) {
+                        $maDM = $_REQUEST['madanhmuc'];
+                        $sql = "SELECT dm.tendanhmuc FROM sanpham sp INNER JOIN danhmuc dm ON sp.madanhmuc = dm.madanhmuc WHERE dm.madanhmuc = '$maDM';";
+                        $result = mysqli_query($link, $sql);
+                        $row = mysqli_fetch_array($result, MYSQLI_BOTH);
+                        echo '<h3 class="title">DANH MỤC '.$row['tendanhmuc'].'</h2>';
+                    }
+                   
+                ?>
+                
+                </div>
+            </div>
+            <div class="row">
+
+            <?php 
+
+                if (isset($_REQUEST['spmoi'])) {
+                    $sql = "SELECT * FROM sanpham WHERE spmoi != 'NULL';";
+                } else if (isset($_REQUEST['spmuanhieu'])) {
+                    $sql = "SELECT * FROM sanpham WHERE spmuanhieu != 'NULL';";
+                } else if (isset($_REQUEST['linhkiencoban'])) {
+                    $sql = "SELECT * FROM sanpham WHERE linhkiencoban != 'NULL';";
+                } else if (isset($_REQUEST['madanhmuc'])) {
+                    $maDM = $_REQUEST['madanhmuc'];
+                    $sql = "SELECT * FROM sanpham WHERE madanhmuc = '$maDM ';";
+                }
+                $result = mysqli_query($link, $sql);
+                while ($row = mysqli_fetch_array($result, MYSQLI_BOTH)) {
+                    echo '<div class="col-md-3" style="padding: 10px;">
+                        <div class="col-md">
+                            <a href="single.php?masanpham='.$row["masp"].'"><img src="'.$row["hinhanh"].'" alt="" /></a>
+                            <div class="top-content">';
+                                echo "<h5>".$row['tensp']."</h5>";
+                                echo '<div class="white clearfix">
+                                        <a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>';
+                                    echo "<div class='price'>".$row["giatien"]." VND</div>";
+                                echo "</div>
+                            </div>
+                        </div>
+                    </div>";
+                }
+            ?>
+
+>>>>>>> e4cb2486b42e98fb6b4496546934cf0ad8149033
             </div>
         </div>
     </div>

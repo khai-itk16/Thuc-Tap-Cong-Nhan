@@ -1,3 +1,7 @@
+<?php 
+    require_once ("xuly-dangky.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -60,46 +64,125 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             });
         });
     </script>
+    <script type="text/javascript">
+        
+        function validateForm() {
+            //Tài khoản phải được điền
+            var taiKhoan = document.forms["myForm"]["user"].value;
+            if (taiKhoan == "") {
+                alert("Tài khoản không được để trống");
+                document.forms["myForm"]["user"].focus();
+                return false;
+            }
+            //Tên phải được điền
+            var ten = document.forms["myForm"]["name"].value;
+            if (ten == "") {
+                alert("Tên không được để trống");
+                document.forms["myForm"]["name"].focus();
+                return false;
+            }
+
+            //Địa chỉ phải được điền
+            var diaChi = document.forms["myForm"]["address"].value;
+            if (diaChi == "") {
+                alert("Địa chỉ không được để trống");
+                document.forms["myForm"]["address"].focus();
+                return false;
+            }
+             //Nhập số điện thoại
+            var dienThoai = document.forms["myForm"]["phone"].value;
+            var kiemTraDT = isNaN(dienThoai);
+            if (dienThoai == "") {
+                alert("Điện thoại không được để trống");
+                document.forms["myForm"]["phone"].focus();
+                return false;
+            }
+            if (kiemTraDT == true) {
+                alert("Điện thoại phải để ở định dạng số");
+                document.forms["myForm"]["phone"].focus();
+                return false;
+            }
+
+            //Email phải được điền chính xác
+            var email=document.forms["myForm"]["email"].value;
+            var aCong=email.indexOf("@");
+            var dauCham = email.lastIndexOf(".");
+            if (email == "") {
+                alert("Email không được để trống");
+                document.forms["myForm"]["email"].focus();
+                return false;
+            }
+            else if ((aCong<1) || (dauCham<aCong+2) || (dauCham+2>email.length)) {
+                alert("Email bạn điền không chính xác");
+                document.forms["myForm"]["email"].focus();
+                return false;
+            }
+           
+
+            //xác nhận giới tính
+            var gioiTinh = document.forms["myForm"]["sex"].value;
+            if (gioiTinh == -1) {
+                alert("Bạn chưa chọn giới tính");
+                return false;
+            }
+            // Xác nhận mật khẩu
+            var matKhau = document.forms["myForm"]["pass"].value;
+            var xacNhanMatKhau = document.forms["myForm"]["re_pass"].value;
+            if (matKhau != xacNhanMatKhau) {
+                alert("Xác nhận mật khẩu không khớp. Vui lòng nhập lại mật khẩu");
+                document.forms["myForm"]["re_pass"].value = "";
+                return false;
+            }
+        }
+    </script>
 </head>
 <body>
-    <?php include 'header.php';?>
+    <?php require_once 'header.php';?>
     <div class="container">
 		<div class="account">
 			<h2 class="account-in">ĐĂNG KÝ TÀI KHOẢN</h2>
-				<form>
+				<form action="register.php" method="POST" name="myForm" onsubmit="return validateForm();">
 				<div class="col-md-12">
 					<span class="col-md-2">Tài khoản*</span>
-					<input class="col-md-10" type="text">
+					<input class="col-md-10" type="text" name="user" required>
 				</div> 
                 <div class="col-md-12">
 					<span class="col-md-2">Họ và tên*</span>
-					<input class="col-md-10" type="text">
+					<input class="col-md-10" type="text" name="name" required>
 				</div>
                 <div class="col-md-12">
 					<span class="col-md-2">Địa chỉ*</span>
-					<input class="col-md-10" type="text">
+					<input class="col-md-10" type="text" name="address" required>
 				</div> 
                 <div class="col-md-12"> 	
 					<span class="mail col-md-2" >Số điện thoại*</span>
-					<input type="text" class="col-md-10"> 
+					<input type="text" class="col-md-10" name="phone"> 
 				</div>	
 				<div class="col-md-12"> 	
 					<span class="mail col-md-2" >Email*</span>
-					<input type="text" class="col-md-10"> 
+					<input type="text" class="col-md-10" name="email" required> 
+				</div>
+                <div class="col-md-12"> 
+					<span class="word col-md-2">Gới tính*</span>
+					<select name="sex">
+                        <option value="-1">--</option>
+                        <option value="1">Nam</option>
+                        <option value="0">Nữ</option>
+                    </select>
 				</div>
 				<div class="col-md-12"> 
 					<span class="word col-md-2">Mật khẩu*</span>
-					<input type="password" class="col-md-10">
+					<input type="password" class="col-md-10" name="pass" required>
 				</div>	
                 <div class="col-md-12"> 
 					<span class="word col-md-2">Nhập lại mật khẩu*</span>
-					<input type="password" class="col-md-10">
+					<input type="password" class="col-md-10" name="re_pass" required>
 				</div>				
 					<input type="submit" value="Đăng ký"> 
 				</form>
 		</div>
 	</div>
 		<!---->
-    <?php include 'footer.php';?>
+    <?php require_once ('footer.php');?>
 </body>
 </html>

@@ -55,7 +55,7 @@
     </script>
 </head>
 <body>
-    <?php include 'header.php';?>
+    <?php require_once 'header.php';?>
     <div class="clearfix"></div>
     <div class="container">
         <div class="row">

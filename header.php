@@ -1,3 +1,8 @@
+<?php 
+    @session_start();
+    require_once ("connect.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"/>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery.min.js"></script>
@@ -76,11 +81,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </div>
                     <div class="header-in">
                         <ul class="icon1 sub-icon1">
-                            <li><a href="register.php">Đăng ký</a> </li>
-                            <li><a href="login.php">Đăng nhập</a></li>
+                            <?php
+
+                            if(isset($_SESSION['user'])) {
+                                echo '<li><a>';
+                                    echo "Welcom ".$_SESSION['user'];
+                                echo '</a></li>';
+                                echo '<li><a href="xuly-login.php?logout=true">Đăng xuất</a></li>';
+                            } else {
+                                echo '<li><a href="register.php">Đăng ký</a> </li>';
+                                echo '<li><a href="login.php">Đăng nhập</a></li>';
+                            }
+                            ?>
                             <li>
-                                <div class="cart">
-                                    <a href="#" class="cart-in"> </a>
+                                <div class="cart" style="margin-top: 12px;">
+                                    <a href="gio-hang.php" class="cart-in"> </a>
                                     <span> 0</span>
                                 </div>
                                 <ul class="sub-icon1 list">
@@ -133,12 +148,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <li class="active"><a href="index.php"><i> </i>Trang chủ</a></li>
                         <li><a href="#">Danh mục</a>
                             <ul class="drop">
-                                <li><a href="products.html">ARDUINO</a></li>
-                                <li><a href="products.html">IC</a></li>
-                                <li><a href="products.html">VI ĐIỀU KHIỂN</a></li>
-                                <li><a href="products.html">LED</a></li>
-                                <li><a href="products.html">CẢM BIẾN</a></li>
-                                <li><a href="products.html">MÀN HÌNH</a></li>
+                                <?php 
+                                    $sql = "select * from danhmuc;";
+                                    $result = mysqli_query($link, $sql);
+                                    while ($row = mysqli_fetch_array($result, MYSQLI_BOTH)) {
+                                        echo "<li><a href='product.php?madanhmuc=".$row['madanhmuc']."'>".$row['tendanhmuc']."</a></li>";
+                                    }
+                                ?>
                             </ul>
                         </li>
                         <li><a href="aboutus.php">Về chúng tôi</a></li>
