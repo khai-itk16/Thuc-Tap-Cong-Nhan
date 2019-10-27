@@ -15,7 +15,10 @@
 <?php 
         include 'header.php';
         $iddanhmuc = $_REQUEST['iddanhmuc'];
-        $tendanhmuc = $_REQUEST['tendanhmuc'];
+        if(isset($_REQUEST['tendanhmuc'])){
+            $tendanhmuc = $_REQUEST['tendanhmuc'];
+        }
+        
         
     ?>
     <div class="content">
