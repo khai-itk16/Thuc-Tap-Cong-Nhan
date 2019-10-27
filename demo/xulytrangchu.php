@@ -27,5 +27,7 @@
     mysqli_select_db($link,"thuctapcongnhan");
     $sql = "update sanpham set spmoi = '".$ckb1."', spmuanhieu = '".$ckb2."', linhkiencoban = '".$ckb3."' where masp = '".$masp."'";
     $result = mysqli_query($link, $sql);
-    header("location: quantritrangchu.php")
+    header("location: quantritrangchu.php");
+    $khai = "rrrrrrrrrrrrr";
+echo $khai;
 ?>
