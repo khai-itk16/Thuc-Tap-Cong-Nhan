@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 
 <?php
     require_once ("connect.php");
 ?>
 
->>>>>>> e4cb2486b42e98fb6b4496546934cf0ad8149033
 <!DOCTYPE html>
 <html lang="en">
 
