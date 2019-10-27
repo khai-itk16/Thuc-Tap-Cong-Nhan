@@ -1,0 +1,70 @@
+create table Admin(
+maAd int(11) not null auto_increment,
+tendangnhap varchar(50) not null,
+matkhau varchar(50) not null,
+hoten varchar(50) not null,
+primary key (maAd)
+);
+
+create table khachhang(
+makhachhang int(11) not null auto_increment,
+tendangnhap varchar(50) not null,
+matkhau varchar(50) not null,
+hoten varchar(50) not null,
+gioitinh varchar(10),
+email varchar(50),
+sdt varchar(50) ,
+diachi varchar(50),
+primary key (makhachhang)
+);
+create table danhmuc(
+madanhmuc int(11) not null auto_increment,
+tendanhmuc varchar(50) not null,
+primary key (madanhmuc)
+);
+
+create table sanpham(
+masp int(11) not null auto_increment,
+madanhmuc int(11),
+tensp varchar(50),
+mota text ,
+giatien varchar(100) ,
+soluong int(11),
+hinhanh varchar(100),
+spmoi varchar(20),
+spmuanhieu varchar(20),
+linhkiencoban varchar(20),
+ngaythem varchar(50),
+primary key (masp),
+constraint fk_sanpham_danhmuc foreign key (madanhmuc) references danhmuc(madanhmuc)
+);
+
+create table hoadon(
+mahoadon int(11) not null auto_increment,
+tenkhachhang varchar(50) not null,
+sdt varchar(50) not null,
+diachigiaohang varchar(100) not null,
+tinhtrang bit(1),
+ngaylap varchar(50),
+tongtien varchar(50),
+primary key (mahoadon)
+);
+
+create table chitiethoadon(
+mahoadon int(11) not null,
+masp int(11) not null,
+soluong int(11),
+giatien varchar(100),
+primary key (mahoadon,masp),
+constraint fk_chitietHD_hoadon foreign key(mahoadon) references hoadon(mahoadon),
+constraint fk_chitietHD_sanpham foreign key(masp) references sanpham(masp)
+);
+
+create table lienhe(
+malienhe int(11) not null auto_increment,
+email varchar(50) not null,
+noidung varchar(100),
+ngaylienhe varchar(50),
+phanhoi varchar(100),
+primary key (malienhe)
+);
