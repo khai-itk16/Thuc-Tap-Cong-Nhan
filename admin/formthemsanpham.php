@@ -20,7 +20,8 @@
                 <div class="col-md-2 menu">
                     <div class="title-menu">Lựa chọn</div>
                     <div class="menu1">
-                        <a href="quantrisanpham.php" class="menu-item">Hiển thị sản phẩm</a>
+                    
+                        <a href="quantrisanpham.php?iddanhmuc=<?php echo $_REQUEST['iddanhmuc'];?>&tendanhmuc=<?php echo $_REQUEST['tendanhmuc'];?>" class="menu-item">Hiển thị sản phẩm</a>
                         <a href="formthemsanpham.php?iddanhmuc=<?php echo $_REQUEST['iddanhmuc'];?>" class="menu-item">Thêm sản phẩm</a>
                     </div>
                     
