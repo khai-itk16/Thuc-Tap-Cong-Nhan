@@ -8,8 +8,12 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
+
+    
+
 </head>
 <body>
      <?php 
@@ -20,10 +24,29 @@
             <div class="row">
                 <div class="col-md-12 content-form">
                     <div class="title-menu">Quản trị phản hồi</div>
-                    <div class="phanhoi">
-                        <div class="user"></div>
-                        <div class="user"></div>
-                    </div>
+                    <?php 
+                        include 'connect.php';
+                        $sql = "select * from lienhe";
+                        $result = mysqli_query($link,$sql);
+                        if(mysqli_num_rows($result) == 0){
+                            echo "Không tìm thấy thông tin<br>";
+                        }
+                        else{
+                            while($row = mysqli_fetch_array($result, MYSQLI_BOTH)){
+                                    echo '<div class="phanhoi">
+                                    <div class="user">Email người dùng: '.$row['email'].'</div>
+                                    <div class="user">Nội dung phản hồi: '.$row['noidung'].'</div>
+                                    <div class="user">Ngày liên hệ: '.$row['ngaylienhe'].'</div>
+                                    <a class="user" href="xulyxoaphanhoi.php?idphanhoi='.$row['malienhe'].'">Xóa phản hồi</a>
+                                </div>';
+                            }
+                        }
+                        //free
+                        mysqli_free_result($result);
+                        mysqli_close($link);
+                    ?>
+
+                    
             </div>
         </div>
     </div>

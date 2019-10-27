@@ -62,284 +62,89 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </script>
 </head>
 <body>
-    <?php include 'header.php';?>
-    <?php include 'banner.php';?>
+    <?php require_once ('header.php');?>
+    <?php require_once ('banner.php');?>
     <!---->
 		<div class="container">
 			<div class="content">
 				<div class="content-top">
-					<h3 class="future"><a href="">SẢN PHẨM MUA NHIỀU</a></h3>
+					<h3 class="future"><a href="product.php?spmuanhieu=true">SẢN PHẨM MUA NHIỀU</a></h3>
 					<div class="content-top-in">
-						<div class="col-md-3 md-col" style="padding: 10px;">
-							<div class="col-md">
-								<a href="single.php"><img src="images/pic8.jpg" alt="" /></a>
-								<div class="top-content">
-									<h5>ARDUINO NANO</h5>
-									<div class="white clearfix">
-										<a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
-										<div class="price">200,000 VND</div>
+
+					<?php 
+						$sql = "select * from sanpham where spmuanhieu = '1' limit 8";
+						$result = mysqli_query($link, $sql);
+						while ($row = mysqli_fetch_array($result, MYSQLI_BOTH)) {
+							echo '<div class="col-md-3 " style="padding: 10px;">
+								<div class="col-md">
+									<a href="single.php?masanpham='.$row["masp"].'"><img src="'.$row["hinhanh"].'" alt="" /></a>
+									<div class="top-content">';
+										echo "<h5>".$row['tensp']."</h5>";
+										echo '<div class="white clearfix">
+												<a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>';
+											echo "<div class='price'>".$row["giatien"]." VND</div>";
+										echo "</div>
 									</div>
 								</div>
-							</div>
-                        </div>
-                        
-						<div class="col-md-3 md-col" style="padding: 10px;">
-							<div class="col-md">
-								<a href="single.php"><img src="images/pic8.jpg" alt="" /></a>
-								<div class="top-content">
-									<h5>ARDUINO NANO</h5>
-									<div class="white clearfix">
-										<a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
-										<div class="price">200,000 VND</div>
-									</div>
-								</div>						
-							</div>
-						</div>
-						<div class="col-md-3 md-col" style="padding: 10px;">
-							<div class="col-md">
-								<a href="single.php"><img src="images/pic8.jpg" alt="" /></a>
-								<div class="top-content">
-									<h5>ARDUINO NANO</h5>
-									<div class="white clearfix">
-										<a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
-										<div class="price">200,000 VND</div>
-									</div>
-								</div>						
-							</div>
-						</div>
-                        <div class="col-md-3 md-col" style="padding: 10px;">
-							<div class="col-md">
-								<a href="single.php"><img src="images/pic8.jpg" alt="" /></a>
-								<div class="top-content">
-									<h5>ARDUINO NANO</h5>
-									<div class="white clearfix">
-										<a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
-										<div class="price">200,000 VND</div>
-									</div>
-								</div>							
-							</div>
-                        </div>
-                        <div class="col-md-3 md-col" style="padding: 10px;">
-							<div class="col-md">
-								<a href="single.php"><img src="images/pic8.jpg" alt="" /></a>
-								<div class="top-content">
-									<h5>ARDUINO NANO</h5>
-									<div class="white clearfix">
-										<a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
-										<div class="price">200,000 VND</div>
-									</div>
-								</div>							
-							</div>
-                        </div>
-                        <div class="col-md-3 md-col" style="padding: 10px;">
-							<div class="col-md">
-								<a href="single.php"><img src="images/pic8.jpg" alt="" /></a>
-								<div class="top-content">
-									<h5>ARDUINO NANO</h5>
-									<div class="white clearfix">
-										<a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
-										<div class="price">200,000 VND</div>
-									</div>
-								</div>							
-							</div>
-                        </div>
-                        <div class="col-md-3 md-col" style="padding: 10px;">
-							<div class="col-md">
-								<a href="single.php"><img src="images/pic8.jpg" alt="" /></a>
-								<div class="top-content">
-									<h5>ARDUINO NANO</h5>
-									<div class="white clearfix">
-										<a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
-										<div class="price">200,000 VND</div>
-									</div>
-								</div>							
-							</div>
-                        </div>
-                        <div class="col-md-3 md-col" style="padding: 10px;">
-							<div class="col-md">
-								<a href="single.php"><img src="images/pic8.jpg" alt="" /></a>
-								<div class="top-content">
-									<h5>ARDUINO NANO</h5>
-									<div class="white clearfix">
-										<a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
-										<div class="price">200,000 VND</div>
-									</div>
-								</div>							
-							</div>
-                        </div>
-                        
+							</div>";
+						}
+                    ?>
                        
 					<div class="clearfix"></div>
 					</div>
 				</div>
 				<!---->
 				<div class="content-middle">
-                <h3 class="future"><a href="">SẢN PHẨM MỚI</a></h3>
+                <h3 class="future"><a href="product.php?spmoi=true">SẢN PHẨM MỚI</a></h3>
 					<div class="content-top-in">
-						<div class="col-md-3 md-col">
-							<div class="col-md">
-								<a href="single.php"><img src="images/pic8.jpg" alt="" /></a>
-								<div class="top-content">
-									<h5>ARDUINO NANO</h5>
-									<div class="white clearfix">
-										<a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
-										<div class="price">200,000 VND</div>
+					<?php 
+						$sql = "select * from sanpham where spmoi = '1' limit 8";
+						$result = mysqli_query($link, $sql);
+						while ($row = mysqli_fetch_array($result, MYSQLI_BOTH)) {
+							echo '<div class="col-md-3" style="padding: 10px;">
+								<div class="col-md">
+									<a href="single.php?masanpham='.$row["masp"].'"><img src="'.$row["hinhanh"].'" alt="" /></a>
+									<div class="top-content">';
+										echo "<h5>".$row['tensp']."</h5>";
+										echo '<div class="white clearfix">
+												<a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>';
+											echo "<div class='price'>".$row["giatien"]." VND</div>";
+										echo "</div>
 									</div>
-								</div>						
-							</div>
-						</div>
-						<div class="col-md-3 md-col">
-							<div class="col-md">
-								<a href="single.php"><img src="images/pic8.jpg" alt="" /></a>
-								<div class="top-content">
-									<h5>ARDUINO NANO</h5>
-									<div class="white clearfix">
-										<a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
-										<div class="price">200,000 VND</div>
-									</div>
-								</div>							
-							</div>
-						</div>
-						<div class="col-md-3 md-col">
-							<div class="col-md">
-								<a href="single.php"><img src="images/pic8.jpg" alt="" /></a>
-								<div class="top-content">
-									<h5>ARDUINO NANO</h5>
-									<div class="white clearfix">
-										<a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
-										<div class="price">200,000 VND</div>
-									</div>
-								</div>							
-							</div>
-						</div>
-						<div class="col-md-3 md-col">
-							<div class="col-md">
-								<a href="single.php"><img src="images/pic8.jpg" alt="" /></a>
-								<div class="top-content">
-									<h5>ARDUINO NANO</h5>
-									<div class="white clearfix">
-										<a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
-										<div class="price">200,000 VND</div>
-									</div>
-								</div>						
-							</div>
-						</div>
+								</div>
+							</div>";
+						}
+                    ?>
 					<div class="clearfix"></div>
 					</div>
                 </div>
                 <!---->
                 <!---->
 				<div class="content-middle">
-                <h3 class="future"><a href="">LINH KIÊN CƠ BẢN</a></h3>
+                <h3 class="future"><a href="product.php?linhkiencoban=true">LINH KIÊN CƠ BẢN</a></h3>
 					<div class="content-top-in">
-						<div class="col-md-3 md-col">
-							<div class="col-md">
-								<a href="single.php"><img src="images/pic8.jpg" alt="" /></a>
-								<div class="top-content">
-									<h5>ARDUINO NANO</h5>
-									<div class="white clearfix">
-										<a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
-										<div class="price">200,000 VND</div>
+					<?php 
+						$sql = "select * from sanpham where linhkiencoban = '1' limit 8";
+						$result = mysqli_query($link, $sql);
+						while ($row = mysqli_fetch_array($result, MYSQLI_BOTH)) {
+							echo '<div class="col-md-3" style="padding: 10px;">
+								<div class="col-md">
+									<a href="single.php?masanpham='.$row["masp"].'"><img src="'.$row["hinhanh"].'" alt="" /></a>
+									<div class="top-content">';
+										echo "<h5>".$row['tensp']."</h5>";
+										echo '<div class="white clearfix">
+												<a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>';
+											echo "<div class='price'>".$row["giatien"]." VND</div>";
+										echo "</div>
 									</div>
-								</div>							
-							</div>
-						</div>
-						<div class="col-md-3 md-col">
-							<div class="col-md">
-								<a href="single.php"><img src="images/pic8.jpg" alt="" /></a>
-								<div class="top-content">
-									<h5>ARDUINO NANO</h5>
-									<div class="white clearfix">
-										<a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
-										<div class="price">200,000 VND</div>
-									</div>
-								</div>							
-							</div>
-						</div>
-						<div class="col-md-3 md-col">
-							<div class="col-md">
-								<a href="single.php"><img src="images/pic8.jpg" alt="" /></a>
-								<div class="top-content">
-									<h5>ARDUINO NANO</h5>
-									<div class="white clearfix">
-										<a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
-										<div class="price">200,000 VND</div>
-									</div>
-								</div>							
-							</div>
-						</div>
-						<div class="col-md-3 md-col">
-							<div class="col-md">
-								<a href="single.php"><img src="images/pic8.jpg" alt="" /></a>
-								<div class="top-content">
-									<h5>ARDUINO NANO</h5>
-									<div class="white clearfix">
-										<a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
-										<div class="price">200,000 VND</div>
-									</div>
-								</div>							
-							</div>
-						</div>
+								</div>
+							</div>";
+						}
+                    ?>
 					<div class="clearfix"></div>
 					</div>
                 </div>
                 <!---->
-                <!---->
-				<div class="content-middle">
-                <h3 class="future"><a href="">ARDUINO</a></h3>
-					<div class="content-top-in">
-						<div class="col-md-3 md-col">
-							<div class="col-md">
-								<a href="single.php"><img src="images/pic8.jpg" alt="" /></a>
-								<div class="top-content">
-									<h5>ARDUINO NANO</h5>
-									<div class="white clearfix">
-										<a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
-										<div class="price">200,000 VND</div>
-									</div>
-								</div>							
-							</div>
-						</div>
-						<div class="col-md-3 md-col">
-							<div class="col-md">
-								<a href="single.php"><img src="images/pic8.jpg" alt="" /></a>
-								<div class="top-content">
-									<h5>ARDUINO NANO</h5>
-									<div class="white clearfix">
-										<a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
-										<div class="price">200,000 VND</div>
-									</div>
-								</div>							
-							</div>
-						</div>
-						<div class="col-md-3 md-col">
-							<div class="col-md">
-								<a href="single.php"><img src="images/pic8.jpg" alt="" /></a>
-								<div class="top-content">
-									<h5>ARDUINO NANO</h5>
-									<div class="white clearfix">
-										<a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
-										<div class="price">200,000 VND</div>
-									</div>
-								</div>							
-							</div>
-						</div>
-						<div class="col-md-3 md-col">
-							<div class="col-md">
-								<a href="single.php"><img src="images/pic8.jpg" alt="" /></a>
-								<div class="top-content">
-									<h5>ARDUINO NANO</h5>
-									<div class="white clearfix">
-										<a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
-										<div class="price">200,000 VND</div>
-									</div>
-								</div>							
-							</div>
-						</div>
-					<div class="clearfix"></div>
-					</div>
-                </div>
-				<!---->
             <ul class="start">
                 <li ><a href="#"><i></i></a></li>
                 <li><span>1</span></li>
@@ -351,6 +156,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </ul>
         </div>
     </div>
-    <?php include 'footer.php';?>
+    <?php require_once ('footer.php');?>
 </body>
 </html>

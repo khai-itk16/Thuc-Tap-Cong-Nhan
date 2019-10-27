@@ -29,7 +29,8 @@
                 </div>
                 <div class="col-md-10 content-form">
                     <div class="title-menu">Thêm sản phẩm</div>
-                    <form action="xulythemsanpham.php?iddanhmuc=$iddm" method="POST">                      
+                    <form action="xulythemdanhmuc.php" method="POST">
+                        <input readonly type="text" placeholder="Nhập mã sản phẩm" name="masp" value="<?php echo $_REQUEST['iddanhmuc'];?>">
                         <input type="text" placeholder="Nhập tên sản phẩm" name="tensp">
                         <textarea placeholder="Nhập mô tả sản phẩm" name="motasp"></textarea>
                         <input type="text" placeholder="Nhập giá bán sản phẩm" name="giasp">

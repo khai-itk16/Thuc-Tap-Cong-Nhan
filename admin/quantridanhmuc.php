@@ -37,9 +37,31 @@
                             <td><h5>Xóa danh mục</h5></td>
                             <td><h5>Thêm sản phẩm</h5></td>
                         </tr>
-                        <tr>
-
-                        </tr>
+                        
+                        <?php 
+                            include 'connect.php';
+                            $sql = "select * from danhmuc";
+                            $result = mysqli_query($link,$sql);
+                            if(mysqli_num_rows($result) == 0){
+                                echo "Không tìm thấy thông tin<br>";
+                            }
+                            else{
+                                while($row = mysqli_fetch_array($result, MYSQLI_BOTH)){
+                                        echo '<tr>
+                                        <td>'.$row['madanhmuc'].'</td>
+                                        <td>'.$row['tendanhmuc'].'</td>
+                                        <td><a href="quantrisanpham.php?iddanhmuc='.$row['madanhmuc'].'&tendanhmuc='.$row['tendanhmuc'].'">Xem sản phẩm</a></td>
+                                        <td><a href="formsuadanhmuc.php?iddanhmuc='.$row['madanhmuc'].'&tendanhmuc='.$row['tendanhmuc'].'">Sửa danh mục</a></td>
+                                        <td><a href="xulyxoadanhmuc.php?iddanhmuc='.$row['madanhmuc'].'">Xóa danh mục</a></td>
+                                        <td><a href="formthemsanpham.php?iddanhmuc='.$row['madanhmuc'].'">Thêm sản phẩm</a></td>
+                                    </tr>';
+                                }
+                            }
+                            //free
+                            mysqli_free_result($result);
+                            mysqli_close($link);
+                            ?>
+                        
                     </table>
                 </div>
             </div>

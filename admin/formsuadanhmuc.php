@@ -12,7 +12,7 @@
     <title>Document</title>
 </head>
 <body>
-     <?php 
+    <?php
         include 'header.php';
     ?>
     <div class="content">
@@ -28,9 +28,12 @@
                 </div>
                 <div class="col-md-10 content-form">
                     <div class="title-menu">Sửa danh mục</div>
-                    <form action="xulysuadanhmuc.php" method="POST">
-                        <input type="text" placeholder="Nhập mã danh mục">
-                        <input type="text" placeholder="Nhập tên danh mục">
+                    <form action="xulythemdanhmuc.php" method="POST">
+                        <?php 
+                            echo '<input readonly="true" name="iddanhmuc" value='.$_REQUEST['iddanhmuc'].' type="text" placeholder="Nhập mã danh mục">
+                            <input name="tendanhmuc" value='.$_REQUEST['tendanhmuc'].' type="text" placeholder="Nhập tên danh mục">'
+                        
+                        ?>
                         <input type="submit" name="" id="" value="Sửa danh mục">
                     </form>
             </div>

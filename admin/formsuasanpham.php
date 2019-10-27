@@ -28,19 +28,33 @@
                 </div>
                 <div class="col-md-10 content-form">
                     <div class="title-menu">Sửa sản phẩm</div>
-                    <form action="xulysuasanpham.php" method="POST">
-                        <input type="text" placeholder="Nhập mã sản phẩm" name="masp">
-                        <input type="text" placeholder="Nhập tên sản phẩm" name="tensp">
-                        <textarea placeholder="Nhập mô tả sản phẩm" name="motasp"></textarea>
-                        <input type="text" placeholder="Nhập giá bán sản phẩm" name="giasp">
-                        <input type="text" placeholder="Nhập số lượng" name="soluongsp">
-                        <div class="clearfix clear">
-                            <div class="float-left">Hình ảnh sản phẩm</div>
-                            <input class="float-left hinhanh" type="file" name="hinhanhsp" placeholder="Hình ảnh">
-                        </div>
-                         <input type="text" placeholder="sản phẩm mua nhiều" name="spmuanhieu">
-                        <input type="text" placeholder="linh kiện cơ bản" name="linhkien">
-                        <input type="submit" name="" id="" value="Sửa sản phẩm">
+                    <form action="xulythemdanhmuc.php" method="POST">
+                        <?php 
+                            include 'connect.php';
+                            $sql = "select * from sanpham where masp = '".$_REQUEST['idsp']."'";
+                            $result = mysqli_query($link,$sql);
+                            if(mysqli_num_rows($result) == 0){
+                                echo "Không tìm thấy thông tin<br>";
+                            }else{
+                                $row = mysqli_fetch_array($result, MYSQLI_BOTH);
+                                echo '<input readonly value='.$row['masp'].' type="text" placeholder="Nhập mã sản phẩm" name="masp">
+                                <input value='.$row['tensp'].' type="text" placeholder="Nhập tên sản phẩm" name="tensp">
+                                <textarea value='.$row['mota'].' placeholder="Nhập mô tả sản phẩm" name="motasp"></textarea>
+                                <input value='.$row['giatien'].' type="text" placeholder="Nhập giá bán sản phẩm" name="giasp">
+                                <input value='.$row['soluong'].' type="text" placeholder="Nhập số lượng" name="soluongsp">
+                                <div class="clearfix clear">
+                                    <div class="float-left">Hình ảnh sản phẩm</div>
+                                    <input class="float-left hinhanh" type="file" name="hinhanhsp" placeholder="Hình ảnh">
+                                </div>
+                                <input type="submit" name="" id="" value="Sửa sản phẩm">';
+                            }
+	
+	
+                            
+                            mysqli_free_result($result);
+	                        mysqli_close($link);
+                        ?>
+                        
                     </form>
             </div>
         </div>

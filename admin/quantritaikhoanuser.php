@@ -12,7 +12,7 @@
     <title>Document</title>
 </head>
 <body>
-    <?php 
+<?php 
         include 'header.php';
     ?>
     <div class="content">
@@ -22,17 +22,40 @@
                     <div class="title-menu">Quản trị tài khoản người dùng</div>
                     <table class="table table-light" border="1">
                         <tr>
-                            <td><h5>Mã khách hàng</h5></td>
-                            <td><h5>Tên khách hàng</h5></td>
+                        <td><h5>Mã khách hàng</h5></td>
+                            <td><h5>Tên tài khoản</h5></td>
                             <td><h5>Mật khẩu</h5></td>
                             <td><h5>Họ tên</h5></td>
+                            <td><h5>Giới tính</h5></td>
                             <td><h5>Email</h5></td>
                             <td><h5>Số điện thoại</h5></td>
                             <td><h5>Địa chỉ</h5></td>
                         </tr>
-                        <tr>
-
-                        </tr>
+                        
+                        <?php 
+                            include 'connect.php';
+                            $sql = "select * from khachhang";
+                            $result = mysqli_query($link,$sql);
+                            if(mysqli_num_rows($result) == 0){
+                                echo "Không tìm thấy thông tin<br>";
+                            }
+                            else{
+                                while($row = mysqli_fetch_array($result, MYSQLI_BOTH)){
+                                        echo '<tr><td>'.$row['makhachhang'].'</td>
+                                        <td>'.$row['tendangnhap'].'</td>
+                                        <td>'.$row['matkhau'].'</td>
+                                        <td>'.$row['hoten'].'</td>
+                                        <td>'.$row['gioitinh'].'</td>
+                                        <td>'.$row['email'].'</td>
+                                        <td>'.$row['sdt'].'</td>
+                                        <td>'.$row['diachi'].'</td></tr>';
+                                }
+                            }
+                            //free
+                            mysqli_free_result($result);
+                            mysqli_close($link);
+                        ?>
+                        
                     </table>
                 </div>
             </div>
