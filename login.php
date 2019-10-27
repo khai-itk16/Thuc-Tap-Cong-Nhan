@@ -60,26 +60,40 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             });
         });
     </script>
+    <script type="text/javascript">
+        function validateForm() {
+            //Tài khoản phải được điền
+            var taiKhoan = document.forms["myForm"]["user"].value;
+            if (taiKhoan == "") {
+                alert("Tài khoản không được để trống");
+                document.forms["myForm"]["user"].focus();
+                return false;
+            }
+             //Mật khẩu phải được điền
+             var matKhau = document.forms["myForm"]["pass"].value;
+            if (matKhau == "") {
+                alert("Tài khoản không được để trống");
+                document.forms["myForm"]["pass"].focus();
+                return false;
+            }
+        }
+    </script>
 </head>
 <body>
     <?php include 'header.php';?>
     <div class="container">
 		<div class="account">
 			<h2 class="account-in">ĐĂNG NHẬP TÀI KHOẢN</h2>
-				<form>
-				<div class="col-md-12">
-					<span class="col-md-2">Tài khoản*</span>
-					<input class="col-md-10" type="text">
-				</div> 	
-				<div class="col-md-12"> 	
-					<span class="mail col-md-2" >Email*</span>
-					<input type="text" class="col-md-10"> 
-				</div>
-				<div class="col-md-12"> 
-					<span class="word col-md-2">Mật khẩu*</span>
-					<input type="password" class="col-md-10">
-				</div>				
-					<input type="submit" value="Login"> 
+				<form action="xuly-login.php" method="POST" onsubmit= "return validateForm();">
+                    <div class="col-md-12">
+                        <span class="col-md-2">Tài khoản*</span>
+                        <input class="col-md-10" type="text" name="user" required>
+                    </div> 	
+                    <div class="col-md-12"> 
+                        <span class="word col-md-2">Mật khẩu*</span>
+                        <input type="password" class="col-md-10" name="pass" required> 
+                    </div>				
+                    <input type="submit" value="Login"> 
 				</form>
 		</div>
 	</div>
