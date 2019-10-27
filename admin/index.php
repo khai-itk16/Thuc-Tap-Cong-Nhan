@@ -45,7 +45,12 @@
                         <a class="nav-link" href="quantritaikhoanuser.php" >
                         Quản trị tài khoản người dùng
                         </a>
-                    </li>   
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="quantridonhang.php" >
+                        Quản trị đơn hàng
+                        </a>
+                    </li>    
                 </ul>
                 <ul class="navbar-nav ml-auto">
                     Chào: 

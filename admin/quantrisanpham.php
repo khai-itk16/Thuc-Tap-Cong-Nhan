@@ -12,48 +12,11 @@
     <title>Document</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <a class="navbar-brand" href="index.php">Quản trị trang web</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Quản trị trang chủ
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="quantrisanphammoi.php">Quản trị sản phẩm mới</a>
-                            <a class="dropdown-item" href="quantrisanphammuanhieu.php">Quản trị sản phẩm mua nhiều</a>
-                            <a class="dropdown-item" href="quantrilinhkiencoban.php">Quản trị linh kiện cơ bản</a>
-                            <a class="dropdown-item" href="quantriarduino.php">Quản trị arduino</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="quantridanhmuc.php" >
-                        Quản trị sản phẩm
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="quantriphanhoi.php" >
-                        Quản trị phản hồi
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="quantritaikhoanuser.php" >
-                        Quản trị tài khoản người dùng
-                        </a>
-                    </li>    
-                </ul>
-                <ul class="navbar-nav ml-auto">
-                    Chào: 
-                </ul>
-                </form>
-            </div>
-        </div>    
-    </nav>
+<?php 
+        include 'header.php';
+        $iddanhmuc = $_REQUEST['iddanhmuc'];
+        $tendanhmuc = $_REQUEST['tendanhmuc'];
+    ?>
     <div class="content">
         <div class="container">
             <div class="row">
@@ -66,7 +29,7 @@
                     
                 </div>
                 <div class="col-md-10">
-                    <div class="title-menu">Quản trị sản phẩm của danh mục</div>
+                    <div class="title-menu">Quản trị sản phẩm của danh mục <?php echo $tendanhmuc?></div>
                     <table class="table table-light" border="1">
                         <tr>
                             <td><h5>Mã sản phẩm</h5></td>
@@ -78,9 +41,33 @@
                             <td><h5>Xóa sản phẩm</h5></td>
                             <td><h5>Sửa sản phẩm</h5></td>
                         </tr>
-                        <tr>
+                        <?php 
+                            include 'connect.php';
+                            $sql = "select * from sanpham";
+                            $result = mysqli_query($link,$sql);
+                            if(mysqli_num_rows($result) == 0){
+                                echo "Không tìm thấy thông tin<br>";
+                            }
+                            else{
+                                while($row = mysqli_fetch_array($result, MYSQLI_BOTH)){
+                                        echo '<tr>
+                                        <td>'.$row['masp'].'</td>
+                                        <td>'.$row['tensp'].'</td>
+                                        <td>'.$row['soluong'].'</td>
+                                        <td>'.$row['mota'].'</td>
+                                        <td>'.$row['giatien'].'</td>
+                                        <td>'.$row['hinhanh'].'</td>
 
-                        </tr>
+                                        <td><a href="xulyxoasanpham.php?idsp='.$row['masp'].'&iddanhmuc='.$iddanhmuc.'">Xem sản phẩm</a></td>
+                                        <td><a href="formsuasanpham.php?idsp='.$row['masp'].'">Sửa danh mục</a></td>
+                        
+                                    </tr>';
+                                }
+                            }
+                            //free
+                            mysqli_free_result($result);
+                            mysqli_close($link);
+                        ?>
                     </table>
                 </div>
             </div>
