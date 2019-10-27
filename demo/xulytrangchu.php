@@ -28,7 +28,6 @@
     $sql = "update sanpham set spmoi = '".$ckb1."', spmuanhieu = '".$ckb2."', linhkiencoban = '".$ckb3."' where masp = '".$masp."'";
     $result = mysqli_query($link, $sql);
     header("location: quantritrangchu.php");
-    $khanh = "sssssssssss";
-    echo $khanh;
-    
+    $khai = "rrrrrrrrrrrrr";
+echo $khai;
 ?>
