@@ -72,7 +72,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="content-top-in">
 
 					<?php 
-						$sql = "select * from sanpham where spmuanhieu != 'NULL' limit 8";
+						$sql = "select * from sanpham where spmuanhieu = '1' limit 8";
 						$result = mysqli_query($link, $sql);
 						while ($row = mysqli_fetch_array($result, MYSQLI_BOTH)) {
 							echo '<div class="col-md-3 " style="padding: 10px;">
@@ -98,7 +98,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <h3 class="future"><a href="product.php?spmoi=true">SẢN PHẨM MỚI</a></h3>
 					<div class="content-top-in">
 					<?php 
-						$sql = "select * from sanpham where spmoi != 'NULL' limit 8";
+						$sql = "select * from sanpham where spmoi = '1' limit 8";
 						$result = mysqli_query($link, $sql);
 						while ($row = mysqli_fetch_array($result, MYSQLI_BOTH)) {
 							echo '<div class="col-md-3" style="padding: 10px;">
@@ -124,7 +124,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <h3 class="future"><a href="product.php?linhkiencoban=true">LINH KIÊN CƠ BẢN</a></h3>
 					<div class="content-top-in">
 					<?php 
-						$sql = "select * from sanpham where linhkiencoban != 'NULL' limit 8";
+						$sql = "select * from sanpham where linhkiencoban = '1' limit 8";
 						$result = mysqli_query($link, $sql);
 						while ($row = mysqli_fetch_array($result, MYSQLI_BOTH)) {
 							echo '<div class="col-md-3" style="padding: 10px;">
