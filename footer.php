@@ -94,7 +94,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="container">
                 <div class="footer-middle-in" style="width:33.33% !important;">
                     <h6>GIỚI THIỆU</h6>
-                    <p>Suspendisse sed accumsan risus. Curabitur rhoncus, elit vel tincidunt elementum, nunc urna tristique nisi, in interdum libero magna tristique ante. adipiscing varius. Vestibulum dolor lorem.</p>
+                    <p>Shop linh kiện hàng đầu Việt Nam</p>
                 </div>
                 <div class="footer-middle-in"  style="width:33.33% !important;">
                     <h6>LIÊN HỆ</h6>
