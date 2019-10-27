@@ -14,7 +14,7 @@
 <body>
      <?php 
         include 'header.php';
-        $iddm = $_REQUEST['iddanhmuc'];
+        $iddanhmuc = $_REQUEST['iddanhmuc'];
     ?>
     <div class="content">
         <div class="container">
@@ -22,16 +22,15 @@
                 <div class="col-md-2 menu">
                     <div class="title-menu">Lựa chọn</div>
                     <div class="menu1">
-                    
-                        <a href="quantrisanpham.php?iddanhmuc=<?php echo $_REQUEST['iddanhmuc'];?>&tendanhmuc=<?php echo $_REQUEST['tendanhmuc'];?>" class="menu-item">Hiển thị sản phẩm</a>
-                        <a href="formthemsanpham.php?iddanhmuc=<?php echo $_REQUEST['iddanhmuc'];?>" class="menu-item">Thêm sản phẩm</a>
+                        <a href="quantrisanpham.php?iddanhmuc=<?php echo $iddanhmuc ?>" class="menu-item">Hiển thị sản phẩm</a>
+                        <a href="formthemsanpham.php?iddanhmuc=<?php echo $iddanhmuc ?> class="menu-item">Thêm sản phẩm</a>
                     </div>
                     
                 </div>
                 <div class="col-md-10 content-form">
                     <div class="title-menu">Thêm sản phẩm</div>
-                    <form action="xulythemdanhmuc.php" method="POST">
-                        <input readonly type="text" placeholder="Nhập mã sản phẩm" name="masp" value="<?php echo $_REQUEST['iddanhmuc'];?>">
+
+                    <form action="xulythemsanpham.php?iddanhmuc=<?php echo $iddanhmuc ?>" method="POST">                      
                         <input type="text" placeholder="Nhập tên sản phẩm" name="tensp">
                         <textarea placeholder="Nhập mô tả sản phẩm" name="motasp"></textarea>
                         <input type="text" placeholder="Nhập giá bán sản phẩm" name="giasp">

@@ -14,11 +14,13 @@
 <body>
 <?php 
         include 'header.php';
+        include 'connect.php';
         $iddanhmuc = $_REQUEST['iddanhmuc'];
-        if(isset($_REQUEST['tendanhmuc'])){
-            $tendanhmuc = $_REQUEST['tendanhmuc'];
-        }
-        
+        $sql = "select *from danhmuc where madanhmuc = ".$iddanhmuc;
+        $result = mysqli_query($link,$sql);
+        $row = mysqli_fetch_array($result,MYSQLI_BOTH);
+   
+
         
     ?>
     <div class="content">
@@ -27,13 +29,13 @@
                 <div class="col-md-2 menu">
                     <div class="title-menu">Lựa chọn</div>
                     <div class="menu1">
-                        <a href="quantrisanpham.php" class="menu-item">Hiển thị sản phẩm</a>
-                        <a href="formthemsanpham.php" class="menu-item">Thêm sản phẩm</a>
+                        <a href="quantrisanpham.php?iddanhmuc=<?php echo $iddanhmuc ?>" class="menu-item">Hiển thị sản phẩm</a>
+                        <a href="formthemsanpham.php?iddanhmuc=<?php echo $iddanhmuc ?>" class="menu-item">Thêm sản phẩm</a>
                     </div>
                     
                 </div>
                 <div class="col-md-10">
-                    <div class="title-menu">Quản trị sản phẩm của danh mục <?php echo $tendanhmuc?></div>
+                    <div class="title-menu">Quản trị sản phẩm của danh mục <?php echo $row['tendanhmuc']?></div> 
                     <table class="table table-light" border="1">
                         <tr>
                             <td><h5>Mã sản phẩm</h5></td>
@@ -46,7 +48,6 @@
                             <td><h5>Sửa sản phẩm</h5></td>
                         </tr>
                         <?php 
-                            include 'connect.php';
                             $sql = "select * from sanpham where madanhmuc =".$iddanhmuc;
                             $result = mysqli_query($link,$sql);
                             if(mysqli_num_rows($result) == 0){
@@ -62,8 +63,8 @@
                                         <td>'.$row['giatien'].'</td>
                                         <td>'.$row['hinhanh'].'</td>
 
-                                        <td><a href="xulyxoasanpham.php?idsp='.$row['masp'].'&iddanhmuc='.$iddanhmuc.'">Xem sản phẩm</a></td>
-                                        <td><a href="formsuasanpham.php?idsp='.$row['masp'].'">Sửa danh mục</a></td>
+                                        <td><a href="xulyxoasanpham.php?idsp='.$row['masp'].'&iddanhmuc='.$iddanhmuc.'">Xóa sản phẩm</a></td>
+                                        <td><a href="formsuasanpham.php?idsp='.$row['masp'].'">Sửa sản phẩm</a></td>
                         
                                     </tr>';
                                 }
