@@ -84,69 +84,11 @@
 
 <body>
     <!--header-->
-<<<<<<< HEAD
-    <?php include 'header.php'; ?>
-=======
-    <?php require_once('header.php'); ?>
->>>>>>> e4cb2486b42e98fb6b4496546934cf0ad8149033
+    <?php require_once ('header.php'); ?>
     <div class="search-result">
         <div class="container">
             <div class="row ">
                 <div class="col-md-12">
-<<<<<<< HEAD
-                <h3 class="title">DANH MỤC ARDUINO</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="col-md1">
-                        <a href="single.php"><img src="images/pic8.jpg" alt="" /></a>
-                        <div class="top-content">
-                            <h5>ARDUINO NANO</h5>
-                            <div class="white clearfix">
-                                <a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
-                                <div class="price">200,000 VND</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="col-md1">
-                        <a href="single.php"><img src="images/pic8.jpg" alt="" /></a>
-                        <div class="top-content">
-                            <h5>ARDUINO NANO</h5>
-                            <div class="white clearfix">
-                                <a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
-                                <div class="price">200,000 VND</div>
-                            </div>
-                        </div>                            
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="col-md1">
-                        <a href="single.php"><img src="images/pic8.jpg" alt="" /></a>
-                        <div class="top-content">
-                            <h5>ARDUINO NANO</h5>
-                            <div class="white clearfix">
-                                <a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
-                                <div class="price">200,000 VND</div>
-                            </div>
-                        </div>                            
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="col-md1">
-                        <a href="single.php"><img src="images/pic8.jpg" alt="" /></a>
-                        <div class="top-content">
-                            <h5>ARDUINO NANO</h5>
-                            <div class="white clearfix">
-                                <a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
-                                <div class="price">200,000 VND</div>
-                            </div>
-                        </div>                            
-                    </div>
-                </div>
-=======
                 <?php
                     if (isset($_REQUEST['spmoi'])) {
                         echo '<h3 class="title">SẢN PHẨM MỚI</h2>';
@@ -197,7 +139,6 @@
                 }
             ?>
 
->>>>>>> e4cb2486b42e98fb6b4496546934cf0ad8149033
             </div>
         </div>
     </div>
