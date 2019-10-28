@@ -12,7 +12,7 @@
     <title>Document</title>
 </head>
 <body>
-<?php 
+    <?php 
         include 'header.php';
     ?>
     <div class="content">
