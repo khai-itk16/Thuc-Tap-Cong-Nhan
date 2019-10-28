@@ -32,7 +32,13 @@
     </style>
 </head>
 <body>
+<?php include 'header.php';?>
     <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title-menu">Quản trị trang chủ</div>
+            </div>
+        </div>
         <div class="row">
             <div class="col-md-12">
             <table class="table table-light" border="1">

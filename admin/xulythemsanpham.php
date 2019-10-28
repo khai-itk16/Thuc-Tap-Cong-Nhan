@@ -7,7 +7,7 @@
 	$hinhanh = $_REQUEST['hinhanhsp'];
 	$ngay = date("Y/m/d");
 	include 'connect.php';
-	$sql = "insert into sanpham(madanhmuc,tensp,mota,giatien,soluong,hinhanh,ngaythem) values('$iddm','$tensp','$motasp','$giasp','$soluong', '$hinhanh', '$ngay')";
+	$sql = "insert into sanpham(madanhmuc,tensp,mota,giatien,soluong,hinhanh,ngaythem,spmoi,spmuanhieu,linhkiencoban) values('$iddm','$tensp','$motasp','$giasp','$soluong', '$hinhanh', '$ngay',0,0,0)";
 	mysqli_query($link,$sql);
 	header("location: quantrisanpham.php?iddanhmuc=$iddm");
 ?>

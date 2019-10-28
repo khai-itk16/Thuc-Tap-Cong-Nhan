@@ -163,7 +163,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <h4>Sản phẩm mua nhiều</h4>
 
                         <?php 
-                            $sql = "select * from sanpham where spmuanhieu != 'NULL' limit 3";
+                            $sql = "select * from sanpham where spmuanhieu = 1 limit 3";
                             $result = mysqli_query($link, $sql);
                             while ($row = mysqli_fetch_array($result, MYSQLI_BOTH)) {
                                 echo '<div class="product">

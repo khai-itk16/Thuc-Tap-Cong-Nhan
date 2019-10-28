@@ -40,12 +40,12 @@
                             }else{
                                 $row = mysqli_fetch_array($result, MYSQLI_BOTH);
                                 echo '
-                                <input readonly value='.$iddanhmuc.' type="text" placeholder="Mã danh mục" name="iddanhmuc">
-                                <input readonly value='.$row['masp'].' type="text" placeholder="Mã sản phẩm" name="masp">
-                                <input value='.$row['tensp'].' type="text" placeholder="Nhập tên sản phẩm" name="tensp">
-                                <textarea value='.$row['mota'].' placeholder="Nhập mô tả sản phẩm" name="motasp"></textarea>
-                                <input value='.$row['giatien'].' type="text" placeholder="Nhập giá bán sản phẩm" name="giasp">
-                                <input value='.$row['soluong'].' type="text" placeholder="Nhập số lượng" name="soluongsp">
+                                <input readonly value="'.$iddanhmuc.'" type="text" placeholder="Mã danh mục" name="iddanhmuc">
+                                <input readonly value="'.$row['masp'].'" type="text" placeholder="Mã sản phẩm" name="masp">
+                                <input value="'.$row['tensp'].'" type="text" placeholder="Nhập tên sản phẩm" name="tensp">
+                                <textarea value="'.$row['mota'].'" placeholder="Nhập mô tả sản phẩm" name="motasp"></textarea>
+                                <input value="'.$row['giatien'].'" type="text" placeholder="Nhập giá bán sản phẩm" name="giasp">
+                                <input value="'.$row['soluong'].'" type="text" placeholder="Nhập số lượng" name="soluongsp">
                                 <div class="clearfix clear">
                                     <div class="float-left">Hình ảnh sản phẩm</div>
                                     <input class="float-left hinhanh" type="file" name="hinhanhsp" placeholder="Hình ảnh">

@@ -17,7 +17,11 @@
     ?>
     <div class="don-hang">
         <div class="container">
-            <h4>Danh sách đơn hàng</h4>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="title-menu">QUẢN TRỊ ĐƠN HÀNG</div>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-md-12">
                     <table class="table table-light" border="1">

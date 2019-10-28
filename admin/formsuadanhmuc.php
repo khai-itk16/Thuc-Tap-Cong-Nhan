@@ -30,8 +30,8 @@
                     <div class="title-menu">Sửa danh mục</div>
                     <form action="xulysuadanhmuc.php" method="POST">
                         <?php 
-                            echo '<input readonly="true" name="iddanhmuc" value='.$_REQUEST['iddanhmuc'].' type="text" placeholder="Nhập mã danh mục">
-                            <input name="tendanhmuc" value='.$_REQUEST['tendanhmuc'].' type="text" placeholder="Nhập tên danh mục">'
+                            echo '<input readonly="true" name="iddanhmuc" value="'.$_REQUEST['iddanhmuc'].'" type="text" placeholder="Nhập mã danh mục">
+                            <input name="tendanhmuc" value="'.$_REQUEST['tendanhmuc'].'" type="text" placeholder="Nhập tên danh mục">'
                         
                         ?>
                         <input type="submit" name="" id="" value="Sửa danh mục">

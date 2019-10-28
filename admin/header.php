@@ -12,16 +12,10 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <li class="nav-item">
+                        <a class="nav-link" href="quantritrangchu.php" >
                         Quản trị trang chủ
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="quantrisanphammoi.php">Quản trị sản phẩm mới</a>
-                            <a class="dropdown-item" href="quantrisanphammuanhieu.php">Quản trị sản phẩm mua nhiều</a>
-                            <a class="dropdown-item" href="quantrilinhkiencoban.php">Quản trị linh kiện cơ bản</a>
-                            <a class="dropdown-item" href="quantriarduino.php">Quản trị arduino</a>
-                        </div>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="quantridanhmuc.php" >
@@ -36,6 +30,11 @@
                     <li class="nav-item">
                         <a class="nav-link" href="quantritaikhoanuser.php" >
                         Quản trị tài khoản người dùng
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="quantridonhang.php" >
+                        Quản trị đơn hàng
                         </a>
                     </li>   
                 </ul>

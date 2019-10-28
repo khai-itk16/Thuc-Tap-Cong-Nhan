@@ -1337,7 +1337,9 @@ h2.products-in:after {
     background: #eee;
     margin-bottom: 30px;
 }
-
+.single-bottom .product{
+    border-bottom: 1px solid black;
+}
 .white .price {
     padding: 7px 14px;
     vertical-align: middle;
