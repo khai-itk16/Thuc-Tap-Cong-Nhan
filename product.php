@@ -126,7 +126,7 @@
                 while ($row = mysqli_fetch_array($result, MYSQLI_BOTH)) {
                     echo '<div class="col-md-3" style="padding: 10px;">
                         <div class="col-md">
-                            <a href="single.php?masanpham='.$row["masp"].'"><img src="'.$row["hinhanh"].'" alt="" /></a>
+                            <a href="single.php?masanpham='.$row["masp"].'"><img src="images/'.$row["hinhanh"].'" alt="" /></a>
                             <div class="top-content">';
                                 echo "<h5>".$row['tensp']."</h5>";
                                 echo '<div class="white clearfix">

@@ -83,7 +83,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <div class="col-md-5 single-top">
                             <ul id="etalage">
                                 <li>
-                                    <img class="etalage_source_image etalage_thumb_image img-responsive" src="<?php echo $row['hinhanh']; ?>" alt="">
+                                    <img class="etalage_source_image etalage_thumb_image img-responsive" src="<?php echo 'images/'.$row['hinhanh']; ?>" alt="">
                                 </li>
                             </ul>
 
@@ -129,7 +129,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             while ($row = mysqli_fetch_array($result, MYSQLI_BOTH)) {
                                 echo '<div class="col-md-4 top-single">
                                     <div class="col-md">
-                                        <img src="'.$row['hinhanh'].'" alt="" />
+                                        <img src="images/'.$row['hinhanh'].'" alt="" />
                                         <div class="top-content">
                                             <h5>'.$row['tensp'].'</h5>
                                             <div class="white clearfix">
@@ -167,10 +167,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             $result = mysqli_query($link, $sql);
                             while ($row = mysqli_fetch_array($result, MYSQLI_BOTH)) {
                                 echo '<div class="product">
-                                    <img class="img-responsive fashion" src="'.$row["hinhanh"].'" alt="">
+                                    <img width="100%" class="img-responsive fashion" src="images/'.$row["hinhanh"].'" alt="">
                                     <div class="grid-product">
                                         <a href="single.php?masanpham='.$row["masp"].'" class="elit">'.$row['tensp'].'</a>
-                                        <span class="price price-in">'.$row["giatien"].'</span>
+                                        <span class="price price-in">'.$row["giatien"].' VND</span>
                                     </div>
                                     <div class="clearfix"> </div>
                                 </div>';
