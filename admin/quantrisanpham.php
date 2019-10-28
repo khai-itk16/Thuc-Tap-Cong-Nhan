@@ -63,8 +63,8 @@
                                         <td>'.$row['giatien'].'</td>
                                         <td>'.$row['hinhanh'].'</td>
 
-                                        <td><a href="xulyxoasanpham.php?idsp='.$row['masp'].'&iddanhmuc='.$iddanhmuc.'">Xóa sản phẩm</a></td>
-                                        <td><a href="formsuasanpham.php?idsp='.$row['masp'].'">Sửa sản phẩm</a></td>
+                                        <td><a href="xulyxoasanpham.php?idsp='.$row['masp'].'&">Xóa sản phẩm</a></td>
+                                        <td><a href="formsuasanpham.php?iddanhmuc='.$iddanhmuc.'&idsp='.$row['masp'].'">Sửa sản phẩm</a></td>
                         
                                     </tr>';
                                 }

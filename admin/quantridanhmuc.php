@@ -50,7 +50,7 @@
                                         echo '<tr>
                                         <td>'.$row['madanhmuc'].'</td>
                                         <td>'.$row['tendanhmuc'].'</td>
-                                        <td><a href="quantrisanpham.php?iddanhmuc='.$row['madanhmuc'].'&tendanhmuc='.$row['tendanhmuc'].'">Xem sản phẩm</a></td>
+                                        <td><a href="quantrisanpham.php?iddanhmuc='.$row['madanhmuc'].'">Xem sản phẩm</a></td>
                                         <td><a href="formsuadanhmuc.php?iddanhmuc='.$row['madanhmuc'].'&tendanhmuc='.$row['tendanhmuc'].'">Sửa danh mục</a></td>
                                         <td><a href="xulyxoadanhmuc.php?iddanhmuc='.$row['madanhmuc'].'">Xóa danh mục</a></td>
                                         <td><a href="formthemsanpham.php?iddanhmuc='.$row['madanhmuc'].'">Thêm sản phẩm</a></td>

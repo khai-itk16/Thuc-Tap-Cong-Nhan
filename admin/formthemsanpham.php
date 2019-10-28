@@ -23,7 +23,7 @@
                     <div class="title-menu">Lựa chọn</div>
                     <div class="menu1">
                         <a href="quantrisanpham.php?iddanhmuc=<?php echo $iddanhmuc ?>" class="menu-item">Hiển thị sản phẩm</a>
-                        <a href="formthemsanpham.php?iddanhmuc=<?php echo $iddanhmuc ?> class="menu-item">Thêm sản phẩm</a>
+                        <a href="formthemsanpham.php?iddanhmuc=<?php echo $iddanhmuc ?>" class="menu-item">Thêm sản phẩm</a>
                     </div>
                     
                 </div>
