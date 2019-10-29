@@ -145,7 +145,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="h_menu4">
                     <a class="toggleMenu" href="#">Menu</a>
                     <ul class="nav">
-                        <li class="active"><a href="index.php"><i> </i>Trang chủ</a></li>
+                        <li><a href="index.php"><i> </i>Trang chủ</a></li>
                         <li><a href="#">Danh mục</a>
                             <ul class="drop">
                                 <?php 
