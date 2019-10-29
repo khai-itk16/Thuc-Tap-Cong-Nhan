@@ -85,6 +85,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <h1>VỀ CHÚNG TÔI</h1>
                     <br>
                     <p>Công ty điện tử K2DMC là công ty TNHH chuyên cung cấp các linh kiện điện tử chất lượng cao</p>
+                    <p>Thành lập ngày 28/10/2019</p>
                     <p>Tham vọng chiếm lĩnh thị trường linh kiện điện tử tại Việt Nam</p>
                 </div>
             </div>

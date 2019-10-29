@@ -99,17 +99,17 @@
                     <h4><i class="fas fa-phone-volume"></i>Số điện thoại: 0335941792</h4>
                     <h4><i class="fas fa-envelope"></i>Email: giakhanh9890@gmail.com</h4>
                     <h4><i class="fab fa-facebook-square"></i>facebook.com/page/dientuk2dmc</h4>
-                    <form class="form-lienhe" action="">
+                    <form class="form-lienhe" method="POST" action="xulyphanhoi.php">
                         <div class="row">
                             
                             <div class="col-md-12">
-                                <textarea placeholder="Nội dung thắc mắc" name="" id="" cols="100%" rows="4" width="100%"></textarea>
+                                <textarea required name="noidung" placeholder="Nội dung thắc mắc" name="" id="" cols="100%" rows="4" width="100%"></textarea>
                             </div>
                             
                         </div>
                         <div class="row">
                             <div class="col-md-9">
-                                <input type="gmail" width="100%" placeholder="Nhập email của bạn">
+                                <input required name="email" type="gmail" width="100%" placeholder="Nhập email của bạn">
                             </div>
                             <div class="col-md-3">
                                 <div class="btn-submit">

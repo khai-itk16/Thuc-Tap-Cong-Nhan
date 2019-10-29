@@ -14,6 +14,8 @@
 <body>
     <?php 
         include 'header.php';
+        $iddanhmuc = $_REQUEST['iddanhmuc'];
+        $masp = $_REQUEST['idsp'];
     ?>
     <div class="content">
         <div class="container">
@@ -21,27 +23,29 @@
                 <div class="col-md-2 menu">
                     <div class="title-menu">Lựa chọn</div>
                     <div class="menu1">
-                        <a href="quantrisanpham.php" class="menu-item">Hiển thị sản phẩm</a>
-                        <a href="formthemsanpham.php" class="menu-item">Thêm sản phẩm</a>
+                        <a href="quantrisanpham.php?iddanhmuc=<?php echo $iddanhmuc ?>" class="menu-item">Hiển thị sản phẩm</a>
+                        <a href="formthemsanpham.php?iddanhmuc=<?php echo $iddanhmuc ?>" class="menu-item">Thêm sản phẩm</a>
                     </div>
                     
                 </div>
                 <div class="col-md-10 content-form">
                     <div class="title-menu">Sửa sản phẩm</div>
-                    <form action="xulythemdanhmuc.php" method="POST">
+                    <form action="xulysuasanpham.php" method="POST">
                         <?php 
                             include 'connect.php';
-                            $sql = "select * from sanpham where masp = '".$_REQUEST['idsp']."'";
+                            $sql = "select * from sanpham where masp = '$masp'";
                             $result = mysqli_query($link,$sql);
                             if(mysqli_num_rows($result) == 0){
                                 echo "Không tìm thấy thông tin<br>";
                             }else{
                                 $row = mysqli_fetch_array($result, MYSQLI_BOTH);
-                                echo '<input readonly value='.$row['masp'].' type="text" placeholder="Nhập mã sản phẩm" name="masp">
-                                <input value='.$row['tensp'].' type="text" placeholder="Nhập tên sản phẩm" name="tensp">
-                                <textarea value='.$row['mota'].' placeholder="Nhập mô tả sản phẩm" name="motasp"></textarea>
-                                <input value='.$row['giatien'].' type="text" placeholder="Nhập giá bán sản phẩm" name="giasp">
-                                <input value='.$row['soluong'].' type="text" placeholder="Nhập số lượng" name="soluongsp">
+                                echo '
+                                <input readonly value="'.$iddanhmuc.'" type="text" placeholder="Mã danh mục" name="iddanhmuc">
+                                <input readonly value="'.$row['masp'].'" type="text" placeholder="Mã sản phẩm" name="masp">
+                                <input value="'.$row['tensp'].'" type="text" placeholder="Nhập tên sản phẩm" name="tensp">
+                                <textarea value="'.$row['mota'].'" placeholder="Nhập mô tả sản phẩm" name="motasp"></textarea>
+                                <input value="'.$row['giatien'].'" type="text" placeholder="Nhập giá bán sản phẩm" name="giasp">
+                                <input value="'.$row['soluong'].'" type="text" placeholder="Nhập số lượng" name="soluongsp">
                                 <div class="clearfix clear">
                                     <div class="float-left">Hình ảnh sản phẩm</div>
                                     <input class="float-left hinhanh" type="file" name="hinhanhsp" placeholder="Hình ảnh">
