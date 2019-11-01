@@ -80,62 +80,39 @@
 <body>
     <!--header-->
     <?php include 'header.php'; ?>
+    <?php
+        $tensp = $_POST['tensp'];
+        //include 'connect';
+        
+        $sql = "select * from sanpham where tensp like '%$tensp%'";
+        $result = mysqli_query($link,$sql);
+        if(mysqli_num_rows($result) == 0){
+            echo "Không tìm thấy thông tin<br>";
+        }
+    ?>
     <div class="search-result">
         <div class="container">
             <div class="row ">
                 <div class="col-md-12 title">
-                    <h2><i class="fas fa-search"></i> KẾT QUẢ TÌM KIẾM CHO: IC</h2>
+                    <h2><i class="fas fa-search"></i> KẾT QUẢ TÌM KIẾM CHO: <?php echo $tensp;?></h2>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-3">
-                    <div class="col-md1">
-                        <a href="single.php"><img src="images/pic8.jpg" alt="" /></a>
-                        <div class="top-content">
-                            <h5>ARDUINO NANO</h5>
-                            <div class="white clearfix">
-                                <a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
-                                <div class="price">200,000 VND</div>
+                <?php while($row = mysqli_fetch_array($result, MYSQLI_BOTH)){
+                   ?> <div class="col-md-3">
+                        <div class="col-md1">
+                            <a href="single.php"><img src="images/<?php echo $row['hinhanh'];?>" alt="" /></a>
+                            <div class="top-content">
+                                <h5><?php echo $row['tensp'];?></h5>
+                                <div class="white clearfix">
+                                    <a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
+                                    <div class="price"><?php echo $row['giatien'];?> VND</div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="col-md1">
-                        <a href="single.php"><img src="images/pic8.jpg" alt="" /></a>
-                        <div class="top-content">
-                            <h5>ARDUINO NANO</h5>
-                            <div class="white clearfix">
-                                <a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
-                                <div class="price">200,000 VND</div>
-                            </div>
-                        </div>                            
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="col-md1">
-                        <a href="single.php"><img src="images/pic8.jpg" alt="" /></a>
-                        <div class="top-content">
-                            <h5>ARDUINO NANO</h5>
-                            <div class="white clearfix">
-                                <a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
-                                <div class="price">200,000 VND</div>
-                            </div>
-                        </div>                            
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="col-md1">
-                        <a href="single.php"><img src="images/pic8.jpg" alt="" /></a>
-                        <div class="top-content">
-                            <h5>ARDUINO NANO</h5>
-                            <div class="white clearfix">
-                                <a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
-                                <div class="price">200,000 VND</div>
-                            </div>
-                        </div>                            
-                    </div>
-                </div>
+               <?php }
+                ?>
             </div>
         </div>
     </div>
