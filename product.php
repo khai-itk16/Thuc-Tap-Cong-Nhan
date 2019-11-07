@@ -113,11 +113,11 @@
             <?php 
 
                 if (isset($_REQUEST['spmoi'])) {
-                    $sql = "SELECT * FROM sanpham WHERE spmoi != 'NULL';";
+                    $sql = "SELECT * FROM sanpham WHERE spmoi = '1';";
                 } else if (isset($_REQUEST['spmuanhieu'])) {
-                    $sql = "SELECT * FROM sanpham WHERE spmuanhieu != 'NULL';";
+                    $sql = "SELECT * FROM sanpham WHERE spmuanhieu = '1';";
                 } else if (isset($_REQUEST['linhkiencoban'])) {
-                    $sql = "SELECT * FROM sanpham WHERE linhkiencoban != 'NULL';";
+                    $sql = "SELECT * FROM sanpham WHERE linhkiencoban = '1';";
                 } else if (isset($_REQUEST['madanhmuc'])) {
                     $maDM = $_REQUEST['madanhmuc'];
                     $sql = "SELECT * FROM sanpham WHERE madanhmuc = '$maDM ';";
