@@ -160,8 +160,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <li><a href="aboutus.php">Về chúng tôi</a></li>
                         <li><a href="contactus.php">Liên hệ</a></li>
                         <div class="search" style="margin-top: 20px; float: right;">
-                            <form>
-                                <input type="text" placeholder="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}">
+                            <form action="searchresult.php" method="POST">
+                                <input name="tensp" type="text" placeholder="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}">
                                 <input type="submit" value="">
                             </form>
                         </div>

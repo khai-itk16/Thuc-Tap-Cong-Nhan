@@ -30,7 +30,7 @@
                 <div class="col-md-10 content-form">
                     <div class="title-menu">Thêm sản phẩm</div>
 
-                    <form action="xulythemsanpham.php?iddanhmuc=<?php echo $iddanhmuc ?>" method="POST">                      
+                    <form action="xulythemsanpham.php?iddanhmuc=<?php echo $iddanhmuc ?>" method="POST" enctype="multipart/form-data">                      
                         <input type="text" placeholder="Nhập tên sản phẩm" name="tensp">
                         <textarea placeholder="Nhập mô tả sản phẩm" name="motasp"></textarea>
                         <input type="text" placeholder="Nhập giá bán sản phẩm" name="giasp">

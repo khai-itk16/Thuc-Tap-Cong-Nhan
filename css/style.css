@@ -1147,6 +1147,14 @@ p.dollar span.in-dollar {
 }
 /*--products--*/
 
+.col-md-3 .col-md img{
+    width: 252px;
+    height: 252px;
+}
+.col-md-4 .col-md img{
+    width: 252px;
+    height: 252px;
+}
 .products {
     padding: 4em 0;
 }
