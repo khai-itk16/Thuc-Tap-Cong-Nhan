@@ -29,8 +29,8 @@
                 <div class="col-md-10 content-form">
                     <div class="title-menu">Thêm danh mục</div>
                     <form action="xulythemdanhmuc.php" method="POST">
-                        <input type="text" placeholder="Nhập tên danh mục" name="tendanhmuc">
-                        <input type="submit" name="submit" id="" value="Thêm danh mục">
+                        <input type="text" required placeholder="Nhập tên danh mục" name="tendanhmuc">
+                        <input type="submit" required name="submit" id="" value="Thêm danh mục">
                     </form>
             </div>
         </div>
