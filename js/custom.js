@@ -32,32 +32,68 @@ $(document).ready(function () {
       totalCost();
     });
 
-    $(".minus").click(function (e) { 
-      e.preventDefault();
-      var quatity = $(this).next().val();
-      if (quatity > 1) {
-        var price = $(this).parents().prev().children().val();
-        $(this).next().val((Number)(quatity) - 1);
-        var total = (Number)(price) * ((Number)(quatity)-1);
-        $(this).parent().next().children().val(total);
-
-        totalCost();
-      } else {
-        alert("Hiện tại số lượng sản phẩm bằng 1");
-      }
+    
+    $('.minus').on('click', function(){
+      let root = $(this).next();
+      var id = $(this).attr('id');
+      var status=-1;
       
+      $.ajax({
+        url : "xuly_capnhatgiohang.php",
+        method : 'GET',
+        data : {
+          id : id,
+          status : status
+        },
+        success : function (data) {
+          if (data==true) {
+            let priceContent = parseInt(root.parent().parent().children('.price-content').children('.price-status').val());
+            let qty = parseInt(root.val())-1;
+            root.parent().parent().children('.total-content').children('.total-status').val(priceContent*qty);
+            root.val(qty);
+            let currentTotal = parseInt($('.cart-item-content .total-price').val());
+            $('.cart-item-content .total-price').val(currentTotal- priceContent);
+            let current = $('#test123').text();
+            let num = parseInt(current)
+            $('#test123').text(num-1);
+          }
+        }
+     })
     });
+    //
 
-    $(".plus").click(function (e) { 
-      e.preventDefault();
-      var price = $(this).parents().prev().children().val();
-      var quatity = $(this).prev().val();
-      $(this).prev().val((Number)(quatity)+1);
-      var total = (Number)(price) * ((Number)(quatity)+1);
-      $(this).parent().next().children().val(total);
+    
+    $('.plus').on('click', function(){
+      //let data = {};
+      let root = $(this).prev();
+      var id = $(this).attr('id');
+      var status=1;
+      //data.id = id;
+      $.ajax({
+        url : "xuly_capnhatgiohang.php",
+        method : 'GET',
+        data : {
+          id : id,
+          status : status
+        },
+        success : function (data) {
+          if (data==true) {
+            let priceContent = parseInt(root.parent().parent().children('.price-content').children('.price-status').val());
+            let qty = parseInt(root.val())+1;
+            root.parent().parent().children('.total-content').children('.total-status').val(priceContent*qty);
+            let currentTotal = parseInt($('.cart-item-content .total-price').val());
+            $('.cart-item-content .total-price').val(currentTotal+priceContent);
+            root.val(qty);
 
-      totalCost();
-    });
+            let current = $('#test123').text();
+            let num = parseInt(current)
+            $('#test123').text(num+1);
+          }else {
+            alert('Sản phẩm đã hết hàng');
+          }
+        }
+     });
+    })
 
     $(".quatity-status").blur(function() {
       var quatity = $(".quatity-status").val();
@@ -88,6 +124,69 @@ $(document).ready(function () {
       $(".nav > li").removeClass("active");
       $(this).addClass("active");
     });
+
+    //
+    $('.cart-to').on('click', function(){
+      let data = {};
+      var id = $(this).attr('id');
+      data.id = id;
+      // alert(id);
+      $.ajax({
+        url : "xuly-giohang.php",
+        method : 'GET',
+        data : {
+          id : id
+        },
+        success : function (data) {
+          if (data==true) {
+            alert('Thêm sản phẩm vào giỏ hàng');
+            let current = $('#test123').text();
+            let num = parseInt(current)
+            $('#test123').text(num+1);
+          } else {
+            alert('Sản phẩm đã hết hàng');
+          }
+          
+        }
+
+
+
+     })
+    });
+    //
+    $('.xoagiohang').on('click', function(){
+      let data = {};
+      var id = $(this).attr('id');
+      var root = $(this).parent().parent();
+      data.id = id;
+      // alert(id);
+      $.ajax({
+        url : "xuly_xoagiohang.php",
+        method : 'GET',
+        data : {
+          id : id
+        },
+        success : function (data) {
+          if (data==true) {
+            alert('Xóa sản phẩm thành công');
+            let current = $('#test123').text();
+            let num = parseInt(current);
+            let numDel = root.children('.count-content').children('.quatity-status').attr('value');
+            // console.log(numDel)
+            $('#test123').text(num-parseInt(numDel));
+            let totalPrice = parseInt(root.children('.total-content').children('.total-status').attr('value'));
+            //console.log("Hello"+totalPrice);
+            let currentTotal = parseInt($('.cart-item-content .total-price').val());
+            $('.cart-item-content .total-price').val(currentTotal- totalPrice);
+            root.remove();
+            if ($('#test123').text()==="0"){
+              $('.content').html('<p>Không có sản phẩm nào trong giỏ </p>');
+            }
+          }
+        }
+     })
+    })
+    //
     
 });
 

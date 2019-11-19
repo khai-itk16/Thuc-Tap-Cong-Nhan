@@ -81,7 +81,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<div class="top-content">';
 										echo "<h5>".$row['tensp']."</h5>";
 										echo '<div class="white clearfix">
-												<a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>';
+												<a href="javascript:void(0)" id='.$row["masp"].' class="hvr-shutter-in-vertical hvr-shutter-in-vertical2 cart-to" >ADD TO CART</a>';
 											echo "<div class='price'>".$row["giatien"]." VND</div>";
 										echo "</div>
 									</div>
@@ -107,7 +107,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<div class="top-content">';
 										echo "<h5>".$row['tensp']."</h5>";
 										echo '<div class="white clearfix">
-												<a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>';
+												<a href="javascript:void(0)" id='.$row["masp"].' class="hvr-shutter-in-vertical hvr-shutter-in-vertical2 cart-to" >ADD TO CART</a>';
 											echo "<div class='price'>".$row["giatien"]." VND</div>";
 										echo "</div>
 									</div>
@@ -133,7 +133,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<div class="top-content">';
 										echo "<h5>".$row['tensp']."</h5>";
 										echo '<div class="white clearfix">
-												<a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>';
+												<a href="javascript:void(0)" id='.$row["masp"].' class="hvr-shutter-in-vertical hvr-shutter-in-vertical2 cart-to" >ADD TO CART</a>';
 											echo "<div class='price'>".$row["giatien"]." VND</div>";
 										echo "</div>
 									</div>

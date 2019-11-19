@@ -94,25 +94,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <h4><?php echo $row['tensp']; ?></h4>
                                 <div class="para-grid">
                                     <span class="add-to price"><?php echo $row['giatien']; ?> VND</span>
-                                    <a href="#" class="hvr-shutter-in-vertical cart-to">Add to Cart</a>
+                                    <a href="javascript:void(0)" id="<?= $row['masp'] ?>" class="hvr-shutter-in-vertical cart-to">Add to Cart</a>
                                     <div class="clearfix"></div>
                                 </div>
                                 <h5>Còn số lượng <?php echo $row['soluong']; ?></h5>
-                                <div class="available">
-                                    Số lượng:
-                                    <select name="quantity">
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                        <option value="9">9</option>
-                                        <option value="10">10</option>
-                                    </select>
-                                </div>
                                 <p><?php echo $row['mota']; ?></p>
 
                             </div>
@@ -133,7 +118,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                         <div class="top-content">
                                             <h5>'.$row['tensp'].'</h5>
                                             <div class="white clearfix">
-                                                <a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
+                                                <a href="javascript:void(0)" id='.$row["masp"].' class="hvr-shutter-in-vertical hvr-shutter-in-vertical2 cart-to" >ADD TO CART</a>
                                                 <div class="price">'.$row['giatien'].' VND</div>
                                             </div>
                                         </div>
