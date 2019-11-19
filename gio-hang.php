@@ -54,7 +54,7 @@
         });
     </script>
 </head>
-<body>
+<body style="width:100%; float: left;">
     <?php require_once 'header.php';?>
     <?php
     if(isset($_SESSION['cart']) && $_SESSION['cart'] !=null ) {
@@ -99,18 +99,23 @@
                         </div>
                     </div>
 
-                <?php endforeach ; ?>
-                <?php }else {?>
-                    <p>Không có sản phẩm nào trong giỏ </p>
-                <?php };?>
-                    <div class="cart-item-content" style="color: red;">
-                        TỔNG CỘNG:
-                        <input class="total-price" name="total-price" readonly value="0">đ 
-                    </div>
+                <?php endforeach; ?>
+                        
+                <div class="cart-item-content" style="color: red;">
+                    TỔNG CỘNG:
+                    <input class="total-price" name="total-price" readonly value="0">đ 
+                </div>
 
-                    <div class="cart-order col-md-4">
-                        <button><a href="index.php">MUA THÊM SẢN PHẨM</a></button>
-                        <input type="submit" value="ĐẶT HÀNG">
+                <?php }else {?>
+                    <div class="col-md-12" style="background: white; padding: 10px;">
+                        <h3 class="no-item">Không có sản phẩm nào trong giỏ </h3>
+                    </div>
+                <?php };?>
+                    <div class="col-md-12" style="background: white; padding: 20px; margin-bottom: 20px;">
+                        <div class="cart-order">
+                            <button><a href="index.php">MUA THÊM SẢN PHẨM</a></button>
+                            <input type="submit" value="ĐẶT HÀNG">
+                        </div>
                     </div>
                 </form>
 
