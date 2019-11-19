@@ -162,3 +162,29 @@ h2.account-in:after {
     border: 0;
     text-align: right;
 }
+
+.payment-method {
+    margin: auto;
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.payment_name {
+    height: 100%;
+    border: 1px solid grey;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.payment_name h4 {
+    color: grey;
+    font-size: 16px;
+}
+
+.payment_name img {
+    width: 40%;
+    display: block;
+    margin: auto;
+    padding: 10px 0;
+}

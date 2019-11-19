@@ -11,6 +11,7 @@
     <!-- Custom Theme files -->
     <!--theme-style-->
     <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/style1.css" rel="stylesheet" type="text/css" media="all" />
     <link rel="stylesheet" href="css/style1.css">
     <!--//theme-style-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -66,7 +67,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="container">
         <div class="row">
             <div class="account">
-                <h3 class="future">ĐƠN HÀNG</h2>
+                <h3 class="future">ĐƠN HÀNG</h3>
                 <form action="">
                     <div class="content-order">
                         <div class="content-header">
@@ -130,7 +131,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </div>
 
                     
-                    <h3 class="future">ĐỊA ĐIỂM NHẬN HÀNG</h2>
+                    <h3 class="future">ĐỊA ĐIỂM NHẬN HÀNG</h3>
                     <div class="col-md-12">
                         <span class="col-md-2">Họ và tên*</span>
                         <input class="col-md-10" type="text" require="require">
@@ -152,8 +153,26 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <input type="text" class="col-md-10"> 
                     </div>					
 
-                    <h3 class="future">HÌNH THỨC THANH TOÁN</h2>
-                    <input type="submit" value="ĐẶT HÀNG"> 
+                    <div class="col-md-12"> 
+                        <h3 class="future">HÌNH THỨC THANH TOÁN</h3>	
+                        <div class="payment-method"> 
+                            <div class="col-md-4 payment_name">
+                                <h4>Thanh toán khi nhận hàng</h4>
+                                <img src="./images/give-money.png" alt="give money">
+                                <input type="radio" name="radio">
+                            </div>
+
+                            <div class="col-md-4 payment_name">
+                                <h4>Thanh toán tại cửa hàng</h4>
+                                <img src="./images/money-bag.png" alt="money bag">
+                                <input type="radio" name="radio">
+                            </div>
+                        </div>
+                    </div>		
+
+                    <div class="col-md-12"> 
+                        <input type="submit" value="ĐẶT HÀNG" style="margin-left: 45% !important;"> 
+                    </div>
 
                 </form>
             </div>
