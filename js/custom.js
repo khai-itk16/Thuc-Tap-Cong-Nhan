@@ -155,37 +155,49 @@ $(document).ready(function () {
     });
     //
     $('.xoagiohang').on('click', function(){
-      let data = {};
-      var id = $(this).attr('id');
-      var root = $(this).parent().parent();
-      data.id = id;
-      // alert(id);
-      $.ajax({
-        url : "xuly_xoagiohang.php",
-        method : 'GET',
-        data : {
-          id : id
-        },
-        success : function (data) {
-          if (data==true) {
-            alert('Xóa sản phẩm thành công');
-            let current = $('#test123').text();
-            let num = parseInt(current);
-            let numDel = root.children('.count-content').children('.quatity-status').attr('value');
-            // console.log(numDel)
-            $('#test123').text(num-parseInt(numDel));
-            let totalPrice = parseInt(root.children('.total-content').children('.total-status').attr('value'));
-            //console.log("Hello"+totalPrice);
-            let currentTotal = parseInt($('.cart-item-content .total-price').val());
-            $('.cart-item-content .total-price').val(currentTotal- totalPrice);
-            root.remove();
-            if ($('#test123').text()==="0"){
-              $('.content').html('<p>Không có sản phẩm nào trong giỏ </p>');
+      if(confirm("Bạn chắc chắn có muốn xóa sản phẩm này không!")) {
+        let data = {};
+        var id = $(this).attr('id');
+        var root = $(this).parent().parent();
+        data.id = id;
+        // alert(id);
+        $.ajax({
+          url : "xuly_xoagiohang.php",
+          method : 'GET',
+          data : {
+            id : id
+          },
+          success : function (data) {
+            if (data==true) {
+              //alert('Xóa sản phẩm thành công');
+              let current = $('#test123').text();
+              let num = parseInt(current);
+              let numDel = root.children('.count-content').children('.quatity-status').attr('value');
+              // console.log(numDel)
+              $('#test123').text(num-parseInt(numDel));
+              let totalPrice = parseInt(root.children('.total-content').children('.total-status').attr('value'));
+              //console.log("Hello"+totalPrice);
+              let currentTotal = parseInt($('.cart-item-content .total-price').val());
+              $('.cart-item-content .total-price').val(currentTotal - totalPrice);
+              root.remove();
+              if ($('#test123').text()==="0"){
+                $('.content').html(`
+                  <div class="col-md-12" style="background: white; padding: 10px;">
+                    <h3 class="no-item">Không có sản phẩm nào trong giỏ </h3>
+                  </div>
+                  <div class="col-md-12" style="background: white; padding: 20px; margin-bottom: 20px;">
+                    <div class="cart-order">
+                      <button><a href="index.php">MUA THÊM SẢN PHẨM</a></button>
+                      <input type="submit" value="ĐẶT HÀNG">
+                    </div>
+                  </div>`
+                );
+              }
             }
           }
-        }
-     })
-    })
+        })
+      }
+    });
     //
     
 });
