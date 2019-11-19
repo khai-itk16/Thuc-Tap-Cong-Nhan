@@ -31,15 +31,15 @@
                     <div class="title-menu">Thêm sản phẩm</div>
 
                     <form action="xulythemsanpham.php?iddanhmuc=<?php echo $iddanhmuc ?>" method="POST" enctype="multipart/form-data">                      
-                        <input type="text" placeholder="Nhập tên sản phẩm" name="tensp">
-                        <textarea placeholder="Nhập mô tả sản phẩm" name="motasp"></textarea>
-                        <input type="text" placeholder="Nhập giá bán sản phẩm" name="giasp">
-                        <input type="text" placeholder="Nhập số lượng" name="soluongsp">
+                        <input required type="text" placeholder="Nhập tên sản phẩm" name="tensp">
+                        <textarea required placeholder="Nhập mô tả sản phẩm" name="motasp"></textarea>
+                        <input required type="text" placeholder="Nhập giá bán sản phẩm" name="giasp">
+                        <input required type="text" placeholder="Nhập số lượng" name="soluongsp">
                         <div class="clearfix clear">
                             <div class="float-left">Hình ảnh sản phẩm</div>
-                            <input class="float-left hinhanh" type="file" name="hinhanhsp" placeholder="Hình ảnh">
+                            <input required class="float-left hinhanh" type="file" name="hinhanhsp" placeholder="Hình ảnh">
                         </div>
-                        <input type="submit" name="" id="" value="Thêm sản phẩm">
+                        <input required type="submit" name="" id="" value="Thêm sản phẩm">
                     </form>
             </div>
         </div>

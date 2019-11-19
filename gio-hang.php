@@ -56,6 +56,9 @@
 </head>
 <body>
     <?php require_once 'header.php';?>
+    <?php
+    if(isset($_SESSION['cart']) && $_SESSION['cart'] !=null ) {
+     ?>
     <div class="clearfix"></div>
     <div class="container">
         <div class="row">
@@ -69,91 +72,53 @@
                         <div class="col-md-2">Số lượng</div>
                         <div class="col-md-3">Thành tiền</div>
                     </div>
+                    <?php  
 
+                    foreach ($_SESSION['cart'] as $key => $value) : ?>
+                        <?php $tongtien=$value['tien']*$value['qty'];?>
                     <div class="cart-item-content">
                         <div class="img-content col-md-2">
-                            <a href=""><img src="./images/cuon_cam.jpg" alt=""></a>
+                            <a href=""><img src="./images/<?=$value['hinhanh'] ?>" alt=""></a>
                         </div>
                         <div class="name-content col-md-3">
-                            Cuộn cảm 0.1uH
+                            <?=$value['name']?>
                         </div>
                         <div class="price-content col-md-2">
-                            <input class="price-status" name="price" readonly value="1000">đ 
+                            <input class="price-status" name="price" readonly value="<?=$value['tien'] ?>">đ 
                         </div>
                         <div class="count-content col-md-2">
-                            <button class="minus">-</button>
-                            <input class="quatity-status" name="quatity" value="1">
-                            <button class="plus">+</button>
+                            <button  type="button" class="minus" id="<?=$key?>">-</button>
+                            <input class="quatity-status" name="quatity" value="<?=$value['qty'] ?>">
+                            <button  type="button" class="plus"  id="<?=$key?>">+</button>
                         </div>
                         <div class="total-content col-md-2">
-                            <input class="total-status" name="price" readonly value="1000">đ 
+                            <input class="total-status" name="price" readonly value="<?=$tongtien?>">đ 
                         </div>
-                        <div class="delete-item col-md-1">
-                            <i class="far fa-trash-alt"></i>
-                        </div>
-                    </div>
-                    
-                    <div class="cart-item-content">
-                        <div class="img-content col-md-2">
-                            <a href=""><img src="./images/cuon_cam.jpg" alt=""></a>
-                        </div>
-                        <div class="name-content col-md-3">
-                            Cuộn cảm 0.1uH
-                        </div>
-                        <div class="price-content col-md-2">
-                            <input class="price-status" name="price" readonly value="1000">đ 
-                        </div>
-                        <div class="count-content col-md-2">
-                            <button class="minus">-</button>
-                            <input class="quatity-status" name="quatity" value="1">
-                            <button class="plus">+</button>
-                        </div>
-                        <div class="total-content col-md-2">
-                            <input class="total-status" name="price" readonly value="1000">đ 
-                        </div>
-                        <div class="delete-item col-md-1">
-                            <i class="far fa-trash-alt"></i>
+                        <div >
+                            <a href="javascript:void(0)"class="xoagiohang" id="<?=$key?>"><i class="far fa-trash-alt" ></i></a>
                         </div>
                     </div>
 
-                    <div class="cart-item-content">
-                        <div class="img-content col-md-2">
-                            <a href=""><img src="./images/cuon_cam.jpg" alt=""></a>
-                        </div>
-                        <div class="name-content col-md-3">
-                            Cuộn cảm 0.1uH
-                        </div>
-                        <div class="price-content col-md-2">
-                            <input class="price-status" name="price" readonly value="1000">đ 
-                        </div>
-                        <div class="count-content col-md-2">
-                            <button class="minus">-</button>
-                            <input class="quatity-status" name="quatity" value="1">
-                            <button class="plus">+</button>
-                        </div>
-                        <div class="total-content col-md-2">
-                            <input class="total-status" name="price" readonly value="1000">đ 
-                        </div>
-                        <div class="delete-item col-md-1">
-                            <i class="far fa-trash-alt"></i>
-                        </div>
-                    </div>
-
+                <?php endforeach ; ?>
+                <?php }else {?>
+                    <p>Không có sản phẩm nào trong giỏ </p>
+                <?php };?>
                     <div class="cart-item-content" style="color: red;">
                         TỔNG CỘNG:
                         <input class="total-price" name="total-price" readonly value="0">đ 
                     </div>
 
                     <div class="cart-order col-md-4">
-                        <button><a href="">MUA THÊM SẢN PHẨM</a></button>
+                        <button><a href="index.php">MUA THÊM SẢN PHẨM</a></button>
                         <input type="submit" value="ĐẶT HÀNG">
                     </div>
                 </form>
 
             </div>
         </div>
-	</div>
-		<!---->
+    </div>
+
+        <!---->
     <?php include 'footer.php';?>
 </body>
 </html>

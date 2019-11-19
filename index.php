@@ -81,7 +81,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<div class="top-content">
                                         <h5>'.$row["tensp"].'</h5>';
 										echo '<div class="white clearfix">
-												<a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>';
+												<a href="javascript:void(0)" id='.$row["masp"].' class="hvr-shutter-in-vertical hvr-shutter-in-vertical2 cart-to" >ADD TO CART</a>';
 											echo "<div class='price'>".$row["giatien"]." VND</div>";
 										echo "</div>
 									</div>
@@ -104,12 +104,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							echo '<div class="col-md-3" style="padding: 10px;">
 								<div class="col-md">
 									<a href="single.php?masanpham='.$row["masp"].'"><img src="images/'.$row["hinhanh"].'" alt="" /></a>
-                                    <div class="top-content">
-                                    <h5>'.$row["tensp"].'</h5></a>';
-                                    echo '<div class="white clearfix">
-                                            <a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>';
-                                        echo "<div class='price'>".$row["giatien"]." VND</div>";
-                                    echo "</div>
+									<div class="top-content">';
+										echo "<h5>".$row['tensp']."</h5>";
+										echo '<div class="white clearfix">
+												<a href="javascript:void(0)" id='.$row["masp"].' class="hvr-shutter-in-vertical hvr-shutter-in-vertical2 cart-to" >ADD TO CART</a>';
+											echo "<div class='price'>".$row["giatien"]." VND</div>";
+										echo "</div>
 									</div>
 								</div>
 							</div>";
@@ -133,7 +133,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     <div class="top-content">
                                     <h5>'.$row["tensp"].'</h5>';
 										echo '<div class="white clearfix">
-												<a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>';
+												<a href="javascript:void(0)" id='.$row["masp"].' class="hvr-shutter-in-vertical hvr-shutter-in-vertical2 cart-to" >ADD TO CART</a>';
 											echo "<div class='price'>".$row["giatien"]." VND</div>";
 										echo "</div>
 									</div>
