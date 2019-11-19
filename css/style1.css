@@ -1,3 +1,9 @@
+
+a,
+a:hover {
+    text-decoration: none !important;
+}
+
 h3.future:after{ 
 	content: "";
 	background: url(../images/line.png)0px 0px;

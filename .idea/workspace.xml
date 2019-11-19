@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d34c0e44-339e-461f-a347-246027f10b40" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style1.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style1.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -80,6 +82,8 @@
       <workItem from="1571714328856" duration="700000" />
       <workItem from="1571932035782" duration="2285000" />
       <workItem from="1572188672921" duration="960000" />
+      <workItem from="1572591556793" duration="615000" />
+      <workItem from="1573483730631" duration="289000" />
     </task>
     <task id="LOCAL-00001" summary="add folder css, images, js">
       <created>1571409727075</created>
