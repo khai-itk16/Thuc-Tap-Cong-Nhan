@@ -99,18 +99,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="footer-middle-in"  style="width:33.33% !important;">
                     <h6>LIÊN HỆ</h6>
                     <ul>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Delivery Information</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><p>P.Hòa Khánh - Q.Liên Chiểu - TP.Đà Nẵng</p></li>
+                        <li><p>Email:</p></li>
+                        <li><p>Phone:</p></li>
                     </ul>
                 </div>
                 <div class="footer-middle-in"  style="width:33.33% !important;">
                     <h6>THEO DÕI CHÚNG TÔI TRÊN</h6>
                     <ul>
-                        <li><a href="contact.html">Contact Us</a></li>
-                        <li><a href="#">Returns</a></li>
-                        <li><a href="#">Site Map</a></li>
+                        <li><p>Facebook:</p></li>
                     </ul>
                 </div>
                 <div class="clearfix"></div>
