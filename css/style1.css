@@ -150,7 +150,7 @@ h2.account-in:after {
 
 .total-status,
 .price-status {
-    width: 60%;
+    width: 50%;
     border: none;
     text-align: right;
 }
@@ -195,4 +195,17 @@ h2.account-in:after {
 .no-item {
     width: fit-content;
     margin: auto;
+}
+
+.time-receipt,
+.order-status {
+    outline: none;
+    border: none;
+    margin-top: -26px;
+    display: block;
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    color: gray;
+    font-size: 14px;
 }
