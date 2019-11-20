@@ -114,7 +114,7 @@
                     <div class="col-md-12" style="background: white; padding: 20px; margin-bottom: 20px;">
                         <div class="cart-order">
                             <button><a href="index.php">MUA THÊM SẢN PHẨM</a></button>
-                            <input type="submit" value="ĐẶT HÀNG">
+                            <button><a href="don-hang.php">Đặt Hàng</a></button>
                         </div>
                     </div>
                 </form>

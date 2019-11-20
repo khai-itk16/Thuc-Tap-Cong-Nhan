@@ -15,7 +15,7 @@
         
         if($row[0] == 1) {
             $_SESSION['user']=$user;
-            $_SESSION['pass']=$pass;
+            $_SESSION['pass']=$pass;// nói với khai ko nên lưu pass trong session nì  so thế hắn bị
             header("location: index.php");
 
         } else {

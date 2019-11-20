@@ -61,96 +61,85 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             });
         });
     </script>
+    <script type="text/javascript">
+        
+        function validateForm() {
+            //Tài khoản phải được điền
+            var taiKhoan = document.forms["myForm"]["hoten"].value;
+            if (taiKhoan == "") {
+                alert("Tên không được để trống");
+                document.forms["myForm"]["hoten"].focus();
+                return false;
+            }
+            //Địa chỉ phải được điền
+            var diaChi = document.forms["myForm"]["diaChi"].value;
+            if (diaChi == "") {
+                alert("Địa chỉ không được để trống");
+                document.forms["myForm"]["diaChi"].focus();
+                return false;
+            }
+             //Nhập số điện thoại
+            var dienThoai = document.forms["myForm"]["sodienthoai"].value;
+            var kiemTraDT = isNaN(dienThoai);
+            if (dienThoai == "") {
+                alert("Sô Điện thoại không được để trống");
+                document.forms["myForm"]["sodienthoai"].focus();
+                return false;
+            }
+            if (kiemTraDT == true) {
+                alert("Số Điện thoại phải để ở định dạng số");
+                document.forms["myForm"]["sodienthoai"].focus();
+                return false;
+            }
+
+            //Email phải được điền chính xác
+            var email=document.forms["myForm"]["email"].value;
+            var aCong=email.indexOf("@");
+            var dauCham = email.lastIndexOf(".");
+            if (email == "") {
+                alert("Email không được để trống");
+                document.forms["myForm"]["email"].focus();
+                return false;
+            }
+            else if ((aCong<1) || (dauCham<aCong+2) || (dauCham+2>email.length)) {
+                alert("Email bạn điền không chính xác");
+                document.forms["myForm"]["email"].focus();
+                return false;
+            }
+           
+
+      
+           
+            
+        }
+    </script>
 </head>
 <body>
     <?php include 'header.php';?>
     <div class="container">
         <div class="row">
-            <div class="account">
-                <h3 class="future">ĐƠN HÀNG</h3>
-                <form action="">
-                    <div class="content-order">
-                        <div class="content-header">
-                            <div class="col-md-2" style="padding: 0 !important;">Hình ảnh</div>
-                            <div class="col-md-3" style="padding: 0 !important;">Sản phẩm</div>
-                            <div class="col-md-2" style="padding: 0 !important;">Đơn giá</div>
-                            <div class="col-md-2" style="padding: 0 !important;">Số lượng</div>
-                            <div class="col-md-3" style="padding: 0 !important;">Thành tiền</div>
-                        </div>
-
-                        <div class="cart-item-content" style="padding-top: 0 !important; line-height: 80px;">
-                            <div class="img-content col-md-2">
-                                <a href=""><img src="./images/cuon_cam.jpg" alt=""></a>
-                            </div>
-                            <div class="name-content col-md-3">
-                                Cuộn cảm 0.1uH
-                            </div>
-                            <div class="price-content col-md-2">
-                                <input class="price-status" name="price" readonly value="1000">đ 
-                            </div>
-                            <div class="count-content col-md-2">
-                                <button class="minus">-</button>
-                                <input class="quatity-status" name="quatity" value="1">
-                                <button class="plus">+</button>
-                            </div>
-                            <div class="total-content col-md-2">
-                                <input class="total-status" name="total-status" readonly value="1000">đ 
-                            </div>
-                            <div class="delete-item col-md-1">
-                                <i class="far fa-trash-alt"></i>
-                            </div>
-                        </div>
-
-                        <div class="cart-item-content" style="padding-top: 0 !important; line-height: 80px;">
-                            <div class="img-content col-md-2">
-                                <a href=""><img src="./images/cuon_cam.jpg" alt=""></a>
-                            </div>
-                            <div class="name-content col-md-3">
-                                Cuộn cảm 0.1uH
-                            </div>
-                            <div class="price-content col-md-2">
-                                <input class="price-status" name="price" readonly value="1000">đ 
-                            </div>
-                            <div class="count-content col-md-2">
-                                <button class="minus">-</button>
-                                <input class="quatity-status" name="quatity" value="1">
-                                <button class="plus">+</button>
-                            </div>
-                            <div class="total-content col-md-2">
-                                <input class="total-status" name="total-status" readonly value="1000">đ 
-                            </div>
-                            <div class="delete-item col-md-1">
-                                <i class="far fa-trash-alt"></i>
-                            </div>
-                        </div>
-
-                        <div class="cart-item-content" style="color: red;">
-                            TỔNG CỘNG:
-                            <input class="total-price" name="total-price" readonly value="0">đ 
-                        </div>
-                    </div>
-
-                    
+            <div class="account"> 
+                <form action="xuly_donhang.php" method="POST" name="myForm" >  
                     <h3 class="future">ĐỊA ĐIỂM NHẬN HÀNG</h3>
                     <div class="col-md-12">
                         <span class="col-md-2">Họ và tên*</span>
-                        <input class="col-md-10" type="text" require="require">
+                        <input class="col-md-10" type="text" name="hoten" required>
                     </div>
                     <div class="col-md-12">
                         <span class="col-md-2" >Địa chỉ nhận hàng*</span>
-                        <input class="col-md-10" type="text">
+                        <input class="col-md-10" type="text" name="diachi" required>
                     </div> 
                     <div class="col-md-12"> 	
-                        <span class="mail col-md-2" >Số điện thoại*</span>
-                        <input type="text" class="col-md-10"> 
+                        <span class="mail col-md-2" >Số điện thoại liên hệ*</span>
+                        <input type="text" class="col-md-10" name="sodienthoai" required> 
                     </div>	
                     <div class="col-md-12"> 	
                         <span class="mail col-md-2" >Email*</span>
-                        <input type="text" class="col-md-10"> 
+                        <input type="text" class="col-md-10" name="email" required> 
                     </div>
                     <div class="col-md-12"> 	
                         <span class="mail col-md-2" >Ghi chú</span>
-                        <input type="text" class="col-md-10"> 
+                        <input type="text" class="col-md-10" name="ghichu"> 
                     </div>					
 
                     <div class="col-md-12"> 
@@ -159,17 +148,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <div class="col-md-4 payment_name">
                                 <h4>Thanh toán khi nhận hàng</h4>
                                 <img src="./images/give-money.png" alt="give money">
-                                <input type="radio" name="radio">
-                            </div>
-
-                            <div class="col-md-4 payment_name">
-                                <h4>Thanh toán tại cửa hàng</h4>
-                                <img src="./images/money-bag.png" alt="money bag">
-                                <input type="radio" name="radio">
+                                <input type="radio" name="radio" value="1" checked="true">
                             </div>
                         </div>
-                    </div>		
-
+                    </div>
                     <div class="col-md-12"> 
                         <input type="submit" value="ĐẶT HÀNG" style="margin-left: 45% !important;"> 
                     </div>
