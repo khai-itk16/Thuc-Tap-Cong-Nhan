@@ -106,16 +106,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 document.forms["myForm"]["email"].focus();
                 return false;
             }
-           
-
-      
-           
             
         }
     </script>
 </head>
 <body>
-    <?php include 'header.php';?>
+    <?php require_once 'header.php';?>
     <div class="container">
         <div class="row">
             <div class="account"> 

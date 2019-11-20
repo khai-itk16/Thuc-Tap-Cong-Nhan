@@ -56,12 +56,29 @@
 </head>
 <body style="width:100%; float: left;">
     <?php require_once 'header.php';?>
-    
+    <?php 
+        $sql="SELECT count(*) FROM hoadon hd INNER JOIN khachhang kh 
+            ON hd.makhachhang = kh.makhachhang 
+            WHERE hd.dathanhtoan = 0 AND hd.makhachhang = ".$_SESSION['makh'];
+        $result = mysqli_query($link, $sql);
+        $row = mysqli_fetch_array($result, MYSQLI_BOTH);
+    ?>
     <div class="clearfix"></div>
     <div class="container">
         <div class="row">
             <div class="content col-md-12">
                 <h3 class="future">THANH TOÁN</h2>
+                <?php
+                    if($row[0] == 0) {
+                ?>
+                    <div class="col-md-12" style="background: white; padding: 10px;">
+                        <h3 class="no-item">Hiện tại bạn chưa đặt đơn hàng nào.</h3>
+                    </div>
+                <?php
+                    } else{
+                ?>
+                        
+                
                 <div class="content-header">
                     <div class="col-md-2">Hình ảnh</div>
                     <div class="col-md-3">Sản phẩm</div>
@@ -69,43 +86,56 @@
                     <div class="col-md-2">Số lượng</div>
                     <div class="col-md-3">Thành tiền</div>
                 </div>
+                <?php 
+                    $sql="SELECT hd.tongtien, ct.* FROM hoadon hd 
+                        INNER JOIN chitiethoadon ct ON hd.mahoadon = ct.mahoadon 
+                        WHERE hd.dathanhtoan = 0 AND hd.makhachhang 
+                        IN (SELECT kh.makhachhang FROM khachhang kh WHERE kh.makhachhang = ".$_SESSION['makh'].");";
+                    $result = mysqli_query($link, $sql);
+                    while ($row = mysqli_fetch_array($result, MYSQLI_BOTH)) {
+                ?>
+                    <div lass="col-md-12">
+                        <div class="cart-item-content">
+                            <div class="img-content col-md-2">
+                                <a href="single.php?masanpham=<?= $row['masp'];?>"><img src="./images/<?= $row['hinhanh'];?>" alt=""></a>
+                            </div>
+                            <div class="name-content col-md-3">
+                            <?= $row['tensp'];?>
+                            </div>
+                            <div class="price-content col-md-2">
+                                <input class="price-status"readonly value="<?= $row['dongia'];?>">đ 
+                            </div>
+                            <div class="count-content col-md-2">
+                                <input class="quatity-status" style="outline: none;" readonly value="<?= $row['soluong'];?>">
+                            </div>
+                            <div class="total-content col-md-3">
+                                <input class="total-status" readonly value="<?= $row['thanhtien'];?>">đ 
+                            </div>
+                        </div>
+                    </div>
+                <?php
+                    }
+                ?>
                 
-                <div class="cart-item-content col-md-12">
-                    <div class="img-content col-md-2">
-                        <a href=""><img src="./images/74hc.png" alt=""></a>
+                <div class="cart-item-content" style="color: red;">
+                    <div class="col-md-4">       
+                        Tình trạng đơn hàng:
+                        <input class="order-status" name="" readonly value="Đang chờ xử lý.">
                     </div>
-                    <div class="name-content col-md-3">
-                        IC 74HC
-                    </div>
-                    <div class="price-content col-md-2">
-                        <input class="price-status" name="price" readonly value="10000">đ 
-                    </div>
-                    <div class="count-content col-md-2">
-                        <input class="quatity-status" style="outline: none;" name="quatity" readonly value="2">
-                    </div>
-                    <div class="total-content col-md-3">
-                        <input class="total-status" name="price" readonly value="2000">đ 
-                    </div>
-                </div>
 
-                <div class="col-md-12">
-                    <div class="cart-item-content" style="color: red;">
-                        <div class="col-md-4">       
-                            Tình trạng đơn hàng:
-                            <input class="order-status" name="" readonly value="Đang chờ xử lý.">
-                        </div>
+                    <div class="col-md-4">       
+                        Thời gian nhận hàng:
+                        <input class="time-receipt"name="" readonly value="Giao hàng chậm nhất trong vòng 3 ngày.">
+                    </div>
 
-                        <div class="col-md-4">       
-                            Thời gian nhận hàng:
-                            <input class="time-receipt"name="" readonly value="Giao hàng chậm nhất trong vòng 3 ngày.">
-                        </div>
-
-                        <div class="col-md-4">       
-                            Tổng tiền thanh toán:
-                            <input class="total-price" name="total-price" readonly value="2000">đ 
-                        </div>
-                    </div> 
+                    <div class="col-md-4">       
+                        Tổng tiền thanh toán:
+                        <input class="total-price" name="total-price" readonly value="<?= $row['tongtien'] ?>">đ 
+                    </div>
                 </div> 
+                <?php
+                    }
+                ?>
             </div>
         </div>
     </div>

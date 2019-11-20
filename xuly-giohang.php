@@ -25,15 +25,12 @@ if($sanpham){
 			}
 			
 	}else {
-	$_SESSION['cart'][$_masp]['qty']= 1;
-	$_SESSION['cart'][$_masp]['name']= $sanpham['tensp'];
-	$_SESSION['cart'][$_masp]['hinhanh']= $sanpham['hinhanh'];
-	$_SESSION['cart'][$_masp]['tien']= $sanpham['giatien'];
-	echo true;
-	
-
-}
-	
+		$_SESSION['cart'][$_masp]['qty']= 1;
+		$_SESSION['cart'][$_masp]['name']= $sanpham['tensp'];
+		$_SESSION['cart'][$_masp]['hinhanh']= $sanpham['hinhanh'];
+		$_SESSION['cart'][$_masp]['tien']= $sanpham['giatien'];
+		echo true;
+	}
 }
  
 ?>
