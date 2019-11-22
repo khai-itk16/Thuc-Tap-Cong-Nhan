@@ -105,7 +105,7 @@
                             <div class="top-content">
                                 <h5><?php echo $row['tensp'];?></h5>
                                 <div class="white clearfix">
-                                    <a href="#" class="hvr-shutter-in-vertical hvr-shutter-in-vertical2">ADD TO CART</a>
+                                    <a href="javascript:void(0)" id="<?php echo $row['masp'];?>" class="hvr-shutter-in-vertical cart-to hvr-shutter-in-vertical2"> ADD TO CART</a>
                                     <div class="price"><?php echo $row['giatien'];?> VND</div>
                                 </div>
                             </div>

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery.min.js"></script>
@@ -99,18 +99,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="footer-middle-in"  style="width:33.33% !important;">
                     <h6>LIÊN HỆ</h6>
                     <ul>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Delivery Information</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><p>P.Hòa Khánh - Q.Liên Chiểu - TP.Đà Nẵng</p></li>
+                        <li><p>Email:</p></li>
+                        <li><p>Phone:</p></li>
                     </ul>
                 </div>
                 <div class="footer-middle-in"  style="width:33.33% !important;">
                     <h6>THEO DÕI CHÚNG TÔI TRÊN</h6>
                     <ul>
-                        <li><a href="contact.html">Contact Us</a></li>
-                        <li><a href="#">Returns</a></li>
-                        <li><a href="#">Site Map</a></li>
+                        <li><p>Facebook:</p></li>
                     </ul>
                 </div>
                 <div class="clearfix"></div>
