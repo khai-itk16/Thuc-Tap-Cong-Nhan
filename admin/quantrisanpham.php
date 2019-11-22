@@ -61,7 +61,7 @@
                                         <td>'.$row['soluong'].'</td>
                                         <td>'.$row['mota'].'</td>
                                         <td>'.$row['giatien'].'</td>
-                                        <td><img style="width: 40%; " src="../images/'.$row['hinhanh'].'"></td>
+                                        <td width="30%"><img style="width: 100%; " src="../images/'.$row['hinhanh'].'"></td>
 
                                         <td><a href="xulyxoasanpham.php?idsp='.$row['masp'].'&">Xóa sản phẩm</a></td>
                                         <td><a href="formsuasanpham.php?iddanhmuc='.$iddanhmuc.'&idsp='.$row['masp'].'">Sửa sản phẩm</a></td>

@@ -8,8 +8,9 @@
     mysqli_select_db($link,"thuctapcongnhan");
     $sql = "insert into lienhe (email, noidung, ngaylienhe) values ('".$email."','".$noidung."','".$ngay."')";
     if(mysqli_query($link, $sql)){
-        header('location: contactus.php');
+        echo '<script>alert("Phản hồi thành công");
+        window.location= \'contactus.php\'</script>';
     }else{
-        echo 'Thêm thất bại';
+        echo '<script>alert("Gửi đi thất bại");</script>';
     }
 ?>
