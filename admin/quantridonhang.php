@@ -29,6 +29,7 @@
                             <td>Mã hóa đơn</td>
                             <td>Tên khách hàng</td>
                             <td>Số điện thoại</td>
+                            <td>Email</td>
                             <td>Địa chỉ giao hàng</td>
                             <td>Ngày lập</td>
                             <td>Tình trạng</td>
@@ -43,7 +44,7 @@
                             }
                             else{
                                 while($row = mysqli_fetch_array($result, MYSQLI_BOTH)){
-                                        if($row['tinhtrang'] == 1){
+                                        if($row['dathanhtoan'] == 1){
                                             $tinhtrang = "HOÀN THÀNH";
                                         }else{
                                             $tinhtrang = "CHƯA HOÀN THÀNH";
@@ -52,11 +53,12 @@
                                         <td>'.$row['mahoadon'].'</td>
                                         <td>'.$row['tenkhachhang'].'</td>
                                         <td>'.$row['sdt'].'</td>
+                                        <td>'.$row['email'].'</td>
                                         <td>'.$row['diachigiaohang'].'</td>
                                         
                                         <td>'.$row['ngaylap'].'</td>
                                         <td>'.$tinhtrang.'</td>
-                                        <td><a href="xemchitietdonhang.php?mahoadon='.$row['mahoadon'].'">Xem đơn hàng</a></td>
+                                        <td><a href="xemchitietdonhang.php?mahoadon='.$row['mahoadon'].'&dathanhtoan='.$row['dathanhtoan'].'">Xem đơn hàng</a></td>
                                         
                         
                                     </tr>';

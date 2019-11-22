@@ -25,8 +25,9 @@ if ( isset($_POST['hoten']) && isset($_SESSION['cart'])) {
          $tongcong= $price * $qty;
          $tongtien+=$tongcong;
    }
-   $sql2 = "insert into hoadon (makhachhang, tenkhachhang, sdt, diachigiaohang, email, ghichu, ptthanhtoan,tongtien, dathanhtoan) 
-   values ( '$makhachhang','$name', '$phone', '$address', '$email', '$ghichu' ,'$HinhThucThanhToan','$tongtien', 0);";
+   $ngay = date("Y/m/d");
+   $sql2 = "insert into hoadon (makhachhang, tenkhachhang, sdt, diachigiaohang, email, ngaylap, ghichu, ptthanhtoan,tongtien, dathanhtoan) 
+   values ( '$makhachhang','$name', '$phone', '$address', '$email', '$ngay', '$ghichu' ,'$HinhThucThanhToan','$tongtien', 0);";
    $result = mysqli_query( $link, $sql2 );
    $sql3 = "SELECT mahoadon FROM hoadon WHERE makhachhang = '$makhachhang' ORDER BY mahoadon DESC "; 
    $hoaDon = mysqli_query($link, $sql3);

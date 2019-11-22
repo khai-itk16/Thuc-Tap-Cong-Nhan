@@ -30,8 +30,9 @@
                             <td>Mã hóa đơn</td>
                             <td>Mã sản phẩm</td>
                             <td>Tên sản phẩm</td>
+                            <td>Hình ảnh</td>
                             <td>Số lượng</td>
-                            <td>Tổng tiền</td>
+                            <td>Đơn giá</td>
                         </tr>
                         <?php 
                             include 'connect.php';
@@ -43,7 +44,7 @@
                             else{
                                 $total = 0;
                                 while($row = mysqli_fetch_array($result, MYSQLI_BOTH)){
-                                    $total += $row['giatien'];
+                                    $total += $row['dongia'] * $row['soluong'];
                                     $sql1 = "select * from sanpham where masp = ".$row['masp'];
                                     $result1 = mysqli_query($link,$sql1);
                                     if(mysqli_num_rows($result1) == 0){
@@ -57,26 +58,48 @@
                                             <td>".$row['mahoadon']."</td>
                                             <td>".$row['masp']."</td>
                                             <td>".$row1['tensp']."</td>
+                                            <td width=\"30%\"><img style=\"width: 50%;\" src=\"../images/".$row['hinhanh']."\"></td>
                                             <td>".$row['soluong']."</td>
-                                            <td>".$row['giatien']."</td>
+                                            <td>".$row['dongia']."</td>
                                         </tr>
                                     ";
                                 }
+                                if($_REQUEST['dathanhtoan'] == 0){
+                                    echo '<tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>Tổng tiền</td>
+                                        <td>'.$total.'</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td><a href="chotbill.php?mahoadon='.$mahoadon.'">Chốt bill</a></td>
+                                    </tr>';
+                                }else{
+                                    echo '<tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>Tổng tiền</td>
+                                        <td>'.$total.'</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>ĐÃ HOÀN THÀNH</td>
+                                    </tr>';
+                                }
                                 
-                                echo '<tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td>Tổng tiền</td>
-                                    <td>'.$total.'</td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td><a href="chotbill.php?mahoadon='.$mahoadon.'">Chốt bill</a></td>
-                                </tr>';
                                 
                             }
                         ?>
