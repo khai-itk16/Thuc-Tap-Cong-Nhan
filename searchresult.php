@@ -99,19 +99,19 @@
             </div>
             <div class="row">
                 <?php while($row = mysqli_fetch_array($result, MYSQLI_BOTH)){
-                   ?> <div class="col-md-3">
-                        <div class="col-md1">
-                            <a href="single.php"><img src="images/<?php echo $row['hinhanh'];?>" alt="" /></a>
-                            <div class="top-content">
-                                <h5><?php echo $row['tensp'];?></h5>
-                                <div class="white clearfix">
-                                    <a href="javascript:void(0)" id="<?php echo $row['masp'];?>" class="hvr-shutter-in-vertical cart-to hvr-shutter-in-vertical2"> ADD TO CART</a>
-                                    <div class="price"><?php echo $row['giatien'];?> VND</div>
-                                </div>
+                    echo '<div class="col-md-3 top-single">
+                    <div class="col-md">
+                        <a href="single.php?masanpham='.$row['masp'].'"><img src="images/'.$row['hinhanh'].'" alt="" /></a>
+                        <div class="top-content">
+                            <h5>'.$row['tensp'].'</h5>
+                            <div class="white clearfix">
+                                <a href="javascript:void(0)" id='.$row["masp"].' class="hvr-shutter-in-vertical hvr-shutter-in-vertical2 cart-to" >ADD TO CART</a>
+                                <div class="price">'.$row['giatien'].' VND</div>
                             </div>
                         </div>
                     </div>
-               <?php }
+                </div>';
+                    }
                 ?>
             </div>
         </div>
