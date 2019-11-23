@@ -72,7 +72,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
              //Mật khẩu phải được điền
              var matKhau = document.forms["myForm"]["pass"].value;
             if (matKhau == "") {
-                alert("Tài khoản không được để trống");
+                alert("Mật khẩu không được để trống");
                 document.forms["myForm"]["pass"].focus();
                 return false;
             }
@@ -84,15 +84,28 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="container">
 		<div class="account">
 			<h2 class="account-in">ĐĂNG NHẬP TÀI KHOẢN</h2>
-				<form action="xuly-login.php" method="POST" onsubmit= "return validateForm();">
+				<form action="xuly-login.php" method="POST" name="myForm" onsubmit= "return validateForm();">
                     <div class="col-md-12">
                         <span class="col-md-2">Tài khoản*</span>
-                        <input class="col-md-10" type="text" name="user" required>
+                        <input class="col-md-10" type="text" name="user">
                     </div> 	
                     <div class="col-md-12"> 
                         <span class="word col-md-2">Mật khẩu*</span>
-                        <input type="password" class="col-md-10" name="pass" required> 
-                    </div>				
+                        <input type="password" class="col-md-10" name="pass"> 
+                    </div>
+                    <?php 
+                        if (isset($_SESSION["errorLogin"])){
+                            unset($_SESSION['errorLogin']);
+                        ?>
+
+                        <div class="col-md-12"> 
+                            <h6 style="text-align: center;">Đăng nhập thất bại. Vui lòng kiểm tra lại thông tin tài khoản và mật khẩu!</h6>
+                            <h6 style="text-align: center;">Nếu bạn chưa có tài khoản vui lòng đăng ký tài khoản <a href="register.php" style="color: red; text-decoration: underline !important;">tại đây.</a></h6>
+                        </div>  
+                        
+                        <?php
+                        }
+                    ?>				
                     <input type="submit" value="Login"> 
 				</form>
 		</div>

@@ -1,8 +1,9 @@
-<?php 
+<?php
+if(session_id() == '' || !isset($_SESSION)) {
     @session_start();
-    require_once ("connect.php");
+}
+require_once ("connect.php");
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 

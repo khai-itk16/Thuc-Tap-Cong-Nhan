@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -111,7 +112,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </script>
 </head>
 <body>
-    <?php require_once 'header.php';?>
+    <?php include 'header.php';?>
     <div class="container">
         <div class="row">
             <div class="account"> 

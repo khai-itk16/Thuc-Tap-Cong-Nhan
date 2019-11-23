@@ -64,7 +64,6 @@
         <div class="row">
             <div class="content col-md-12">
                 <h3 class="future">GIỎ HÀNG</h2>
-                <form action="">
                     <div class="content-header">
                         <div class="col-md-2">Hình ảnh</div>
                         <div class="col-md-3">Sản phẩm</div>
@@ -106,19 +105,25 @@
                     <input class="total-price" name="total-price" readonly value="0">đ 
                 </div>
 
+                <div class="col-md-12" style="background: white; padding: 20px; margin-bottom: 20px;">
+                    <div class="cart-order">
+                        <button><a href="index.php">MUA THÊM SẢN PHẨM</a></button>&emsp;
+                        <button><a href="don-hang.php">ĐẶT HÀNG</a></button>
+                    </div>
+                </div>
+
                 <?php }else {?>
                     <div class="col-md-12" style="background: white; padding: 10px;">
                         <h3 class="no-item">Không có sản phẩm nào trong giỏ </h3>
                     </div>
-                <?php };?>
+
                     <div class="col-md-12" style="background: white; padding: 20px; margin-bottom: 20px;">
                         <div class="cart-order">
                             <button><a href="index.php">MUA THÊM SẢN PHẨM</a></button>&emsp;
-                            <button><a href="don-hang.php">Đặt Hàng</a></button>
+                            <button style="cursor: not-allowed;"><a>ĐẶT HÀNG</a></button>
                         </div>
                     </div>
-                </form>
-
+                <?php };?>
             </div>
         </div>
     </div>

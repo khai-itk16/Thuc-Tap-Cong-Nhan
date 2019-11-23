@@ -17,10 +17,9 @@
             $_SESSION['user']=$user;
             $_SESSION['makh']=$row[1];
             header("location: index.php");
-
         } else {
-            session_unset();
-            header("location: register.php");
+            $_SESSION['errorLogin']=0;
+            header("location: login.php");
         }
     }
 ?>
