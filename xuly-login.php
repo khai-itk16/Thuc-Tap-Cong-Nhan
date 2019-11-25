@@ -8,7 +8,7 @@
 
     if (isset($_POST["user"])) {
         $user = $_POST["user"];
-        $pass = $_POST["pass"];
+        $pass = md5($_POST["pass"]);
         $sql = "select count(*), makhachhang from khachhang where tendangnhap='$user' and matkhau='$pass';";
         $result = mysqli_query($link, $sql);
         $row = mysqli_fetch_array($result, MYSQLI_BOTH);

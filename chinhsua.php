@@ -1,6 +1,25 @@
 <?php 
-    require_once ("xuly-dangky.php");
+    session_start();
+    if(isset($_POST['user'])) {
+        require_once('connect.php');
+        $user = $_POST['user'];
+        $name = $_POST['name'];
+        $address = $_POST['address'];
+        $phone = $_POST['phone'];
+        $email = $_POST['email'];
+        $sex = $_POST['sex'];
+        $sql = "UPDATE khachhang kh 
+            SET kh.tendangnhap='$user', kh.hoten='$name', kh.diachi='$address', kh.sdt='$phone', kh.email='$email', kh.gioitinh='$sex' 
+            WHERE kh.makhachhang = '".$_SESSION['makh']."'";
+            $result = mysqli_query($link, $sql);
+            $_SESSION['user'] = $user;
+            echo "<script>
+               alert('Chỉnh sửa thông tin thành công');
+               window.location='profile.php';
+            </script>";
+    }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -116,78 +135,52 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 document.forms["myForm"]["email"].focus();
                 return false;
             }
-           
-
-            //xác nhận giới tính
-            var gioiTinh = document.forms["myForm"]["sex"].value;
-            if (gioiTinh == -1) {
-                alert("Bạn chưa chọn giới tính");
-                return false;
-            }
-            // Xác nhận mật khẩu
-            var matKhau = document.forms["myForm"]["pass"].value;
-            var xacNhanMatKhau = document.forms["myForm"]["re_pass"].value;
-            if (matKhau == '') {
-                alert("Mật khẩu không được để trống.");
-                document.forms["myForm"]["pass"].focus();
-                return false;
-            }
-            if (matKhau != xacNhanMatKhau) {
-                alert("Xác nhận mật khẩu không khớp. Vui lòng nhập lại mật khẩu");
-                document.forms["myForm"]["re_pass"].value = "";
-                document.forms["myForm"]["re_pass"].focus();
-                return false;
-            }
         }
     </script>
 </head>
 <body>
-    <?php require_once 'header.php';?>
+    <?php require_once ('header.php');?>
+    <?php
+        $sql="SELECT * FROM khachhang kh WHERE kh.makhachhang = '".$_SESSION['makh']."';";
+        $result = mysqli_query($link, $sql);
+        $row = mysqli_fetch_array($result, MYSQLI_BOTH);
+    ?>
     <div class="container">
 		<div class="account">
-			<h2 class="account-in">ĐĂNG KÝ TÀI KHOẢN</h2>
-				<form action="register.php" method="POST" name="myForm" onsubmit="return validateForm();">
+			<h2 class="account-in">THÔNG TIN TÀI KHOẢN</h2>
+				<form action="chinhsua.php" method="POST" name="myForm" onsubmit="return validateForm();">
 				<div class="col-md-12">
 					<span class="col-md-2">Tài khoản*</span>
-					<input class="col-md-10" type="text" name="user">
+					<input class="col-md-10" type="text" name="user" value="<?= $row['tendangnhap'] ?>">
 				</div> 
                 <div class="col-md-12">
 					<span class="col-md-2">Họ và tên*</span>
-					<input class="col-md-10" type="text" name="name">
+					<input class="col-md-10" type="text" name="name" value="<?= $row['hoten'] ?>"> 
 				</div>
                 <div class="col-md-12">
 					<span class="col-md-2">Địa chỉ*</span>
-					<input class="col-md-10" type="text" name="address">
+					<input class="col-md-10" type="text" name="address" value="<?= $row['diachi'] ?>">
 				</div> 
                 <div class="col-md-12"> 	
 					<span class="mail col-md-2" >Số điện thoại*</span>
-					<input type="text" class="col-md-10" name="phone"> 
+					<input type="text" class="col-md-10" name="phone" value="<?= $row['sdt'] ?>"> 
 				</div>	
 				<div class="col-md-12"> 	
 					<span class="mail col-md-2" >Email*</span>
-					<input type="text" class="col-md-10" name="email"> 
+					<input type="text" class="col-md-10" name="email" value="<?= $row['email'] ?>"> 
 				</div>
                 <div class="col-md-12"> 
 					<span class="word col-md-2">Gới tính*</span>
 					<select name="sex">
-                        <option value="-1">--</option>
-                        <option value="1">Nam</option>
-                        <option value="0">Nữ</option>
+                        <option value="1" <?= ($row['gioitinh']==1)?("selected"):''?>>Nam</option>
+                        <option value="0"<?= ($row['gioitinh']==0)?("selected"):''?>>Nữ</option>
                     </select>
 				</div>
-				<div class="col-md-12"> 
-					<span class="word col-md-2">Mật khẩu*</span>
-					<input type="password" class="col-md-10" name="pass">
-				</div>	
-                <div class="col-md-12"> 
-					<span class="word col-md-2">Nhập lại mật khẩu*</span>
-					<input type="password" class="col-md-10" name="re_pass" >
-				</div>				
-					<input type="submit" value="Đăng ký"> 
+                    <input type="submit" value="Cập nhật">
+                    <button class="button" style="width: 80px !important"><a href="profile.php">Hủy</a></button>
 				</form>
 		</div>
-	</div>
-		<!---->
+	</div>    
     <?php require_once ('footer.php');?>
 </body>
 </html>

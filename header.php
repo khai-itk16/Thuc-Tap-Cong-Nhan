@@ -83,12 +83,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <div class="header-in">
                         <ul class="icon1 sub-icon1">
                             <?php
-
                             if(isset($_SESSION['user'])) {
-                                echo '<li><a href="thanhtoan.php">';
-                                    echo "Welcom ".$_SESSION['user'];
-                                echo '</a></li>';
-                                echo '<li><a href="xuly-login.php?logout=true">Đăng xuất</a></li>';
+                                ?> <li class="dropdown">
+                                    <a href="#">Welcom <?= $_SESSION['user'] ?></a>
+                                        <div class="dropdown-content">
+                                            <a href="profile.php">Hồ sơ</a>
+                                            <a href="thanhtoan.php">Thanh toán</a>
+                                        </div>
+                                   
+                                </a></li>';
+                                <li><a href="xuly-login.php?logout=true">Đăng xuất</a></li>';
+                            <?php
                             } else {
                                 echo '<li><a href="register.php">Đăng ký</a> </li>';
                                 echo '<li><a href="login.php">Đăng nhập</a></li>';

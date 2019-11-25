@@ -41,24 +41,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             });
         });
     </script>
-   <!--slider-script-->
-   <script src="./js/responsiveslides.min.js"></script>
-    <script>
-        $(function() {
-            $(".rslides").responsiveSlides({
-                auto: true,             
-                speed: 1000,            
-                timeout: 4000,          
-                pager: false,           
-                nav: false,             
-                random: false,          
-                pause: false,           
-                pauseControls: false,   
-                prevText: "Previous",   
-                nextText: "Next",       
-            });
-        });
-    </script>
     <!--//slider-script-->
     <script>
         $(document).ready(function(c) {
@@ -80,28 +62,58 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </script>
 </head>
 <body>
-    <div class="banner-mat">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="banner">
-
-                    <!-- Slideshow 4 -->
-                    <div class="slider">
-                        <ul class="rslides" id="slider1">
-                            <li><img src="images/banner.jpg" alt=""></li>
-                            <li><img src="images/banner1.jpg" alt=""></li>
-                            <li><img src="images/banner.jpg" alt=""></li>
-                            <li><img src="images/banner2.jpg" alt=""></li>
-                        </ul>
-                    </div>
-
-                    <div class="banner-bottom">
-                        <div class="clearfix"></div>
-                    </div>
-                </div>
+    <?php require_once ('header.php');?>
+    <?php
+        $sql="SELECT * FROM khachhang kh WHERE kh.makhachhang = '".$_SESSION['makh']."';";
+        $result = mysqli_query($link, $sql);
+        $row = mysqli_fetch_array($result, MYSQLI_BOTH);
+    ?>
+    <div class="container">
+		<div class="account">
+			<h2 class="account-in">THÔNG TIN TÀI KHOẢN</h2>
+				
+            <div class="col-md-12">
+                <span class="col-md-2">Tài khoản: </span>
+                <input class="col-md-10" type="text" readonly value="<?= $row['tendangnhap'] ?>">
+            </div> 
+            <div class="col-md-12">
+                <span class="col-md-2">Họ và tên: </span>
+                <input class="col-md-10" type="text" readonly value="<?= $row['hoten'] ?>">
             </div>
-            <!-- //slider-->
-        </div>
-    </div>
+            <div class="col-md-12">
+                <span class="col-md-2">Địa chỉ: </span>
+                <input class="col-md-10" type="text" readonly value="<?= $row['diachi'] ?>">
+            </div> 
+            <div class="col-md-12"> 	
+                <span class="mail col-md-2" >Số điện thoại: </span>
+                <input type="text" class="col-md-10" readonly value="<?= $row['sdt'] ?>"> 
+            </div>	
+            <div class="col-md-12"> 	
+                <span class="mail col-md-2" >Email: </span>
+                <input type="text" class="col-md-10" readonly value="<?= $row['email'] ?>"> 
+            </div>
+            <div class="col-md-12"> 
+                <span class="word col-md-2">Gới tính: </span>
+                <?php
+                    if($row['gioitinh'] == 1) {
+                        ?>
+                        <input type="text" class="col-md-10" readonly value="Nam"> 
+                        <?php
+                    } else {
+                        ?>
+                        <input type="text" class="col-md-10" readonly value="Nữ"> 
+                        <?php
+                    }
+                ?>
+                
+            </div>
+
+            <div class="col-md-12" style="text-align: center;"> 	
+                <button class="button"><a href="chinhsua.php">Chỉnh sửa</a></button>
+                <button class="button"><a href="doimatkhau.php">Đổi mật khẩu</a></button>
+            </div>
+		</div>
+	</div>    
+    <?php require_once ('footer.php');?>
 </body>
 </html>
