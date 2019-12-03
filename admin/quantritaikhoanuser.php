@@ -24,7 +24,6 @@
                         <tr>
                         <td><h5>Mã khách hàng</h5></td>
                             <td><h5>Tên tài khoản</h5></td>
-                            <td><h5>Mật khẩu</h5></td>
                             <td><h5>Họ tên</h5></td>
                             <td><h5>Giới tính</h5></td>
                             <td><h5>Email</h5></td>
@@ -43,7 +42,6 @@
                                 while($row = mysqli_fetch_array($result, MYSQLI_BOTH)){
                                         echo '<tr><td>'.$row['makhachhang'].'</td>
                                         <td>'.$row['tendangnhap'].'</td>
-                                        <td>'.$row['matkhau'].'</td>
                                         <td>'.$row['hoten'].'</td>
                                         <td>'.$row['gioitinh'].'</td>
                                         <td>'.$row['email'].'</td>

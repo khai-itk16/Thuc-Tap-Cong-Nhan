@@ -36,6 +36,16 @@
                 </div>
                 <div class="col-md-10">
                     <div class="title-menu">Quản trị sản phẩm của danh mục <?php echo $row['tendanhmuc']?></div> 
+
+                    <?php 
+                            $sql = "select * from sanpham where madanhmuc =".$iddanhmuc;
+                            $result = mysqli_query($link,$sql);
+                            if(mysqli_num_rows($result) == 0){
+                                echo "<h1>Không tìm thấy thông tin</h1><br>";
+                            }
+                            else{
+                    ?>
+                    
                     <table class="table table-light" border="1">
                         <tr>
                             <td><h5>Mã sản phẩm</h5></td>
@@ -47,13 +57,7 @@
                             <td><h5>Xóa sản phẩm</h5></td>
                             <td><h5>Sửa sản phẩm</h5></td>
                         </tr>
-                        <?php 
-                            $sql = "select * from sanpham where madanhmuc =".$iddanhmuc;
-                            $result = mysqli_query($link,$sql);
-                            if(mysqli_num_rows($result) == 0){
-                                echo "Không tìm thấy thông tin<br>";
-                            }
-                            else{
+                        <?php
                                 while($row = mysqli_fetch_array($result, MYSQLI_BOTH)){
                                         echo '<tr>
                                         <td>'.$row['masp'].'</td>
@@ -61,10 +65,10 @@
                                         <td>'.$row['soluong'].'</td>
                                         <td>'.$row['mota'].'</td>
                                         <td>'.$row['giatien'].'</td>
-                                        <td width="30%"><img style="width: 100%; " src="../images/'.$row['hinhanh'].'"></td>
-
-                                        <td><a href="xulyxoasanpham.php?idsp='.$row['masp'].'&">Xóa sản phẩm</a></td>
-                                        <td><a href="formsuasanpham.php?iddanhmuc='.$iddanhmuc.'&idsp='.$row['masp'].'">Sửa sản phẩm</a></td>
+                                        <td width="30%"><img style="width: 100%; " src="../images/'.$row['hinhanh'].'"></td>';
+                                    ?>
+                                        <td><a href="xulyxoasanpham.php?idsp= <?php echo $row['masp'].'&iddanhmuc='.$iddanhmuc?>" onclick = "return confirm('Bạn có chắc muốn xóa sản phẩm này không?')">Xóa sản phẩm</a></td>
+                                  <?php    echo'  <td><a href="formsuasanpham.php?iddanhmuc='.$iddanhmuc.'&idsp='.$row['masp'].'">Sửa sản phẩm</a></td>
                         
                                     </tr>';
                                 }
