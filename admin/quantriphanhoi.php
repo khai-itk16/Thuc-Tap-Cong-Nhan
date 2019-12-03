@@ -29,16 +29,19 @@
                         $sql = "select * from lienhe";
                         $result = mysqli_query($link,$sql);
                         if(mysqli_num_rows($result) == 0){
-                            echo "Không tìm thấy thông tin<br>";
+                            echo "<h1>Không tìm thấy thông tin phản hồi </h1><br>";
                         }
                         else{
                             while($row = mysqli_fetch_array($result, MYSQLI_BOTH)){
                                     echo '<div class="phanhoi">
                                     <div class="user">Email người dùng: '.$row['email'].'</div>
                                     <div class="user">Nội dung phản hồi: '.$row['noidung'].'</div>
-                                    <div class="user">Ngày liên hệ: '.$row['ngaylienhe'].'</div>
-                                    <a class="user" href="xulyxoaphanhoi.php?idphanhoi='.$row['malienhe'].'">Xóa phản hồi</a>
-                                </div>';
+                                    <div class="user">Ngày liên hệ: '.$row['ngaylienhe'].'</div>';
+                                    ?>
+                                    <a class="user" href="xulyxoaphanhoi.php?idphanhoi= <?php echo $row['malienhe']?>"
+                                    onclick ="return confirm('Bạn có chắc muốn xóa phản hồi này không?')" >Xóa phản hồi</a>
+                                <?php
+                                echo '</div>';
                             }
                         }
                         //free

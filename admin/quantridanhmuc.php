@@ -28,6 +28,15 @@
                 </div>
                 <div class="col-md-10">
                     <div class="title-menu">Quản trị danh mục</div>
+                    <?php 
+                            include 'connect.php';
+                            $sql = "select * from danhmuc";
+                            $result = mysqli_query($link,$sql);
+                            if(mysqli_num_rows($result) == 0){
+                                echo "Không tìm thấy thông tin<br>";
+                            }
+                            else{
+                    ?>
                     <table class="table table-light" border="1">
                         <tr>
                             <td><h5>Mã danh mục</h5></td>
@@ -38,22 +47,19 @@
                             <td><h5>Thêm sản phẩm</h5></td>
                         </tr>
                         
-                        <?php 
-                            include 'connect.php';
-                            $sql = "select * from danhmuc";
-                            $result = mysqli_query($link,$sql);
-                            if(mysqli_num_rows($result) == 0){
-                                echo "Không tìm thấy thông tin<br>";
-                            }
-                            else{
+                       <?php
                                 while($row = mysqli_fetch_array($result, MYSQLI_BOTH)){
                                         echo '<tr>
                                         <td>'.$row['madanhmuc'].'</td>
                                         <td>'.$row['tendanhmuc'].'</td>
                                         <td><a href="quantrisanpham.php?iddanhmuc='.$row['madanhmuc'].'">Xem sản phẩm</a></td>
-                                        <td><a href="formsuadanhmuc.php?iddanhmuc='.$row['madanhmuc'].'&tendanhmuc='.$row['tendanhmuc'].'">Sửa danh mục</a></td>
-                                        <td><a href="xulyxoadanhmuc.php?iddanhmuc='.$row['madanhmuc'].'">Xóa danh mục</a></td>
-                                        <td><a href="formthemsanpham.php?iddanhmuc='.$row['madanhmuc'].'">Thêm sản phẩm</a></td>
+                                        <td><a href="formsuadanhmuc.php?iddanhmuc='.$row['madanhmuc'].'&tendanhmuc='.$row['tendanhmuc'].'">Sửa danh mục</a></td>';
+                                        ?>
+
+                                        <!-- <td><a href="xulyxoadanhmuc.php?iddanhmuc='.$row['madanhmuc'].'">Xóa danh mục</a></td> -->
+                                        <td><a href="xulyxoadanhmuc.php?iddanhmuc=<?php echo $row['madanhmuc']?>" onclick = "return confirm('Bạn có chắc muốn xóa danh mục này không?')">Xóa danh mục</a></td>
+                                        <?php
+                                       echo '<td><a href="formthemsanpham.php?iddanhmuc='.$row['madanhmuc'].'">Thêm sản phẩm</a></td>
                                     </tr>';
                                 }
                             }

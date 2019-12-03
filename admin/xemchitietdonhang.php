@@ -64,39 +64,33 @@
                                         </tr>
                                     ";
                                 }
-                                if($_REQUEST['dathanhtoan'] == 0){
-                                    echo '<tr>
+                                echo '<tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>Tổng tiền</td>
+                                <td>'.$total.'</td>
+                                    </tr>';
+                                if($_REQUEST['tinhtrang'] == 0){
+                                   
+                                echo '<tr>
                                         <td></td>
                                         <td></td>
                                         <td></td>
                                         <td></td>
-                                        <td>Tổng tiền</td>
-                                        <td>'.$total.'</td>
-                                    </tr>
-                                    <tr>
                                         <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td><a href="chotbill.php?mahoadon='.$mahoadon.'">Chốt bill</a></td>
+                                        <td><a href="chotbill.php?mahoadon='.$mahoadon.'&tinhtrang='.$_REQUEST['tinhtrang'].'">Xác nhận đơn</a></td>
                                     </tr>';
                                 }else{
-                                    echo '<tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td>Tổng tiền</td>
-                                        <td>'.$total.'</td>
-                                    </tr>
-                                    <tr>
+
+                                   echo '<tr>
                                         <td></td>
                                         <td></td>
                                         <td></td>
                                         <td></td>
                                         <td></td>
-                                        <td>ĐÃ HOÀN THÀNH</td>
+                                       <td><a href="chotbill.php?mahoadon='.$mahoadon.'&tinhtrang='.$_REQUEST['tinhtrang'].'">Đã giao hàng</a></td>
                                     </tr>';
                                 }
                                 

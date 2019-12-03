@@ -24,6 +24,15 @@
             </div>
             <div class="row">
                 <div class="col-md-12">
+                <?php 
+                            include 'connect.php';
+                            $sql = "select * from hoadon";
+                            $result = mysqli_query($link,$sql);
+                            if(mysqli_num_rows($result) == 0){
+                                echo "Không tìm thấy thông tin<br>";
+                            }
+                            else{
+                ?>
                     <table class="table table-light" border="1">
                         <tr>
                             <td>Mã hóa đơn</td>
@@ -35,20 +44,19 @@
                             <td>Tình trạng</td>
                             <td>Xem đơn hàng</td>
                         </tr>
-                        <?php 
-                            include 'connect.php';
-                            $sql = "select * from hoadon";
-                            $result = mysqli_query($link,$sql);
-                            if(mysqli_num_rows($result) == 0){
-                                echo "Không tìm thấy thông tin<br>";
-                            }
-                            else{
+                <?php        
                                 while($row = mysqli_fetch_array($result, MYSQLI_BOTH)){
-                                        if($row['dathanhtoan'] == 1){
-                                            $tinhtrang = "HOÀN THÀNH";
+                                        if($row['tinhtrang'] == 1){
+                                            if($row['dathanhtoan'] == 1){
+                                                $tinhtrang = "ĐÃ GIAO HÀNG";
+                                            }else{
+                                                $tinhtrang = "ĐANG GIAO HÀNG";
+                                            }
                                         }else{
-                                            $tinhtrang = "CHƯA HOÀN THÀNH";
+                                            $tinhtrang = "CHƯA XÁC NHẬN";
                                         }
+
+                                       
                                         echo '<tr>
                                         <td>'.$row['mahoadon'].'</td>
                                         <td>'.$row['tenkhachhang'].'</td>
@@ -58,7 +66,7 @@
                                         
                                         <td>'.$row['ngaylap'].'</td>
                                         <td>'.$tinhtrang.'</td>
-                                        <td><a href="xemchitietdonhang.php?mahoadon='.$row['mahoadon'].'&dathanhtoan='.$row['dathanhtoan'].'">Xem đơn hàng</a></td>
+                                        <td><a href="xemchitietdonhang.php?mahoadon='.$row['mahoadon'].'&tinhtrang='.$row['tinhtrang'].'">Xem đơn hàng</a></td>
                                         
                         
                                     </tr>';
