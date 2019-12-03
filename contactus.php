@@ -96,7 +96,7 @@
                     <h3>Điện tử K2DMC</h3>
                     <h4><i class="fas fa-map-marker-alt"></i>Địa chỉ: K05/47 Lê Trọng Tấn, Thành phố Đà Nẵng</h4>
                     <h4><i class="fas fa-phone-volume"></i>Số điện thoại: 0335941792</h4>
-                    <h4><i class="fas fa-envelope"></i>Email: giakhanh9890@gmail.com</h4>
+                    <h4><i class="fas fa-envelope"></i>Email: dientuk2dmc@gmail.com</h4>
                     <h4><i class="fab fa-facebook-square"></i>facebook.com/page/dientuk2dmc</h4>
                     <form class="form-lienhe" method="POST" action="xulyphanhoi.php">
                         <div class="row">

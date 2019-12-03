@@ -60,7 +60,7 @@
     <?php 
         $sql="SELECT count(*) FROM hoadon hd INNER JOIN khachhang kh 
             ON hd.makhachhang = kh.makhachhang 
-            WHERE hd.dathanhtoan = 0 AND hd.makhachhang = ".$_SESSION['makh'];
+            WHERE hd.dathanhtoan = 1 AND hd.makhachhang = ".$_SESSION['makh'];
         $result = mysqli_query($link, $sql);
         $row = mysqli_fetch_array($result, MYSQLI_BOTH);
     ?>
@@ -68,7 +68,7 @@
     <div class="container">
         <div class="row">
             <div class="content col-md-12">
-                <h3 class="future">THANH TOÁN</h2>
+                <h3 class="future">LỊCH SỬ GIAO DỊCH</h2>
                 <?php
                     if($row[0] == 0) {
                 ?>
@@ -114,28 +114,16 @@
                                 <input class="total-status" readonly value="<?= $row['thanhtien'];?>">đ 
                             </div>
                             <div class="col-md-2">
-                                <input class="status-bill" readonly value="<?php echo(($row['tinhtrang']==0) ? "Đang chờ xử lý" : "Đang giao hàng" );?>">
+                                <input class="status-bill" readonly value="Đã thanh toán.">
                             </div>
                         </div>
                     </div>
                 <?php
                     }
                 ?>
-                
-                <div class="cart-item-content" style="color: red;">
-                    <div class="col-md-6">       
-                        Thời gian nhận hàng:
-                        <input class="time-receipt"name="" readonly value="Giao hàng chậm nhất trong vòng 3 ngày.">
-                    </div>
-
-                    <div class="col-md-4">       
-                        Tổng tiền thanh toán:
-                        <input class="total-price" name="total-price" readonly value="<?= $row['tongtien'] ?>">đ 
-                    </div>
-                </div> 
-                <?php
-                    }
-                ?>
+            <?php
+                }
+            ?>
             </div>
         </div>
     </div>

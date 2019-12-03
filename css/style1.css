@@ -280,3 +280,15 @@ h2.account-in:after {
     background-color: #fbf2d3;
     color: #f63 !important;
 }
+
+.status-bill {
+    outline: none;
+    border: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.check-user {
+    color: red;
+    line-height: 40px;
+}
