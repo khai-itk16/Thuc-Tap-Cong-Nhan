@@ -73,7 +73,7 @@
                     if($row[0] == 0) {
                 ?>
                     <div class="col-md-12" style="background: white; padding: 10px;">
-                        <h3 class="no-item">Hiện tại bạn chưa đặt đơn hàng nào.</h3>
+                        <h3 class="no-item">Lịch sử trống.</h3>
                     </div>
                 <?php
                     } else{
