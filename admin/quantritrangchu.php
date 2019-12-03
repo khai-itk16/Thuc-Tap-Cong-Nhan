@@ -1,46 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-    <style>
-        form{
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-        }
-        form div{
-            display: flex;
-            width: 100%;
-            text-align: left;
-        }
-        form input{
-            
-            margin-top: 6px;
-        }
-        .table tr td{
-            vertical-align: middle;
-        }
-    </style>
-</head>
-<body>
-<?php include 'header.php';?>
-    <div class="container">
+  <?php 
+        include './inc/header.php';
+        include './inc/leftbar.php';
+
+    ?>
+
+    <div id="page-wrapper">
+    <div id="page-inner">
         <div class="row">
             <div class="col-md-12">
-                <div class="title-menu">Quản trị trang chủ</div>
+                <h2>Quản lý Trang chủ</h2>
             </div>
         </div>
+        <!-- /. ROW  -->
+        <hr />
         <div class="row">
             <div class="col-md-12">
+                <!-- Advanced Tables -->
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="table-responsive">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    
+                                </div>
+                                <div class="col-sm-6" style="text-align: right;">
+                                    <form method="post" action="xulytimkiem.php">
+                                        <input type="submit"  value="Tìm kiếm" class="btn btn-warning btn-sm" style="float:right" />
+                                        <input type="text" name="search"class="form-control input-sm" placeholder="Nhập tên sản phẩm" style="float:right; width: 300px;" />
+                                        <div style="clear:both"></div>
+                                    </form><br />
+                                </div>
+                            </div>
             <table class="table table-light" border="1">
                 <tr>
                     <td>Mã sản phẩm</td>
@@ -98,4 +88,7 @@
             </div>
         </div>
     </div>
+    <script>
+    document.getElementById("sanpham").classList.add('active-menu');
+</script>
 </body>

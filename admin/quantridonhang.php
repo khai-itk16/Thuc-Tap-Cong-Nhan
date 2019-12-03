@@ -1,38 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-</head>
-<body>
-    <?php 
-        include 'header.php';
+
+<?php 
+        include './inc/header.php';
+        include './inc/leftbar.php';
+         include 'connect.php';
     ?>
-    <div class="don-hang">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="title-menu">QUẢN TRỊ ĐƠN HÀNG</div>
-                </div>
+    <div id="page-wrapper">
+    <div id="page-inner">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Quản lý người dùng</h2>
             </div>
-            <div class="row">
-                <div class="col-md-12">
-                <?php 
-                            include 'connect.php';
+        </div>
+        <!-- /. ROW  -->
+        <hr />
+        <div class="row">
+            <div class="col-md-12">
+                <!-- Advanced Tables -->
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="table-responsive">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                </div>
+                                <div class="col-sm-6" style="text-align: right;">
+                                  
+                                </div>
+                            </div>
+
+                            
+                            <?php 
                             $sql = "select * from hoadon";
                             $result = mysqli_query($link,$sql);
                             if(mysqli_num_rows($result) == 0){
-                                echo "Không tìm thấy thông tin<br>";
+                                echo "<h1>Không tìm thấy thông tin</h1><br>";
                             }
                             else{
-                ?>
+                    ?>
                     <table class="table table-light" border="1">
                         <tr>
                             <td>Mã hóa đơn</td>
@@ -67,8 +70,6 @@
                                         <td>'.$row['ngaylap'].'</td>
                                         <td>'.$tinhtrang.'</td>
                                         <td><a href="xemchitietdonhang.php?mahoadon='.$row['mahoadon'].'&tinhtrang='.$row['tinhtrang'].'">Xem đơn hàng</a></td>
-                                        
-                        
                                     </tr>';
                                 }
                             }
@@ -81,5 +82,7 @@
             </div>
         </div>
     </div>
-    
+    <script>
+    document.getElementById("hoadon").classList.add('active-menu');
+</script>
 </body>
