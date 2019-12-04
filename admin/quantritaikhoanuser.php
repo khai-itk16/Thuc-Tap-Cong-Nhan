@@ -40,6 +40,7 @@
                             }
                             else{
                                 while($row = mysqli_fetch_array($result, MYSQLI_BOTH)){
+                                    
                                         echo '<tr><td>'.$row['makhachhang'].'</td>
                                         <td>'.$row['tendangnhap'].'</td>
                                         <td>'.$row['hoten'].'</td>
