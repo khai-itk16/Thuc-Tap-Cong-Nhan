@@ -99,7 +99,7 @@
             </div>
             <div class="row">
                 <?php while($row = mysqli_fetch_array($result, MYSQLI_BOTH)){
-                    echo '<div class="col-md-3 top-single">
+                    echo '<div class="col-md-3 top-single" style="padding: 10px;">
                     <div class="col-md">
                         <a href="single.php?masanpham='.$row['masp'].'"><img src="images/'.$row['hinhanh'].'" alt="" /></a>
                         <div class="top-content">

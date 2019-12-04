@@ -145,7 +145,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
                 </div>
                 <!---->
-            <ul class="start">
+            <!-- <ul class="start">
                 <li ><a href="#"><i></i></a></li>
                 <li><span>1</span></li>
                 <li class="arrow"><a href="#">2</a></li>
@@ -153,7 +153,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <li class="arrow"><a href="#">4</a></li>
                 <li class="arrow"><a href="#">5</a></li>
                 <li ><a href="#"><i  class="next"> </i></a></li>
-            </ul>
+            </ul> -->
         </div>
     </div>
     <?php require_once ('footer.php');?>

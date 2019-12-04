@@ -53,6 +53,7 @@
             });
         });
     </script>
+
 </head>
 <body style="width:100%; float: left;">
     <?php require_once 'header.php';?>
@@ -81,13 +82,14 @@
                 
                 <div class="content-header">
                     <div class="col-md-2">Hình ảnh</div>
-                    <div class="col-md-3">Sản phẩm</div>
+                    <div class="col-md-2">Sản phẩm</div>
                     <div class="col-md-2">Đơn giá</div>
                     <div class="col-md-2">Số lượng</div>
-                    <div class="col-md-3">Thành tiền</div>
+                    <div class="col-md-2">Thành tiền</div>
+                    <div class="col-md-2">Tình trạng</div>
                 </div>
                 <?php 
-                    $sql="SELECT hd.tongtien, ct.* FROM hoadon hd 
+                    $sql="SELECT hd.tongtien, hd.tinhtrang, ct.* FROM hoadon hd 
                         INNER JOIN chitiethoadon ct ON hd.mahoadon = ct.mahoadon 
                         WHERE hd.dathanhtoan = 0 AND hd.makhachhang 
                         IN (SELECT kh.makhachhang FROM khachhang kh WHERE kh.makhachhang = ".$_SESSION['makh'].");";
@@ -99,7 +101,7 @@
                             <div class="img-content col-md-2">
                                 <a href="single.php?masanpham=<?= $row['masp'];?>"><img src="./images/<?= $row['hinhanh'];?>" alt=""></a>
                             </div>
-                            <div class="name-content col-md-3">
+                            <div class="name-content col-md-2">
                             <?= $row['tensp'];?>
                             </div>
                             <div class="price-content col-md-2">
@@ -108,8 +110,11 @@
                             <div class="count-content col-md-2">
                                 <input class="quatity-status" style="outline: none;" readonly value="<?= $row['soluong'];?>">
                             </div>
-                            <div class="total-content col-md-3">
+                            <div class="total-content col-md-2">
                                 <input class="total-status" readonly value="<?= $row['thanhtien'];?>">đ 
+                            </div>
+                            <div class="col-md-2">
+                                <input class="status-bill" readonly value="<?php echo(($row['tinhtrang']==0) ? "Đang chờ xử lý" : "Đang giao hàng" );?>">
                             </div>
                         </div>
                     </div>
@@ -118,12 +123,7 @@
                 ?>
                 
                 <div class="cart-item-content" style="color: red;">
-                    <div class="col-md-4">       
-                        Tình trạng đơn hàng:
-                        <input class="order-status" name="" readonly value="Đang chờ xử lý.">
-                    </div>
-
-                    <div class="col-md-4">       
+                    <div class="col-md-6">       
                         Thời gian nhận hàng:
                         <input class="time-receipt"name="" readonly value="Giao hàng chậm nhất trong vòng 3 ngày.">
                     </div>

@@ -8,7 +8,6 @@
     <title>Document</title>
 
 </head>
-
 <body>
     <div class="title">
         <h2>Đăng nhập</h2> <br>
@@ -47,8 +46,6 @@
                
             }
         }
-       
-           
          ?>
 </body>
 </html>

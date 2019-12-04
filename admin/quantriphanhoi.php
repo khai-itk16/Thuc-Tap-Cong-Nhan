@@ -1,56 +1,71 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-
-    
-
-</head>
-<body>
-     <?php 
-        include 'header.php';
+<?php 
+        include './inc/header.php';
+        include './inc/leftbar.php';
+         include 'connect.php';
     ?>
-    <div class="content">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 content-form">
-                    <div class="title-menu">Quản trị phản hồi</div>
-                    <?php 
-                        include 'connect.php';
-                        $sql = "select * from lienhe";
-                        $result = mysqli_query($link,$sql);
-                        if(mysqli_num_rows($result) == 0){
-                            echo "<h1>Không tìm thấy thông tin phản hồi </h1><br>";
-                        }
-                        else{
-                            while($row = mysqli_fetch_array($result, MYSQLI_BOTH)){
-                                    echo '<div class="phanhoi">
-                                    <div class="user">Email người dùng: '.$row['email'].'</div>
-                                    <div class="user">Nội dung phản hồi: '.$row['noidung'].'</div>
-                                    <div class="user">Ngày liên hệ: '.$row['ngaylienhe'].'</div>';
-                                    ?>
-                                    <a class="user" href="xulyxoaphanhoi.php?idphanhoi= <?php echo $row['malienhe']?>"
-                                    onclick ="return confirm('Bạn có chắc muốn xóa phản hồi này không?')" >Xóa phản hồi</a>
-                                <?php
-                                echo '</div>';
+    <div id="page-wrapper">
+    <div id="page-inner">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Quản lý phản hồi</h2>
+            </div>
+        </div>
+        <!-- /. ROW  -->
+        <hr />
+        <div class="row">
+            <div class="col-md-12">
+                <!-- Advanced Tables -->
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="table-responsive">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                </div>
+                                <div class="col-sm-6" style="text-align: right;">
+                                  
+                                </div>
+                            </div>
+
+                            
+                            <?php 
+                            $sql = "select * from lienhe";
+                            $result = mysqli_query($link,$sql);
+                            if(mysqli_num_rows($result) == 0){
+                                echo "<h1>Không tìm thấy thông tin phản hồi </h1><br>";
                             }
-                        }
-                        //free
-                        mysqli_free_result($result);
-                        mysqli_close($link);
+                            else{
                     ?>
 
-                    
+                    <table class="table table-light" border="1">
+                        <tr>
+                            <th>Email</th>
+                            <th>Nội dung phản hồi</h5></td>
+                            <th>Ngày phản hồi</h5></th>
+                            <th>Chức năng</th>
+                        </tr>
+                        
+                        <?php 
+                            while($row = mysqli_fetch_array($result, MYSQLI_BOTH)){
+                                        echo '<tr><td>'.$row['email'].'</td>
+                                        <td>'.$row['noidung'].'</td>
+                                        <td>'.$row['ngaylienhe'].'</td> ';
+                        ?>
+                                       <td><a class="user" href="xulyxoaphanhoi.php?idphanhoi= <?php echo $row['malienhe']?>"
+                                    onclick ="return confirm('Bạn có chắc muốn xóa phản hồi này không?')" >Xóa phản hồi</a></td></tr>';
+                                       <?php
+                                }
+                            }
+                            //free
+                            mysqli_free_result($result);
+                            mysqli_close($link);
+                        ?>
+                        
+                    </table>
+                </div>
             </div>
         </div>
     </div>
+    <script>
+    document.getElementById("contact").classList.add('active-menu');
+</script>
 </body>

@@ -195,10 +195,47 @@ $(document).ready(function () {
               }
             }
           }
-        })
+        });
       }
     });
+
+    $(".account-user").keyup(function (e) { 
+      setTimeout(() => {
+        var user = $(".account-user").val();
+        //alert(user);
+        $.ajax({
+          url : "check_user.php",
+          method : 'POST',
+          data : {
+            user : user
+          },
+          success : function (data) {
+            //alert(data);
+            if (data==true) {
+              $('.check-user').html("User đã tồn tại!");
+              $('.input-check-user').val(0);
+            } else {
+              $('.check-user').html("");
+              $('.input-check-user').val(1);
+            }
+          }
+        });
+      }, 100);
+      
+    });
+    
     //
+    // function cancelItem(){
+    //   $(".bill-cancel-item").css("display", "none");
+    // }
+    // setTimeout(cancelItem, 150000);
+    
+    // $(".bill-cancel-item").click(function() {
+    //     if(confirm("Bạn chắc chắn muốn xóa mặt hàng này không!")){
+    //       $(this).parents(".cart-item-content").css("display", "none");
+
+    //     }
+    // });
     
 });
 

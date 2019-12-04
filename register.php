@@ -73,6 +73,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 document.forms["myForm"]["user"].focus();
                 return false;
             }
+            //Tài khoản bị trùng
+            var checkUser = document.forms["myForm"]["checkUser"].value;
+            if (checkUser == "0") {
+                alert("Tài khoản không được trùng");
+                document.forms["myForm"]["user"].focus();
+                return false;
+            }
+
             //Tên phải được điền
             var ten = document.forms["myForm"]["name"].value;
             if (ten == "") {
@@ -149,7 +157,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<form action="register.php" method="POST" name="myForm" onsubmit="return validateForm();">
 				<div class="col-md-12">
 					<span class="col-md-2">Tài khoản*</span>
-					<input class="col-md-10" type="text" name="user">
+					<input class="col-md-10 account-user" type="text" name="user">
+                    <span class="col-md-2 check-user"></span>
+                    <input class="input-check-user" type="hidden" name="checkUser" value="1">
 				</div> 
                 <div class="col-md-12">
 					<span class="col-md-2">Họ và tên*</span>

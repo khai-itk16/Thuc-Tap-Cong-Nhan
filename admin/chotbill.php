@@ -1,8 +1,6 @@
 <?php 
 	$mahoadon = $_REQUEST['mahoadon'];
-	echo $mahoadon;
-	echo $_REQUEST['tinhtrang'];
-	echo  '<script>alert("'.$_REQUEST['tinhtrang'].'");</script>';
+	
 	include 'connect.php';
 
 	if($_REQUEST['tinhtrang'] == 0){
@@ -16,7 +14,4 @@
 		echo  '<script>alert("Đã xong");
 		window.location="quantridonhang.php";</script>';
 	};
-	
-
-
 ?>

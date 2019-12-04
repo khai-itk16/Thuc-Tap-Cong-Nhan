@@ -113,30 +113,36 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </head>
 <body>
     <?php include 'header.php';?>
+    <?php
+        $sql="SELECT hd.* FROM hoadon hd INNER JOIN  khachhang kh 
+        ON hd.makhachhang = kh.makhachhang WHERE kh.makhachhang = '".$_SESSION['makh']."';";
+        $result = mysqli_query($link, $sql);
+        $row = mysqli_fetch_array($result, MYSQLI_BOTH);
+    ?>
     <div class="container">
         <div class="row">
             <div class="account"> 
-                <form action="xuly_donhang.php" method="POST" name="myForm" >  
+                <form action="xuly_donhang.php" method="POST" name="myForm"  onsubmit="return validateForm();" >  
                     <h3 class="future">ĐỊA ĐIỂM NHẬN HÀNG</h3>
                     <div class="col-md-12">
                         <span class="col-md-2">Họ và tên*</span>
-                        <input class="col-md-10" type="text" name="hoten" required>
+                        <input class="col-md-10" type="text" name="hoten" value="<?=$row["tenkhachhang"]?>">
                     </div>
                     <div class="col-md-12">
                         <span class="col-md-2" >Địa chỉ nhận hàng*</span>
-                        <input class="col-md-10" type="text" name="diachi" required>
+                        <input class="col-md-10" type="text" name="diachi" value="<?=$row["diachigiaohang"]?>">
                     </div> 
                     <div class="col-md-12"> 	
                         <span class="mail col-md-2" >Số điện thoại liên hệ*</span>
-                        <input type="text" class="col-md-10" name="sodienthoai" required> 
+                        <input type="text" class="col-md-10" name="sodienthoai" value="<?=$row["sdt"]?>"> 
                     </div>	
                     <div class="col-md-12"> 	
                         <span class="mail col-md-2" >Email*</span>
-                        <input type="text" class="col-md-10" name="email" required> 
+                        <input type="text" class="col-md-10" name="email" value="<?=$row["email"]?>"> 
                     </div>
                     <div class="col-md-12"> 	
                         <span class="mail col-md-2" >Ghi chú</span>
-                        <input type="text" class="col-md-10" name="ghichu"> 
+                        <input type="text" class="col-md-10" name="ghichu" value="<?=$row["ghichu"]?>"> 
                     </div>					
 
                     <div class="col-md-12"> 

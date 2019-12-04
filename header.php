@@ -89,13 +89,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                         <div class="dropdown-content">
                                             <a href="profile.php">Hồ sơ</a>
                                             <a href="thanhtoan.php">Thanh toán</a>
+                                            <a href="lichsu.php">Lịch sử giao dịch</a>
                                         </div>
                                    
-                                </a></li>';
-                                <li><a href="xuly-login.php?logout=true">Đăng xuất</a></li>';
+                                </a></li>
+                                <li><a href="xuly-login.php?logout=true">Đăng xuất</a></li>
                             <?php
                             } else {
-                                echo '<li><a href="register.php">Đăng ký</a> </li>';
+                                echo '<li><a href="register.php">Đăng ký</a></li>';
                                 echo '<li><a href="login.php">Đăng nhập</a></li>';
                             }
                             ?>

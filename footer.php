@@ -99,21 +99,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="footer-middle-in"  style="width:33.33% !important;">
                     <h6>LIÊN HỆ</h6>
                     <ul>
-                        <li><p>P.Hòa Khánh - Q.Liên Chiểu - TP.Đà Nẵng</p></li>
-                        <li><p>Email:</p></li>
-                        <li><p>Phone:</p></li>
+                        <li><p>Lê Trọng Tấn, Thành phố Đà Nẵng</p></li>
+                        <li><p>Email: dientuk2dmc@gmail.com</p></li>
+                        <li><p>Phone: 0335941792</p></li>
                     </ul>
                 </div>
                 <div class="footer-middle-in"  style="width:33.33% !important;">
                     <h6>THEO DÕI CHÚNG TÔI TRÊN</h6>
                     <ul>
-                        <li><p>Facebook:</p></li>
+                        <li><p>Facebook: facebook.com/page/dientuk2dmc</p></li>
                     </ul>
                 </div>
                 <div class="clearfix"></div>
             </div>
         </div>
-        <p class="footer-class">Copyright ©  <a href="" target="_blank">W3layouts</a> </p>
+        <p class="footer-class">Copyright ©  <a href="" target="_blank">Start Up 0 Đồng</a> </p>
         <script type="text/javascript">
             $(document).ready(function() {
                 $().UItoTop({
