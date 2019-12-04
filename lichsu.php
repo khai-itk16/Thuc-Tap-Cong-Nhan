@@ -91,7 +91,7 @@
                 <?php 
                     $sql="SELECT hd.tongtien, hd.tinhtrang, ct.* FROM hoadon hd 
                         INNER JOIN chitiethoadon ct ON hd.mahoadon = ct.mahoadon 
-                        WHERE hd.dathanhtoan = 0 AND hd.makhachhang 
+                        WHERE hd.dathanhtoan = 1 AND hd.makhachhang 
                         IN (SELECT kh.makhachhang FROM khachhang kh WHERE kh.makhachhang = ".$_SESSION['makh'].");";
                     $result = mysqli_query($link, $sql);
                     while ($row = mysqli_fetch_array($result, MYSQLI_BOTH)) {

@@ -177,7 +177,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </select>
 				</div>
                     <input type="submit" value="Cập nhật">
-                    <button class="button" style="width: 80px !important"><a href="profile.php">Hủy</a></button>
+                    <button class="button" style="width: 80px !important"><a href="profile.php" style="display:block; width: 100% !important">Hủy</a></button>
 				</form>
 		</div>
 	</div>    
