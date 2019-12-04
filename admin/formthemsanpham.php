@@ -32,17 +32,17 @@
                                         <textarea id="preview" class="form-control" rows="3" name="motasp"></textarea>
                                     </div>
                                     <div class="form-group">
-                                        <label for="preview">giá</label>
-                                        <textarea id="preview" class="form-control" rows="3" name="giasp"></textarea>
+                                        <label for="gia">Giá</label>
+                                        <input type="number" id="gia" class="form-control" rows="3" name="giasp"></input>
                                     </div>
                                     <div class="form-group">
-                                        <label for="preview">Số lượng</label>
-                                        <textarea id="preview" class="form-control" rows="3" name="soluongsp"></textarea>
+                                        <label for="soluong">Số lượng</label>
+                                        <input type="number" id="soluong" class="form-control" rows="3" name="soluongsp"></input>
                                     </div>
                                     <div class="form-group">
 
                                         <label for="picture">Hình ảnh</label>
-                                        <input type="file" name="hinhanhsp" />
+                                        <input id="picture" type="file" name="hinhanhsp" />
                                     </div>
                                     
                                

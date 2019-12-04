@@ -29,7 +29,7 @@
         <?php 
         include 'connect.php';
         $user = $_REQUEST['username'];
-        $pass = md5($_REQUEST['password']);
+        $pass = ($_REQUEST['password']);
         if(isset($_REQUEST['submit'])){
              $sql = "select * from admin where tendangnhap = '$user' and matkhau = '$pass'" ;
             $result = mysqli_query($link, $sql);

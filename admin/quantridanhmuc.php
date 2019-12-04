@@ -33,7 +33,7 @@
                                 echo "Không tìm thấy thông tin<br>";
                             } else{ ?>
 
-                            <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                            <table class="table table-striped table-bordered " id="dataTables-example">
                                 <thead>
                                     <tr>
                                         <th>Mã danh mục</th>
