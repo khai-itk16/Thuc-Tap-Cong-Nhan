@@ -51,7 +51,7 @@
                                         <td>'.$row['ngaylienhe'].'</td> ';
                         ?>
                                        <td><a class="user" href="xulyxoaphanhoi.php?idphanhoi= <?php echo $row['malienhe']?>"
-                                    onclick ="return confirm('Bạn có chắc muốn xóa phản hồi này không?')" >Xóa phản hồi</a></td></tr>';
+                                    onclick ="return confirm('Bạn có chắc muốn xóa phản hồi này không?')" >Xóa phản hồi</a></td></tr>
                                        <?php
                                 }
                             }

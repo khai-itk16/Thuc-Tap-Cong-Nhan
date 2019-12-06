@@ -51,11 +51,11 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="preview">giá</label>
-                                         <input type="text" id="name" value="<?php echo $row['giatien'] ?>" name="giasp" class="form-control" />
+                                         <input type="number" id="name" value="<?php echo $row['giatien'] ?>" name="giasp" class="form-control" />
                                     </div>
                                     <div class="form-group">
                                         <label for="preview">Số lượng</label>
-                                        <input  type="text" id="name" value="<?php echo $row['soluong'] ?>" name="soluongsp" class="form-control" />
+                                        <input  type="number" id="name" value="<?php echo $row['soluong'] ?>" name="soluongsp" class="form-control" />
                                     </div>
                                     <div class="form-group">
 

@@ -1,4 +1,11 @@
-<?php session_start();?>
+<?php session_start();
+    if(!isset($_SESSION['makh'])){
+        echo "<script>
+            alert('Bạn vui lòng đăng nhập trước khi tiến hành đặt hàng');
+            window.location='login.php';
+        </script>";
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
