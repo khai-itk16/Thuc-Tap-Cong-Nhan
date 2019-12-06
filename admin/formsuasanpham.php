@@ -1,5 +1,4 @@
 
-
 <?php 
         include './inc/header.php';
         include './inc/leftbar.php';
@@ -61,8 +60,8 @@
                                     <div class="form-group">
 
                                         <label for="picture">Hình ảnh</label>
-                                        <input type="file" name="hinhanhsp" />
-                                        
+                                        <input type="file" name="hinhanhsp"/>
+                                        <?php echo $row['hinhanh']?>    
                                     </div>
                                     <button type="submit" name="submit" class="btn btn-success btn-md">Sửa</button>
                                 <?php      }

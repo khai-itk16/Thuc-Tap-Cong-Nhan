@@ -30,17 +30,30 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 	}
 
 	include 'connect.php';
+
 	$idsanpham = $_REQUEST['masp'];
 	$iddanhmuc = $_REQUEST['iddanhmuc'];
 	$tensp = $_REQUEST['tensp'];
 	$mota = $_REQUEST['motasp'];
 	$gia = $_REQUEST['giasp'];
-	$soluong = $_REQUEST['soluongsp'];
-	$hinhanh =$_FILES['hinhanhsp']['name'];
+	$soluong = $_REQUEST['soluongsp'];	
 	$spmuanhieu =$_REQUEST['spmuanhieu'];
 	$linhkiencb = $_REQUEST['linhkien'];
 	$ngaythem = date("Y/m/d");
 //
+
+	if($_FILES['hinhanhsp']['name'] == ""){
+		$sql1 = "select *from sanpham where masp =".$idsanpham."";
+        $result = mysqli_query($link, $sql1);
+        $row = mysqli_fetch_array($result,MYSQLI_BOTH);
+        $hinhanh = $row['hinhanh'];
+        echo $hinhanh;
+		
+	}	
+	else{
+		$hinhanh =$_FILES['hinhanhsp']['name'];
+	}
+
 	$sql= "update sanpham set tensp='$tensp', mota ='$mota', giatien ='$gia', soluong ='$soluong', hinhanh = '$hinhanh', spmuanhieu = '$spmuanhieu', linhkiencoban ='$linhkiencb', ngaythem='$ngaythem' where masp ='$idsanpham'";
 	mysqli_query($link,$sql);
 	header("location: quantrisanpham.php?iddanhmuc=$iddanhmuc");
