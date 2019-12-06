@@ -28,9 +28,10 @@
 
         <?php 
         include 'connect.php';
-        $user = $_REQUEST['username'];
-        $pass = ($_REQUEST['password']);
+        
         if(isset($_REQUEST['submit'])){
+            $user = $_REQUEST['username'];
+            $pass = md5($_REQUEST['password']);
              $sql = "select * from admin where tendangnhap = '$user' and matkhau = '$pass'" ;
             $result = mysqli_query($link, $sql);
             if (mysqli_num_rows($result) == 0)
@@ -39,10 +40,11 @@
                     window.location="login.php";</script>';
               }
             else{
-                 header("location: index.php");
+                
                  session_start();
                 $_SESSION['login_ad'] = "ok";
                 $_SESSION['username'] = $user;
+                 header("location: index.php");
                
             }
         }
